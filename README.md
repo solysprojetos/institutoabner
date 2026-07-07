@@ -1,36 +1,32 @@
-# ABNER — Servir Transforma Vidas
+# ABNER Projeto Social — Servir transforma vidas
 
-Site institucional da **ABNER**, instituição sem fins lucrativos dedicada a acolher famílias, apoiar pessoas autistas e neurodivergentes e levar cuidado a quem mais precisa.
+Site institucional de página única do **ABNER Projeto Social**, projeto social brasileiro que leva cestas básicas, cuidado e acolhimento a famílias, igrejas, casas de apoio e animais.
+
+O nome homenageia Abner, filho autista da fundadora. O símbolo é a letra "A" acolhida por uma mão formada de peças de quebra-cabeça coloridas — cada peça representa uma pessoa.
 
 ## Estrutura
 
 ```
 index.html              → o site completo (HTML + CSS + JavaScript em um único arquivo)
-assets/logo-abner.webp  → logo da instituição
+assets/logo-abner.webp  → logo do projeto
+.github/workflows/      → publicação automática no GitHub Pages a cada push na main
 ```
 
-O site é uma página única (one-page) com as seções: **Quem somos · Programas · Impacto · Como ajudar · Depoimentos · Contato**. Não precisa de servidor nem de build — basta abrir o `index.html` no navegador.
+Não precisa de servidor nem de build — basta abrir o `index.html` no navegador.
 
-## Como publicar no GitHub Pages
+## Publicação
 
-1. No GitHub, abra **Settings → Pages** deste repositório.
-2. Em **Source**, escolha **Deploy from a branch**.
-3. Selecione a branch principal (`main`) e a pasta **/ (root)** e salve.
-4. Em alguns minutos o site estará no ar em `https://<usuario>.github.io/institutoabner/`.
+O site é publicado automaticamente no GitHub Pages a cada push na branch `main`, em:
+`https://solysprojetos.github.io/institutoabner/`
 
-## ⚠️ Antes de colocar no ar: dados que precisam ser atualizados
+**Atenção:** em contas gratuitas do GitHub, o Pages só funciona com o repositório **público** (Settings → Danger Zone → Change visibility → Make public).
 
-O site foi criado com **dados de exemplo (placeholders)**. Procure e substitua no `index.html`:
+## ⚠️ Antes de divulgar: dados que precisam ser atualizados
 
-| O quê | Onde está | Valor atual (exemplo) |
+| O quê | Onde está no `index.html` | Valor atual (exemplo) |
 |---|---|---|
-| Endereço | seção Contato | Rua da Solidariedade, 123 — Centro |
-| WhatsApp | seção Contato | (00) 90000-0000 |
-| E-mail | seção Contato **e** na constante `FORM_EMAIL` no `<script>` | contato@abner.org.br |
-| Números de impacto | seção Impacto (`data-count`) | 1.200 famílias, 350 voluntários, 8.500 cestas, 10 anos |
+| WhatsApp (botão) | link `wa.me` no rodapé | 5500000000000 |
+| Telefone/WhatsApp (texto) | seção Contato do rodapé | (xx) xxxxx-xxxx |
+| Fotos reais | blocos "espaço para foto real" | reservados para fotos das entregas, cestas e voluntários |
 
-## Formulário de contato
-
-O formulário usa o serviço gratuito [FormSubmit](https://formsubmit.co) e envia as mensagens para o e-mail definido na constante `FORM_EMAIL` dentro do `index.html` (não requer cadastro).
-
-**Importante:** na primeira mensagem enviada pelo site, o FormSubmit manda um e-mail de confirmação para esse endereço — é preciso clicar no link de ativação uma única vez para os envios passarem a funcionar.
+O Instagram já aponta para **@abnerprojetosocial**.

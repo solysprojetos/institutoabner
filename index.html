@@ -3,217 +3,248 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ABNER — Servir Transforma Vidas</title>
-<meta name="description" content="A ABNER é uma instituição dedicada a acolher, incluir e transformar vidas por meio do serviço ao próximo.">
+<title>ABNER Projeto Social — Servir transforma vidas</title>
+<meta name="description" content="O ABNER Projeto Social leva cestas básicas, cuidado e acolhimento a famílias, igrejas, casas de apoio e animais. Cada peça importa. Cada pessoa importa.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700;6..12,800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 <style>
 :root{
-  --navy:#253A71;
-  --ink:#17264D;
-  --paper:#FFFFFF;
-  --mist:#F1F5FC;
-  --red:#E63229;
-  --orange:#F7941D;
-  --yellow:#FFC907;
-  --green:#3AB54A;
-  --sky:#29ABE2;
-  --magenta:#EC008C;
-  --radius:18px;
-  --shadow:0 12px 34px rgba(23,38,77,.10);
+  --terra:#C9502F;
+  --terra-escuro:#A83E22;
+  --tinta:#2F2721;
+  --papel:#FFFCF8;
+  --areia:#F7F0E7;
+  --amarelo:#E9A93D;
+  --verde:#5B9E63;
+  --ceu:#4E93AE;
+  --magenta:#B85385;
+  --cinza:#6E635A;
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{
-  font-family:'Nunito Sans',sans-serif;
-  color:var(--ink);
-  background:var(--paper);
-  line-height:1.65;
+  font-family:'Atkinson Hyperlegible',sans-serif;
+  font-size:1.05rem;
+  line-height:1.7;
+  color:var(--tinta);
+  background:var(--papel);
   overflow-x:hidden;
 }
-h1,h2,h3{font-family:'Fraunces',serif;line-height:1.12;color:var(--navy)}
+h1,h2,h3{font-family:'Bricolage Grotesque',sans-serif;line-height:1.08;text-wrap:balance}
 img{max-width:100%;display:block}
-a{color:inherit;text-decoration:none}
-.wrap{max-width:1140px;margin:0 auto;padding:0 24px}
-section{padding:88px 0}
-.eyebrow{
-  display:inline-flex;align-items:center;gap:10px;
-  font-weight:800;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;
-  color:var(--navy);margin-bottom:14px;
+a{color:inherit}
+.wrap{max-width:1100px;margin:0 auto;padding:0 28px}
+p{max-width:58ch}
+
+.rotulo{
+  display:block;font-weight:700;font-size:.82rem;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--terra);margin-bottom:14px;
 }
-.eyebrow::before{content:"";width:26px;height:3px;border-radius:2px;
-  background:linear-gradient(90deg,var(--red),var(--orange),var(--yellow),var(--green),var(--sky),var(--magenta));}
-.lead{font-size:1.12rem;max-width:640px;color:#3c4a70}
+.peca{width:20px;height:20px;flex:none}
 
 /* ===== NAV ===== */
 header{
-  position:sticky;top:0;z-index:50;
-  background:rgba(255,255,255,.92);backdrop-filter:blur(10px);
-  border-bottom:1px solid #e7ecf5;
+  position:fixed;top:0;left:0;right:0;z-index:40;
+  background:rgba(255,252,248,.94);backdrop-filter:blur(8px);
+  border-bottom:1px solid #EDE4D8;
 }
-.nav{display:flex;align-items:center;justify-content:space-between;height:74px}
-.brand{display:flex;align-items:center;gap:12px;font-family:'Fraunces',serif;font-weight:700;font-size:1.3rem;color:var(--navy)}
-.brand img{height:46px;width:auto}
-.nav-links{display:flex;gap:30px;font-weight:700;font-size:.95rem}
-.nav-links a{position:relative;padding:6px 0;color:#33436e}
-.nav-links a::after{content:"";position:absolute;left:0;bottom:0;height:3px;width:0;border-radius:2px;
-  background:linear-gradient(90deg,var(--orange),var(--magenta));transition:width .25s}
-.nav-links a:hover::after,.nav-links a:focus-visible::after{width:100%}
-.btn{
-  display:inline-block;padding:13px 28px;border-radius:999px;font-weight:800;font-size:.98rem;
-  transition:transform .18s,box-shadow .18s;border:none;cursor:pointer;
+.nav{display:flex;align-items:center;gap:34px;height:72px}
+.marca{display:flex;align-items:center;gap:10px;font-family:'Bricolage Grotesque',sans-serif;
+  font-weight:800;font-size:1.15rem;text-decoration:none;margin-right:auto}
+.marca img{height:42px;width:auto}
+.nav-links{display:flex;gap:30px}
+.nav-links a{text-decoration:none;font-weight:700;font-size:.95rem;color:var(--cinza)}
+.nav-links a:hover,.nav-links a:focus-visible{color:var(--terra)}
+.botao{
+  display:inline-block;background:var(--terra);color:#fff;text-decoration:none;
+  font-weight:700;padding:12px 26px;border-radius:10px;border:none;cursor:pointer;
+  font-size:.98rem;font-family:inherit;
 }
-.btn:focus-visible{outline:3px solid var(--sky);outline-offset:3px}
-.btn-primary{background:var(--navy);color:#fff;box-shadow:0 8px 20px rgba(37,58,113,.28)}
-.btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(37,58,113,.35)}
-.btn-warm{background:var(--orange);color:#fff;box-shadow:0 8px 20px rgba(247,148,29,.35)}
-.btn-warm:hover{transform:translateY(-2px)}
-.btn-ghost{border:2px solid var(--navy);color:var(--navy);padding:11px 26px;background:transparent}
-.btn-ghost:hover{background:var(--navy);color:#fff}
-.nav .btn{padding:10px 22px;font-size:.9rem}
-.menu-toggle{display:none;background:none;border:none;font-size:1.7rem;color:var(--navy);cursor:pointer}
+.botao:hover{background:var(--terra-escuro)}
+.botao:focus-visible{outline:3px solid var(--ceu);outline-offset:2px}
+.botao-claro{background:transparent;color:var(--terra);border:2px solid var(--terra);padding:10px 24px}
+.botao-claro:hover{background:var(--terra);color:#fff}
+.menu-btn{display:none;background:none;border:none;cursor:pointer;padding:8px}
+.menu-btn span{display:block;width:24px;height:2.5px;background:var(--tinta);margin:5px 0;border-radius:2px}
 
 /* ===== HERO ===== */
-.hero{position:relative;padding:70px 0 110px;background:
-  radial-gradient(1100px 520px at 85% -10%,#eaf1fd 0%,transparent 60%),
-  radial-gradient(800px 420px at -10% 110%,#fdf3e3 0%,transparent 55%),#fff}
-.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
-.hero h1{font-size:clamp(2.5rem,5.4vw,4.1rem);font-weight:700;margin:10px 0 22px}
-.hero h1 .grad{
-  background:linear-gradient(92deg,var(--red) 0%,var(--orange) 26%,var(--green) 55%,var(--sky) 78%,var(--magenta) 100%);
-  -webkit-background-clip:text;background-clip:text;color:transparent;
+.hero{padding:170px 0 110px}
+.hero-grid{display:grid;grid-template-columns:7fr 5fr;gap:60px;align-items:center}
+.hero h1{font-size:clamp(2.7rem,6vw,4.4rem);font-weight:800;margin-bottom:24px}
+.hero h1 em{font-style:normal;color:var(--terra)}
+.hero .apoio{font-size:1.22rem;color:var(--cinza);margin-bottom:36px}
+.hero-acoes{display:flex;gap:16px;flex-wrap:wrap;align-items:center}
+.hero-figura{position:relative}
+.hero-figura img{width:min(380px,100%);margin-left:auto}
+.hero-figura .peca-solta{position:absolute;opacity:.35}
+
+/* ===== SEÇÕES ALTERNADAS ===== */
+section{padding:96px 0}
+.secao-areia{background:var(--areia)}
+.duas-colunas{display:grid;grid-template-columns:6fr 5fr;gap:72px;align-items:center}
+.duas-colunas.invertida{grid-template-columns:5fr 6fr}
+.duas-colunas.invertida .texto{order:2}
+.duas-colunas.invertida .midia{order:1}
+h2{font-size:clamp(1.9rem,3.6vw,2.6rem);font-weight:700;margin-bottom:22px}
+
+/* espaço para foto real */
+.foto{
+  background:var(--areia);border-radius:14px;aspect-ratio:4/3;
+  display:flex;align-items:flex-end;overflow:hidden;
+  border:1px solid #E8DDCE;
 }
-.hero-cta{display:flex;gap:16px;margin-top:34px;flex-wrap:wrap}
-.hero-note{margin-top:26px;font-size:.9rem;color:#5a6890;display:flex;align-items:center;gap:10px}
-.hero-note .dots{display:flex}
-.hero-note .dots span{width:12px;height:12px;border-radius:50%;border:2px solid #fff;margin-left:-4px}
-.hero-figure{position:relative;display:flex;justify-content:center}
-.hero-figure img{width:min(440px,88%);filter:drop-shadow(0 24px 40px rgba(23,38,77,.18));position:relative;z-index:2}
-.puzzle-float{position:absolute;z-index:1;opacity:.9;animation:floaty 7s ease-in-out infinite}
-@keyframes floaty{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-16px) rotate(6deg)}}
-.puzzle-float:nth-child(2){animation-delay:-2.4s}
-.puzzle-float:nth-child(3){animation-delay:-4.8s}
-
-/* puzzle divider */
-.puzzle-divider{display:block;width:100%;height:34px}
-
-/* ===== PILLARS ===== */
-.pillars{background:var(--mist);padding:72px 0}
-.pillar-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:44px}
-.pillar{
-  background:#fff;border-radius:var(--radius);padding:32px 28px;box-shadow:var(--shadow);
-  border-top:6px solid var(--c,var(--navy));transition:transform .2s;
+.secao-areia .foto{background:#EFE5D7;border-color:#DFD2BF}
+.foto figcaption{
+  font-size:.85rem;color:var(--cinza);padding:12px 16px;width:100%;
+  background:rgba(255,252,248,.88);
 }
-.pillar:hover{transform:translateY(-6px)}
-.pillar h3{font-size:1.3rem;margin:16px 0 10px}
-.pillar p{color:#48567e;font-size:.98rem}
-.piece{width:52px;height:52px}
+.foto.baixa{aspect-ratio:16/10}
 
-/* ===== PROGRAMAS ===== */
-.prog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:46px}
-.prog{
-  position:relative;background:#fff;border:1.5px solid #e6ebf6;border-radius:var(--radius);
-  padding:34px 28px 30px;overflow:hidden;transition:transform .2s,box-shadow .2s;
+/* ===== POR QUE ABNER ===== */
+.abner-destaque{
+  margin-top:26px;display:inline-flex;align-items:center;gap:12px;
+  font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:1.25rem;
+  color:var(--terra);
 }
-.prog:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:transparent}
-.prog::before{content:"";position:absolute;inset:0 0 auto 0;height:6px;background:var(--c)}
-.prog .tag{display:inline-block;font-size:.72rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;
-  color:var(--c);background:color-mix(in srgb,var(--c) 12%,#fff);padding:5px 12px;border-radius:999px;margin-bottom:14px}
-.prog h3{font-size:1.25rem;margin-bottom:10px}
-.prog p{color:#48567e;font-size:.97rem}
-.prog .corner{position:absolute;right:-14px;bottom:-14px;width:84px;height:84px;opacity:.14}
+.simbolo-bloco{display:flex;justify-content:center}
+.simbolo-bloco img{width:min(320px,80%)}
 
-/* ===== IMPACTO ===== */
-.impact{background:var(--navy);color:#fff;position:relative}
-.impact .eyebrow{color:#cdd9f5}
-.impact h2{color:#fff}
-.impact-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:50px}
-.stat{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);
-  border-radius:var(--radius);padding:30px 22px;text-align:center}
-.stat b{display:block;font-family:'Fraunces',serif;font-size:2.6rem;font-weight:700;color:var(--c)}
-.stat span{font-size:.92rem;color:#d7e0f5}
-
-/* ===== AJUDAR ===== */
-.help-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:46px}
-.help{
-  border-radius:var(--radius);padding:36px 30px;color:#fff;background:var(--c);
-  display:flex;flex-direction:column;gap:12px;box-shadow:var(--shadow);
-  transition:transform .2s;
+/* ===== QUEM AJUDAMOS ===== */
+.ajudamos-cabeca{max-width:520px;margin-bottom:54px}
+.cards-gente{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.card-gente{
+  background:#fff;border:1px solid #EDE4D8;border-radius:14px;padding:30px 26px;
 }
-.help:hover{transform:translateY(-6px)}
-.help h3{color:#fff;font-size:1.35rem}
-.help p{color:rgba(255,255,255,.92);font-size:.97rem;flex:1}
-.help a{align-self:flex-start;background:#fff;color:var(--ink);padding:10px 22px;border-radius:999px;font-weight:800;font-size:.9rem}
+.card-gente:nth-child(even){transform:translateY(22px)}
+.card-gente svg{width:40px;height:40px;margin-bottom:18px}
+.card-gente h3{font-size:1.25rem;margin-bottom:8px}
+.card-gente p{font-size:.96rem;color:var(--cinza)}
 
-/* ===== DEPOIMENTOS ===== */
-.quotes{background:var(--mist)}
-.quote-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:46px}
-.quote{background:#fff;border-radius:var(--radius);padding:32px 28px;box-shadow:var(--shadow);position:relative}
-.quote::before{content:"“";font-family:'Fraunces',serif;font-size:4rem;color:var(--c);line-height:1;display:block;margin-bottom:6px}
-.quote p{color:#3c4a70;font-style:italic}
-.quote footer{margin-top:18px;font-weight:800;color:var(--navy);font-size:.92rem}
-.quote footer small{display:block;font-weight:600;color:#7482a8}
-
-/* ===== CONTATO ===== */
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;margin-top:44px}
-.contact-list{display:flex;flex-direction:column;gap:20px}
-.contact-item{display:flex;gap:16px;align-items:flex-start}
-.contact-item .ic{width:46px;height:46px;flex:none;border-radius:14px;display:grid;place-items:center;background:var(--c);color:#fff;font-size:1.2rem}
-.contact-item b{display:block;color:var(--navy)}
-.contact-item span{color:#48567e;font-size:.95rem}
-form{background:#fff;border:1.5px solid #e6ebf6;border-radius:var(--radius);padding:34px;box-shadow:var(--shadow)}
-form label{font-weight:800;font-size:.85rem;color:var(--navy);display:block;margin:16px 0 6px}
-form label:first-child{margin-top:0}
-form input,form textarea{
-  width:100%;padding:13px 16px;border:1.5px solid #dde4f2;border-radius:12px;
-  font-family:inherit;font-size:.98rem;color:var(--ink);background:#fbfcff;
+/* ===== O QUE FAZEMOS ===== */
+.fazemos-grid{display:grid;grid-template-columns:5fr 7fr;gap:72px;align-items:start}
+.fazemos-lista{display:flex;flex-direction:column}
+.fazemos-item{
+  display:flex;gap:20px;padding:26px 0;border-top:1px solid #E8DDCE;
 }
-form input:focus,form textarea:focus{outline:none;border-color:var(--sky);box-shadow:0 0 0 3px rgba(41,171,226,.18)}
-form button{margin-top:22px;width:100%}
-.form-ok{display:none;margin-top:16px;background:#e8f8ec;border:1.5px solid var(--green);color:#1e7a33;padding:12px 16px;border-radius:12px;font-weight:700;font-size:.93rem}
+.fazemos-item:last-child{border-bottom:1px solid #E8DDCE}
+.fazemos-item .peca{margin-top:6px}
+.fazemos-item h3{font-size:1.15rem;margin-bottom:4px}
+.fazemos-item p{font-size:.96rem;color:var(--cinza)}
 
-/* ===== FOOTER ===== */
-footer.site{background:var(--ink);color:#c8d3ee;padding:56px 0 30px}
-.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px}
-footer.site h4{color:#fff;font-family:'Fraunces',serif;margin-bottom:14px}
-footer.site a{display:block;padding:4px 0;color:#c8d3ee;font-size:.95rem}
-footer.site a:hover{color:var(--yellow)}
-.foot-bottom{margin-top:44px;padding-top:22px;border-top:1px solid rgba(255,255,255,.14);
-  display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:.85rem;color:#93a3cd}
-.rainbow-line{height:6px;background:linear-gradient(90deg,var(--red),var(--orange),var(--yellow),var(--green),var(--sky),var(--magenta))}
+/* ===== COMO FUNCIONA ===== */
+.passos{margin-top:56px;display:flex;flex-direction:column;max-width:640px}
+.passo{display:flex;gap:28px;position:relative;padding-bottom:44px}
+.passo:last-child{padding-bottom:0}
+.passo::before{
+  content:"";position:absolute;left:23px;top:52px;bottom:8px;width:2px;
+  background:#DFD2BF;
+}
+.passo:last-child::before{display:none}
+.passo-num{
+  flex:none;width:48px;height:48px;border-radius:50%;
+  display:grid;place-items:center;
+  font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:1.15rem;
+  color:#fff;background:var(--pc,var(--terra));
+}
+.passo h3{font-size:1.2rem;margin:8px 0 4px}
+.passo p{color:var(--cinza);font-size:.98rem}
 
-/* reveal on scroll */
-.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
-.reveal.in{opacity:1;transform:none}
+/* ===== VALORES ===== */
+.valores{background:var(--terra);color:#fff;padding:110px 0}
+.valores .rotulo{color:#F6D9CE}
+.valores h2{color:#fff;max-width:420px}
+.lista-valores{margin-top:58px;display:flex;flex-direction:column}
+.valor{
+  display:flex;align-items:baseline;gap:26px;flex-wrap:wrap;
+  padding:22px 0;border-top:1px solid rgba(255,255,255,.25);
+}
+.valor:last-child{border-bottom:1px solid rgba(255,255,255,.25)}
+.valor b{
+  font-family:'Bricolage Grotesque',sans-serif;font-weight:800;
+  font-size:clamp(1.8rem,4.2vw,2.9rem);line-height:1;flex:none;min-width:7.5em;
+}
+.valor span{color:#F9E4DB;font-size:1.05rem}
+.valor .peca{align-self:center}
+
+/* ===== COMO AJUDAR ===== */
+.ajudar-cabeca{max-width:560px;margin-bottom:54px}
+.paineis{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.painel{
+  border-radius:14px;padding:36px 30px;display:flex;flex-direction:column;gap:14px;
+  background:var(--areia);
+}
+.painel:nth-child(1){background:#F9EFDC}
+.painel:nth-child(2){background:#EAF2EA}
+.painel:nth-child(3){background:#EAF1F4}
+.painel h3{font-size:1.35rem}
+.painel p{flex:1;font-size:.98rem;color:var(--cinza)}
+.painel .botao{align-self:flex-start}
+.painel:nth-child(2) .botao{background:var(--verde)}
+.painel:nth-child(2) .botao:hover{background:#4A8551}
+.painel:nth-child(3) .botao{background:var(--ceu)}
+.painel:nth-child(3) .botao:hover{background:#3F7A91}
+
+/* ===== CHAMADA FINAL ===== */
+.chamada{background:var(--areia);text-align:left}
+.chamada .wrap{display:grid;grid-template-columns:7fr 4fr;gap:60px;align-items:center}
+.chamada h2{font-size:clamp(2rem,4.2vw,3.1rem);max-width:15em}
+.chamada .botao{font-size:1.05rem;padding:15px 32px}
+
+/* ===== RODAPÉ ===== */
+footer{background:#2A211B;color:#D9CFC5;padding:70px 0 36px}
+.rodape-grid{display:grid;grid-template-columns:6fr 3fr 3fr;gap:48px;align-items:start}
+footer h4{font-family:'Bricolage Grotesque',sans-serif;color:#fff;font-size:1.05rem;margin-bottom:14px}
+footer p,footer a{font-size:.96rem;color:#D9CFC5}
+footer a{display:block;text-decoration:none;padding:3px 0}
+footer a:hover{color:var(--amarelo)}
+.zap{
+  display:inline-flex;align-items:center;gap:10px;background:var(--verde);color:#fff;
+  text-decoration:none;font-weight:700;padding:12px 24px;border-radius:10px;margin-top:14px;
+}
+.zap:hover{background:#4A8551;color:#fff}
+.zap svg{width:20px;height:20px}
+.rodape-fim{
+  margin-top:52px;padding-top:22px;border-top:1px solid rgba(255,255,255,.14);
+  font-size:.85rem;color:#A79A8D;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
+}
+
+/* aparição suave */
+.surge{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+.surge.visivel{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){
-  .reveal{opacity:1;transform:none;transition:none}
-  .puzzle-float{animation:none}
+  .surge{opacity:1;transform:none;transition:none}
   html{scroll-behavior:auto}
 }
 
 /* ===== RESPONSIVO ===== */
-@media (max-width:980px){
-  .hero-grid{grid-template-columns:1fr;text-align:center}
-  .hero .lead{margin:0 auto}
-  .hero-cta,.hero-note{justify-content:center}
-  .hero-figure{order:-1}
-  .hero-figure img{width:min(320px,70%)}
-  .pillar-grid,.prog-grid,.help-grid,.quote-grid{grid-template-columns:1fr 1fr}
-  .impact-grid{grid-template-columns:1fr 1fr}
-  .contact-grid,.foot-grid{grid-template-columns:1fr}
+@media (max-width:920px){
+  .hero{padding:140px 0 80px}
+  .hero-grid{grid-template-columns:1fr;gap:44px}
+  .hero-figura img{margin:0 auto;width:min(280px,70%)}
+  .duas-colunas,.duas-colunas.invertida{grid-template-columns:1fr;gap:40px}
+  .duas-colunas.invertida .texto{order:1}
+  .duas-colunas.invertida .midia{order:2}
+  .fazemos-grid{grid-template-columns:1fr;gap:40px}
+  .cards-gente{grid-template-columns:1fr 1fr}
+  .card-gente:nth-child(even){transform:none}
+  .paineis{grid-template-columns:1fr}
+  .chamada .wrap{grid-template-columns:1fr}
+  .rodape-grid{grid-template-columns:1fr;gap:32px}
+  .valor b{min-width:0}
 }
 @media (max-width:640px){
-  section{padding:64px 0}
-  .pillar-grid,.prog-grid,.help-grid,.quote-grid{grid-template-columns:1fr}
+  section{padding:70px 0}
+  .cards-gente{grid-template-columns:1fr}
   .nav-links{
-    display:none;position:absolute;top:74px;left:0;right:0;background:#fff;
-    flex-direction:column;gap:0;padding:12px 24px 20px;border-bottom:1px solid #e7ecf5;box-shadow:var(--shadow);
+    display:none;position:absolute;top:72px;left:0;right:0;
+    background:var(--papel);flex-direction:column;gap:0;
+    padding:10px 28px 22px;border-bottom:1px solid #EDE4D8;
   }
-  .nav-links.open{display:flex}
-  .nav-links a{padding:12px 0;border-bottom:1px solid #f0f3fa}
-  .menu-toggle{display:block}
-  .nav .btn{display:none}
+  .nav-links.aberto{display:flex}
+  .nav-links a{padding:12px 0}
+  .nav .botao{display:none}
+  .menu-btn{display:block}
 }
 </style>
 </head>
@@ -221,348 +252,352 @@ footer.site a:hover{color:var(--yellow)}
 
 <header>
   <div class="wrap nav">
-    <a class="brand" href="#inicio">
-      <img src="assets/logo-abner.webp" alt="Logo da ABNER">
+    <a class="marca" href="#inicio">
+      <img src="assets/logo-abner.webp" alt="Símbolo do ABNER: a letra A acolhida por uma mão de peças de quebra-cabeça coloridas">
       ABNER
     </a>
     <nav class="nav-links" id="navLinks" aria-label="Navegação principal">
-      <a href="#sobre">Quem somos</a>
-      <a href="#programas">Programas</a>
-      <a href="#impacto">Impacto</a>
+      <a href="#inicio">Início</a>
+      <a href="#historia">História</a>
       <a href="#ajudar">Como ajudar</a>
       <a href="#contato">Contato</a>
     </nav>
-    <a class="btn btn-warm" href="#ajudar">Quero doar</a>
-    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
+    <a class="botao" href="#ajudar">Quero ajudar</a>
+    <button class="menu-btn" id="menuBtn" aria-label="Abrir menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </header>
 
 <main id="inicio">
 
-<!-- HERO -->
+<!-- 1. HERO -->
 <section class="hero">
   <div class="wrap hero-grid">
-    <div class="reveal">
-      <span class="eyebrow">Instituição de apoio ao próximo</span>
-      <h1>Servir <span class="grad">transforma</span> vidas.</h1>
-      <p class="lead">
-        A ABNER acolhe famílias, apoia pessoas autistas e neurodivergentes e leva
-        cuidado a quem mais precisa. Cada peça importa — e a sua pode ser a que faltava.
-      </p>
-      <div class="hero-cta">
-        <a class="btn btn-primary" href="#ajudar">Fazer parte agora</a>
-        <a class="btn btn-ghost" href="#programas">Conhecer os programas</a>
+    <div class="surge">
+      <span class="rotulo">ABNER Projeto Social</span>
+      <h1>Servir <em>transforma</em> vidas.</h1>
+      <p class="apoio">Cada peça importa. Cada pessoa importa.</p>
+      <div class="hero-acoes">
+        <a class="botao" href="#ajudar">Quero ajudar</a>
+        <a class="botao botao-claro" href="#historia">Conheça nossa história</a>
       </div>
-      <p class="hero-note">
-        <span class="dots" aria-hidden="true">
-          <span style="background:var(--red)"></span>
-          <span style="background:var(--orange)"></span>
-          <span style="background:var(--green)"></span>
-          <span style="background:var(--sky)"></span>
-        </span>
-        Centenas de voluntários já fazem parte dessa história
+    </div>
+    <div class="hero-figura surge">
+      <svg class="peca-solta" style="top:-8%;left:2%" width="34" height="34" viewBox="0 0 100 100" aria-hidden="true">
+        <path fill="var(--amarelo)" d="M20 20h22c-6-14 22-14 16 0h22v22c14-6 14 22 0 16v22H58c6 14-22 14-16 0H20V58c-14 6-14-22 0-16z"/>
+      </svg>
+      <svg class="peca-solta" style="bottom:0;right:6%" width="26" height="26" viewBox="0 0 100 100" aria-hidden="true">
+        <path fill="var(--ceu)" d="M20 20h22c-6-14 22-14 16 0h22v22c14-6 14 22 0 16v22H58c6 14-22 14-16 0H20V58c-14 6-14-22 0-16z"/>
+      </svg>
+      <img src="assets/logo-abner.webp" alt="Logo do ABNER Projeto Social: mão formada por peças de quebra-cabeça coloridas segurando a letra A">
+    </div>
+  </div>
+</section>
+
+<!-- 2. NOSSA HISTÓRIA -->
+<section class="secao-areia" id="historia">
+  <div class="wrap duas-colunas">
+    <div class="texto surge">
+      <span class="rotulo">Nossa história</span>
+      <h2>Começou com um coração generoso</h2>
+      <p>
+        Tudo começou com o coração generoso de uma empresária que, há anos, dedica
+        parte da sua vida a ajudar quem mais precisa. Cestas básicas entregues a
+        famílias, apoio constante a igrejas e casas de apoio: a solidariedade sempre
+        fez parte da rotina dela.
+      </p>
+      <p style="margin-top:16px">
+        Agora, esse amor ganha nome, identidade e ainda mais força:
+        nasce o <strong>ABNER Projeto Social</strong>.
       </p>
     </div>
-    <div class="hero-figure reveal">
-      <svg class="puzzle-float" style="top:6%;left:4%" width="64" height="64" viewBox="0 0 100 100" aria-hidden="true">
-        <path fill="var(--yellow)" d="M20 20h22c-6-14 22-14 16 0h22v22c14-6 14 22 0 16v22H58c6 14-22 14-16 0H20V58c-14 6-14-22 0-16z"/>
-      </svg>
-      <svg class="puzzle-float" style="bottom:10%;right:2%" width="78" height="78" viewBox="0 0 100 100" aria-hidden="true">
-        <path fill="var(--sky)" d="M20 20h22c-6-14 22-14 16 0h22v22c14-6 14 22 0 16v22H58c6 14-22 14-16 0H20V58c-14 6-14-22 0-16z"/>
-      </svg>
-      <svg class="puzzle-float" style="top:46%;right:-4%" width="46" height="46" viewBox="0 0 100 100" aria-hidden="true">
-        <path fill="var(--magenta)" d="M20 20h22c-6-14 22-14 16 0h22v22c14-6 14 22 0 16v22H58c6 14-22 14-16 0H20V58c-14 6-14-22 0-16z"/>
-      </svg>
-      <img src="assets/logo-abner.webp" alt="Mãos formando um coração com peças de quebra-cabeça coloridas — logo da ABNER">
-    </div>
+    <figure class="foto midia surge">
+      <figcaption>espaço para foto real: entrega de cestas básicas</figcaption>
+    </figure>
   </div>
 </section>
 
-<!-- SOBRE / PILARES -->
-<section class="pillars" id="sobre">
-  <div class="wrap">
-    <div class="reveal">
-      <span class="eyebrow">Quem somos</span>
-      <h2>Uma rede de mãos que se encaixam</h2>
-      <p class="lead" style="margin-top:14px">
-        Nascemos da certeza de que ninguém transforma o mundo sozinho. Como num
-        quebra-cabeça, cada pessoa acolhida, cada voluntário e cada doador é uma
-        peça única — e juntas elas formam algo completo.
+<!-- 3. POR QUE ABNER -->
+<section>
+  <div class="wrap duas-colunas invertida">
+    <div class="texto surge">
+      <span class="rotulo">Por que "Abner"?</span>
+      <h2>Um nome que ensina amor todos os dias</h2>
+      <p>
+        O nome do projeto é uma homenagem ao Abner, filho da fundadora, um menino
+        autista que ensina, todos os dias, que o amor fala todas as línguas.
       </p>
+      <p style="margin-top:16px">
+        Por isso, nosso símbolo é a letra A acolhida por uma mão de quebra-cabeça
+        colorido: a mão que serve e cuida, e cada peça representando uma pessoa.
+      </p>
+      <span class="abner-destaque">
+        <svg class="peca" viewBox="0 0 100 100" aria-hidden="true"><path fill="var(--terra)" d="M20 20h22c-6-14 22-14 16 0h22v22c14-6 14 22 0 16v22H58c6 14-22 14-16 0H20V58c-14 6-14-22 0-16z"/></svg>
+        Inclusão em primeiro lugar.
+      </span>
     </div>
-    <div class="pillar-grid">
-      <article class="pillar reveal" style="--c:var(--red)">
-        <svg class="piece" viewBox="0 0 100 100" aria-hidden="true"><path fill="var(--red)" d="M20 20h22c-6-14 22-14 16 0h22v22c14-6 14 22 0 16v22H58c6 14-22 14-16 0H20V58c-14 6-14-22 0-16z"/></svg>
-        <h3>Acolher</h3>
-        <p>Recebemos cada família com escuta, respeito e sem julgamentos. Aqui, toda história tem lugar e toda pessoa tem valor.</p>
-      </article>
-      <article class="pillar reveal" style="--c:var(--green)">
-        <svg class="piece" viewBox="0 0 100 100" aria-hidden="true"><path fill="var(--green)" d="M20 20h22c-6-14 22-14 16 0h22v22c14-6 14 22 0 16v22H58c6 14-22 14-16 0H20V58c-14 6-14-22 0-16z"/></svg>
-        <h3>Incluir</h3>
-        <p>Trabalhamos pela inclusão real de pessoas autistas e neurodivergentes — na escola, na comunidade e no mercado de trabalho.</p>
-      </article>
-      <article class="pillar reveal" style="--c:var(--sky)">
-        <svg class="piece" viewBox="0 0 100 100" aria-hidden="true"><path fill="var(--sky)" d="M20 20h22c-6-14 22-14 16 0h22v22c14-6 14 22 0 16v22H58c6 14-22 14-16 0H20V58c-14 6-14-22 0-16z"/></svg>
-        <h3>Transformar</h3>
-        <p>Do alimento na mesa ao acompanhamento contínuo, agimos para que o cuidado de hoje se torne autonomia amanhã.</p>
-      </article>
+    <div class="simbolo-bloco midia surge">
+      <img src="assets/logo-abner.webp" alt="Símbolo do ABNER em destaque: mão de peças coloridas acolhendo a letra A">
     </div>
   </div>
 </section>
 
-<!-- PROGRAMAS -->
-<section id="programas">
+<!-- 4. QUEM AJUDAMOS -->
+<section class="secao-areia">
   <div class="wrap">
-    <div class="reveal">
-      <span class="eyebrow">Programas</span>
-      <h2>Onde o serviço acontece</h2>
-      <p class="lead" style="margin-top:14px">Frentes de atuação pensadas para atender necessidades reais, com constância e carinho.</p>
+    <div class="ajudamos-cabeca surge">
+      <span class="rotulo">Quem ajudamos</span>
+      <h2>Gente de todas as idades, e também quem não fala</h2>
     </div>
-    <div class="prog-grid">
-      <article class="prog reveal" style="--c:var(--sky)">
-        <span class="tag">Inclusão</span>
-        <h3>Apoio ao autista e à família</h3>
-        <p>Orientação, grupos de apoio a pais e cuidadores, atividades sensoriais e encaminhamento para atendimento especializado.</p>
-        <svg class="corner" viewBox="0 0 100 100" aria-hidden="true"><path fill="var(--sky)" d="M20 20h22c-6-14 22-14 16 0h22v22c14-6 14 22 0 16v22H58c6 14-22 14-16 0H20V58c-14 6-14-22 0-16z"/></svg>
+    <div class="cards-gente">
+      <article class="card-gente surge">
+        <svg viewBox="0 0 48 48" fill="none" stroke="var(--amarelo)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M24 6 L36 20 L24 34 L12 20 Z"/><path d="M24 34 C22 40 26 42 23 45"/><path d="M18 14l12 12M30 14L18 26"/>
+        </svg>
+        <h3>Crianças</h3>
+        <p>Alimentação, carinho e apoio para quem está começando a vida.</p>
       </article>
-      <article class="prog reveal" style="--c:var(--orange)">
-        <span class="tag">Alimentação</span>
-        <h3>Cestas solidárias</h3>
-        <p>Distribuição mensal de cestas básicas e refeições para famílias em situação de vulnerabilidade na nossa comunidade.</p>
-        <svg class="corner" viewBox="0 0 100 100" aria-hidden="true"><path fill="var(--orange)" d="M20 20h22c-6-14 22-14 16 0h22v22c14-6 14 22 0 16v22H58c6 14-22 14-16 0H20V58c-14 6-14-22 0-16z"/></svg>
+      <article class="card-gente surge">
+        <svg viewBox="0 0 48 48" fill="none" stroke="var(--magenta)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M10 26c0-4 3-7 8-7h8c5 0 8 3 8 7v4H10z"/><path d="M13 30v8M35 30v8"/><path d="M18 19v-3a6 6 0 0 1 12 0v3"/>
+        </svg>
+        <h3>Idosos</h3>
+        <p>Cuidado e companhia para quem já cuidou tanto de nós.</p>
       </article>
-      <article class="prog reveal" style="--c:var(--green)">
-        <span class="tag">Educação</span>
-        <h3>Reforço e oficinas</h3>
-        <p>Reforço escolar, oficinas de arte, música e leitura para crianças e adolescentes — porque aprender também é acolher.</p>
-        <svg class="corner" viewBox="0 0 100 100" aria-hidden="true"><path fill="var(--green)" d="M20 20h22c-6-14 22-14 16 0h22v22c14-6 14 22 0 16v22H58c6 14-22 14-16 0H20V58c-14 6-14-22 0-16z"/></svg>
+      <article class="card-gente surge">
+        <svg viewBox="0 0 48 48" fill="none" stroke="var(--verde)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="14" cy="18" r="3.4"/><circle cx="24" cy="14" r="3.4"/><circle cx="34" cy="18" r="3.4"/>
+          <path d="M16 32c0-5 4-9 8-9s8 4 8 9c0 3-2 5-5 5-1.6 0-2.4-.8-3-.8s-1.4.8-3 .8c-3 0-5-2-5-5z"/>
+        </svg>
+        <h3>Animais</h3>
+        <p>Ração, proteção e amor também para os que não falam.</p>
       </article>
-      <article class="prog reveal" style="--c:var(--magenta)">
-        <span class="tag">Saúde</span>
-        <h3>Cuidado e bem-estar</h3>
-        <p>Mutirões de saúde, rodas de conversa sobre saúde mental e apoio psicológico em parceria com profissionais voluntários.</p>
-        <svg class="corner" viewBox="0 0 100 100" aria-hidden="true"><path fill="var(--magenta)" d="M20 20h22c-6-14 22-14 16 0h22v22c14-6 14 22 0 16v22H58c6 14-22 14-16 0H20V58c-14 6-14-22 0-16z"/></svg>
-      </article>
-      <article class="prog reveal" style="--c:var(--red)">
-        <span class="tag">Emergência</span>
-        <h3>Ação social imediata</h3>
-        <p>Roupas, cobertores, itens de higiene e resposta rápida para famílias atingidas por crises e situações inesperadas.</p>
-        <svg class="corner" viewBox="0 0 100 100" aria-hidden="true"><path fill="var(--red)" d="M20 20h22c-6-14 22-14 16 0h22v22c14-6 14 22 0 16v22H58c6 14-22 14-16 0H20V58c-14 6-14-22 0-16z"/></svg>
-      </article>
-      <article class="prog reveal" style="--c:var(--yellow)">
-        <span class="tag">Comunidade</span>
-        <h3>Formação de voluntários</h3>
-        <p>Capacitação contínua para quem deseja servir: acolhimento, noções de inclusão e organização de ações sociais.</p>
-        <svg class="corner" viewBox="0 0 100 100" aria-hidden="true"><path fill="var(--yellow)" d="M20 20h22c-6-14 22-14 16 0h22v22c14-6 14 22 0 16v22H58c6 14-22 14-16 0H20V58c-14 6-14-22 0-16z"/></svg>
+      <article class="card-gente surge">
+        <svg viewBox="0 0 48 48" fill="none" stroke="var(--ceu)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M8 24 24 10l16 14"/><path d="M12 22v16h24V22"/><path d="M21 38v-9h6v9"/>
+        </svg>
+        <h3>Famílias</h3>
+        <p>Cestas básicas e apoio para lares em situação de vulnerabilidade.</p>
       </article>
     </div>
   </div>
 </section>
 
-<!-- IMPACTO -->
-<section class="impact" id="impacto">
+<!-- 5. O QUE FAZEMOS -->
+<section>
+  <div class="wrap fazemos-grid">
+    <div class="surge">
+      <span class="rotulo">O que fazemos</span>
+      <h2>Ações simples que mudam o dia, e a vida, de muita gente</h2>
+      <figure class="foto baixa" style="margin-top:36px">
+        <figcaption>espaço para foto real: voluntários montando as cestas</figcaption>
+      </figure>
+    </div>
+    <div class="fazemos-lista surge">
+      <div class="fazemos-item">
+        <svg class="peca" viewBox="0 0 100 100" aria-hidden="true"><path fill="var(--terra)" d="M20 20h22c-6-14 22-14 16 0h22v22c14-6 14 22 0 16v22H58c6 14-22 14-16 0H20V58c-14 6-14-22 0-16z"/></svg>
+        <div>
+          <h3>Alimentação</h3>
+          <p>Cestas básicas e alimentos para famílias, crianças e idosos.</p>
+        </div>
+      </div>
+      <div class="fazemos-item">
+        <svg class="peca" viewBox="0 0 100 100" aria-hidden="true"><path fill="var(--amarelo)" d="M20 20h22c-6-14 22-14 16 0h22v22c14-6 14 22 0 16v22H58c6 14-22 14-16 0H20V58c-14 6-14-22 0-16z"/></svg>
+        <div>
+          <h3>Apoio a igrejas</h3>
+          <p>Parceria com igrejas que conhecem as necessidades da comunidade.</p>
+        </div>
+      </div>
+      <div class="fazemos-item">
+        <svg class="peca" viewBox="0 0 100 100" aria-hidden="true"><path fill="var(--ceu)" d="M20 20h22c-6-14 22-14 16 0h22v22c14-6 14 22 0 16v22H58c6 14-22 14-16 0H20V58c-14 6-14-22 0-16z"/></svg>
+        <div>
+          <h3>Casas de apoio</h3>
+          <p>Suporte a lares que acolhem pessoas em momentos difíceis.</p>
+        </div>
+      </div>
+      <div class="fazemos-item">
+        <svg class="peca" viewBox="0 0 100 100" aria-hidden="true"><path fill="var(--verde)" d="M20 20h22c-6-14 22-14 16 0h22v22c14-6 14 22 0 16v22H58c6 14-22 14-16 0H20V58c-14 6-14-22 0-16z"/></svg>
+        <div>
+          <h3>Causa animal</h3>
+          <p>Ração e cuidado para animais abandonados e resgatados.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 6. COMO FUNCIONA -->
+<section class="secao-areia">
   <div class="wrap">
-    <div class="reveal">
-      <span class="eyebrow">Nosso impacto</span>
-      <h2>Peça por peça, a diferença aparece</h2>
+    <div class="surge" style="max-width:520px">
+      <span class="rotulo">Como funciona</span>
+      <h2>Do gesto de quem doa até a mesa de quem recebe</h2>
     </div>
-    <div class="impact-grid">
-      <div class="stat reveal" style="--c:var(--yellow)"><b data-count="1200">0</b><span>famílias acompanhadas</span></div>
-      <div class="stat reveal" style="--c:var(--sky)"><b data-count="350">0</b><span>voluntários ativos</span></div>
-      <div class="stat reveal" style="--c:var(--green)"><b data-count="8500">0</b><span>cestas básicas entregues</span></div>
-      <div class="stat reveal" style="--c:var(--magenta)"><b data-count="10">0</b><span>anos de serviço</span></div>
+    <div class="passos">
+      <div class="passo surge" style="--pc:var(--terra)">
+        <span class="passo-num" aria-hidden="true">1</span>
+        <div>
+          <h3>Arrecadação</h3>
+          <p>Doações de alimentos, ração e recursos de pessoas e empresas parceiras.</p>
+        </div>
+      </div>
+      <div class="passo surge" style="--pc:var(--amarelo)">
+        <span class="passo-num" aria-hidden="true">2</span>
+        <div>
+          <h3>Montagem</h3>
+          <p>As cestas e kits são montados com carinho, pensando em cada família.</p>
+        </div>
+      </div>
+      <div class="passo surge" style="--pc:var(--verde)">
+        <span class="passo-num" aria-hidden="true">3</span>
+        <div>
+          <h3>Entrega</h3>
+          <p>Levamos tudo até famílias, igrejas, casas de apoio e abrigos.</p>
+        </div>
+      </div>
+      <div class="passo surge" style="--pc:var(--ceu)">
+        <span class="passo-num" aria-hidden="true">4</span>
+        <div>
+          <h3>Acompanhamento</h3>
+          <p>Mantemos o vínculo com quem recebe, porque cuidar é contínuo.</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- COMO AJUDAR -->
+<!-- 7. NOSSOS VALORES -->
+<section class="valores">
+  <div class="wrap">
+    <div class="surge">
+      <span class="rotulo">Nossos valores</span>
+      <h2>Cinco palavras que resumem o coração do ABNER</h2>
+    </div>
+    <div class="lista-valores surge">
+      <div class="valor">
+        <svg class="peca" viewBox="0 0 100 100" aria-hidden="true"><path fill="var(--amarelo)" d="M20 20h22c-6-14 22-14 16 0h22v22c14-6 14 22 0 16v22H58c6 14-22 14-16 0H20V58c-14 6-14-22 0-16z"/></svg>
+        <b>Amor</b><span>O motor de tudo o que fazemos.</span>
+      </div>
+      <div class="valor">
+        <svg class="peca" viewBox="0 0 100 100" aria-hidden="true"><path fill="#F6D9CE" d="M20 20h22c-6-14 22-14 16 0h22v22c14-6 14 22 0 16v22H58c6 14-22 14-16 0H20V58c-14 6-14-22 0-16z"/></svg>
+        <b>Acolhimento</b><span>Receber cada pessoa de braços abertos.</span>
+      </div>
+      <div class="valor">
+        <svg class="peca" viewBox="0 0 100 100" aria-hidden="true"><path fill="var(--amarelo)" d="M20 20h22c-6-14 22-14 16 0h22v22c14-6 14 22 0 16v22H58c6 14-22 14-16 0H20V58c-14 6-14-22 0-16z"/></svg>
+        <b>Pessoas</b><span>Gente cuidando de gente, sempre.</span>
+      </div>
+      <div class="valor">
+        <svg class="peca" viewBox="0 0 100 100" aria-hidden="true"><path fill="#F6D9CE" d="M20 20h22c-6-14 22-14 16 0h22v22c14-6 14 22 0 16v22H58c6 14-22 14-16 0H20V58c-14 6-14-22 0-16z"/></svg>
+        <b>Animais</b><span>Compaixão por todas as vidas.</span>
+      </div>
+      <div class="valor">
+        <svg class="peca" viewBox="0 0 100 100" aria-hidden="true"><path fill="var(--amarelo)" d="M20 20h22c-6-14 22-14 16 0h22v22c14-6 14 22 0 16v22H58c6 14-22 14-16 0H20V58c-14 6-14-22 0-16z"/></svg>
+        <b>Solidariedade</b><span>Dividir é a nossa forma de somar.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 8. COMO VOCÊ PODE AJUDAR -->
 <section id="ajudar">
   <div class="wrap">
-    <div class="reveal">
-      <span class="eyebrow">Como ajudar</span>
-      <h2>Escolha a sua peça</h2>
-      <p class="lead" style="margin-top:14px">Há muitas formas de servir. Todas cabem no quebra-cabeça.</p>
+    <div class="ajudar-cabeca surge">
+      <span class="rotulo">Como você pode ajudar</span>
+      <h2>Toda ajuda cabe: grande ou pequena, ela sempre chega a alguém</h2>
     </div>
-    <div class="help-grid">
-      <article class="help reveal" style="--c:var(--navy)">
+    <div class="paineis">
+      <article class="painel surge">
         <h3>Doe</h3>
-        <p>Qualquer valor mantém nossos programas funcionando. Doações via Pix, transferência ou itens como alimentos, roupas e brinquedos.</p>
-        <a href="#contato">Quero doar</a>
+        <p>Alimentos não perecíveis, ração, produtos de higiene ou qualquer valor. Tudo vira cuidado.</p>
+        <a class="botao" href="#contato">Quero doar</a>
       </article>
-      <article class="help reveal" style="--c:var(--green)">
+      <article class="painel surge">
         <h3>Seja voluntário</h3>
-        <p>Doe seu tempo e talento: apoio nas ações, oficinas, transporte, comunicação ou o que você souber fazer bem.</p>
-        <a href="#contato">Quero servir</a>
+        <p>Ajude na montagem das cestas e nas entregas. Seu tempo vale ouro.</p>
+        <a class="botao" href="#contato">Quero ser voluntário</a>
       </article>
-      <article class="help reveal" style="--c:var(--magenta)">
-        <h3>Seja parceiro</h3>
-        <p>Empresas, igrejas e escolas podem apoiar com recursos, espaço e campanhas. Vamos construir algo maior juntos.</p>
-        <a href="#contato">Quero apoiar</a>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- DEPOIMENTOS -->
-<section class="quotes">
-  <div class="wrap">
-    <div class="reveal">
-      <span class="eyebrow">Histórias reais</span>
-      <h2>Vidas que se transformaram</h2>
-    </div>
-    <div class="quote-grid">
-      <article class="quote reveal" style="--c:var(--orange)">
-        <p>Quando meu filho foi diagnosticado, eu me senti perdida. Na ABNER encontrei orientação, outras mães e, principalmente, esperança.</p>
-        <footer>Mariana S.<small>mãe atendida pelo programa de inclusão</small></footer>
-      </article>
-      <article class="quote reveal" style="--c:var(--green)">
-        <p>Comecei ajudando a montar cestas num sábado. Três anos depois, o voluntariado virou parte de quem eu sou.</p>
-        <footer>Carlos E.<small>voluntário</small></footer>
-      </article>
-      <article class="quote reveal" style="--c:var(--sky)">
-        <p>O reforço escolar mudou as notas — e a autoestima — da minha filha. Ela hoje sonha em ser professora.</p>
-        <footer>Rosana L.<small>mãe de aluna das oficinas</small></footer>
+      <article class="painel surge">
+        <h3>Divulgue</h3>
+        <p>Compartilhe o projeto com amigos, família e nas redes sociais.</p>
+        <a class="botao" href="https://instagram.com/abnerprojetosocial" target="_blank" rel="noopener">Seguir no Instagram</a>
       </article>
     </div>
   </div>
 </section>
 
-<!-- CONTATO -->
-<section id="contato">
+<!-- 9. CHAMADA FINAL -->
+<section class="chamada">
   <div class="wrap">
-    <div class="reveal">
-      <span class="eyebrow">Contato</span>
-      <h2>Vamos conversar?</h2>
-      <p class="lead" style="margin-top:14px">Tire dúvidas, agende uma visita ou diga como quer participar.</p>
+    <div class="surge">
+      <h2>Cada peça desse quebra-cabeça é uma pessoa como você.</h2>
+      <p style="margin:18px 0 32px;color:var(--cinza);font-size:1.15rem">
+        Venha fazer parte do ABNER Projeto Social.
+      </p>
+      <a class="botao" href="#contato">Quero fazer parte</a>
     </div>
-    <div class="contact-grid">
-      <div class="contact-list reveal">
-        <div class="contact-item" style="--c:var(--sky)">
-          <span class="ic" aria-hidden="true">📍</span>
-          <div><b>Endereço</b><span>Rua da Solidariedade, 123 — Centro<br>Sua cidade — UF</span></div>
-        </div>
-        <div class="contact-item" style="--c:var(--green)">
-          <span class="ic" aria-hidden="true">💬</span>
-          <div><b>WhatsApp</b><span>(00) 90000-0000</span></div>
-        </div>
-        <div class="contact-item" style="--c:var(--orange)">
-          <span class="ic" aria-hidden="true">✉️</span>
-          <div><b>E-mail</b><span>contato@abner.org.br</span></div>
-        </div>
-        <div class="contact-item" style="--c:var(--magenta)">
-          <span class="ic" aria-hidden="true">🕘</span>
-          <div><b>Horário</b><span>Segunda a sexta, 9h às 17h<br>Sábados de ação: 8h às 12h</span></div>
-        </div>
-      </div>
-      <form class="reveal" id="contactForm">
-        <label for="nome">Nome</label>
-        <input id="nome" name="nome" type="text" placeholder="Seu nome completo" required>
-        <label for="email">E-mail</label>
-        <input id="email" name="email" type="email" placeholder="voce@email.com" required>
-        <label for="msg">Mensagem</label>
-        <textarea id="msg" name="msg" rows="4" placeholder="Como você quer participar?" required></textarea>
-        <button class="btn btn-primary" type="submit">Enviar mensagem</button>
-        <p class="form-ok" id="formOk">Mensagem enviada! Em breve entraremos em contato. 💙</p>
-      </form>
-    </div>
+    <figure class="foto surge">
+      <figcaption>espaço para foto real: voluntários do projeto</figcaption>
+    </figure>
   </div>
 </section>
 
 </main>
 
-<div class="rainbow-line" aria-hidden="true"></div>
-<footer class="site">
+<!-- RODAPÉ / CONTATO -->
+<footer id="contato">
   <div class="wrap">
-    <div class="foot-grid">
+    <div class="rodape-grid">
       <div>
-        <h4>ABNER</h4>
-        <p style="max-width:340px;font-size:.95rem">Servir transforma vidas. Uma instituição sem fins lucrativos dedicada a acolher, incluir e cuidar do próximo.</p>
+        <h4>ABNER Projeto Social</h4>
+        <p style="max-width:38ch">
+          Servir transforma vidas. Cada peça importa. Cada pessoa importa.
+        </p>
+        <!-- TROQUE o número abaixo pelo WhatsApp real (só dígitos, com 55 + DDD) -->
+        <a class="zap" href="https://wa.me/5500000000000">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.7.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.4-3c-.3-.4 0-.5.1-.7l.4-.5c.1-.2.2-.3.1-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.9.9-1.1 2.2-.2 3.7 1.2 2 2.8 3.5 4.9 4.4 1.7.7 2.6.6 3.3.4.5-.1 1.2-.6 1.4-1.1.2-.6.2-1 .1-1.1z"/></svg>
+          Chamar no WhatsApp
+        </a>
+      </div>
+      <div>
+        <h4>Contato</h4>
+        <p>Telefone e WhatsApp:<br>(xx) xxxxx-xxxx</p>
+        <a href="https://instagram.com/abnerprojetosocial" target="_blank" rel="noopener" style="margin-top:8px">@abnerprojetosocial</a>
       </div>
       <div>
         <h4>Navegue</h4>
-        <a href="#sobre">Quem somos</a>
-        <a href="#programas">Programas</a>
-        <a href="#impacto">Impacto</a>
+        <a href="#inicio">Início</a>
+        <a href="#historia">História</a>
         <a href="#ajudar">Como ajudar</a>
       </div>
-      <div>
-        <h4>Participe</h4>
-        <a href="#contato">Fale conosco</a>
-        <a href="#ajudar">Doe agora</a>
-        <a href="#ajudar">Voluntariado</a>
-      </div>
     </div>
-    <div class="foot-bottom">
-      <span>© 2026 ABNER — Servir Transforma Vidas. Todos os direitos reservados.</span>
-      <span>Feito com 💙 e muitas peças coloridas.</span>
+    <div class="rodape-fim">
+      <span>© 2026 ABNER Projeto Social. Todos os direitos reservados.</span>
+      <span>Servir transforma vidas.</span>
     </div>
   </div>
 </footer>
 
 <script>
 // Menu mobile
-const toggle = document.getElementById('menuToggle');
+const btn = document.getElementById('menuBtn');
 const links = document.getElementById('navLinks');
-toggle.addEventListener('click', () => {
-  const open = links.classList.toggle('open');
-  toggle.setAttribute('aria-expanded', open);
+btn.addEventListener('click', () => {
+  const aberto = links.classList.toggle('aberto');
+  btn.setAttribute('aria-expanded', aberto);
 });
 links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-  links.classList.remove('open');
-  toggle.setAttribute('aria-expanded', 'false');
+  links.classList.remove('aberto');
+  btn.setAttribute('aria-expanded', 'false');
 }));
 
-// Reveal on scroll
+// Aparição suave ao rolar
 const io = new IntersectionObserver(entries => {
-  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
-}, { threshold: .12 });
-document.querySelectorAll('.reveal').forEach(el => io.observe(el));
-
-// Contadores do impacto
-const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-const fmt = n => n.toLocaleString('pt-BR');
-const cio = new IntersectionObserver(entries => {
   entries.forEach(e => {
-    if (!e.isIntersecting) return;
-    const el = e.target, target = +el.dataset.count;
-    cio.unobserve(el);
-    if (reduce) { el.textContent = fmt(target) + '+'; return; }
-    const t0 = performance.now(), dur = 1600;
-    (function tick(now){
-      const p = Math.min((now - t0) / dur, 1);
-      el.textContent = fmt(Math.round(target * (1 - Math.pow(1 - p, 3)))) + (p === 1 ? '+' : '');
-      if (p < 1) requestAnimationFrame(tick);
-    })(t0);
+    if (e.isIntersecting) { e.target.classList.add('visivel'); io.unobserve(e.target); }
   });
-}, { threshold: .5 });
-document.querySelectorAll('[data-count]').forEach(el => cio.observe(el));
-
-// Formulário — envio via FormSubmit.
-// TROQUE o e-mail abaixo pelo e-mail real da instituição. Na primeira mensagem
-// enviada, o FormSubmit manda um e-mail de confirmação para ativar o serviço.
-const FORM_EMAIL = 'contato@abner.org.br';
-const form = document.getElementById('contactForm');
-form.addEventListener('submit', async e => {
-  e.preventDefault();
-  const btn = form.querySelector('button');
-  btn.disabled = true;
-  btn.textContent = 'Enviando…';
-  try {
-    const res = await fetch('https://formsubmit.co/ajax/' + FORM_EMAIL, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-      body: JSON.stringify(Object.fromEntries(new FormData(form)))
-    });
-    if (!res.ok) throw new Error('falha no envio');
-    document.getElementById('formOk').style.display = 'block';
-    form.reset();
-  } catch {
-    alert('Não foi possível enviar agora. Escreva para ' + FORM_EMAIL + ' ou tente novamente mais tarde.');
-  } finally {
-    btn.disabled = false;
-    btn.textContent = 'Enviar mensagem';
-  }
-});
+}, { threshold: .15 });
+document.querySelectorAll('.surge').forEach(el => io.observe(el));
 </script>
 </body>
 </html>
