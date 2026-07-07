@@ -20,8 +20,8 @@
   --green:#3AB54A;
   --sky:#29ABE2;
   --magenta:#EC008C;
-  --radius:18px;
-  --shadow:0 12px 34px rgba(23,38,77,.10);
+  --radius:14px;
+  --shadow:0 3px 12px rgba(23,38,77,.07);
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -42,8 +42,6 @@ section{padding:88px 0}
   font-weight:800;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;
   color:var(--navy);margin-bottom:14px;
 }
-.eyebrow::before{content:"";width:26px;height:3px;border-radius:2px;
-  background:linear-gradient(90deg,var(--red),var(--orange),var(--yellow),var(--green),var(--sky),var(--magenta));}
 .lead{font-size:1.12rem;max-width:640px;color:#3c4a70}
 
 /* ===== NAV ===== */
@@ -58,17 +56,17 @@ header{
 .nav-links{display:flex;gap:30px;font-weight:700;font-size:.95rem}
 .nav-links a{position:relative;padding:6px 0;color:#33436e}
 .nav-links a::after{content:"";position:absolute;left:0;bottom:0;height:3px;width:0;border-radius:2px;
-  background:linear-gradient(90deg,var(--orange),var(--magenta));transition:width .25s}
+  background:var(--orange);transition:width .25s}
 .nav-links a:hover::after,.nav-links a:focus-visible::after{width:100%}
 .btn{
   display:inline-block;padding:13px 28px;border-radius:999px;font-weight:800;font-size:.98rem;
   transition:transform .18s,box-shadow .18s;border:none;cursor:pointer;
 }
 .btn:focus-visible{outline:3px solid var(--sky);outline-offset:3px}
-.btn-primary{background:var(--navy);color:#fff;box-shadow:0 8px 20px rgba(37,58,113,.28)}
-.btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(37,58,113,.35)}
-.btn-warm{background:var(--orange);color:#fff;box-shadow:0 8px 20px rgba(247,148,29,.35)}
-.btn-warm:hover{transform:translateY(-2px)}
+.btn-primary{background:var(--navy);color:#fff}
+.btn-primary:hover{background:#1c2e5c}
+.btn-warm{background:var(--orange);color:#fff}
+.btn-warm:hover{background:#e0850f}
 .btn-ghost{border:2px solid var(--navy);color:var(--navy);padding:11px 26px;background:transparent}
 .btn-ghost:hover{background:var(--navy);color:#fff}
 .nav .btn{padding:10px 22px;font-size:.9rem}
@@ -80,49 +78,34 @@ header{
   radial-gradient(800px 420px at -10% 110%,#fdf3e3 0%,transparent 55%),#fff}
 .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
 .hero h1{font-size:clamp(2.5rem,5.4vw,4.1rem);font-weight:700;margin:10px 0 22px}
-.hero h1 .grad{
-  background:linear-gradient(92deg,var(--red) 0%,var(--orange) 26%,var(--green) 55%,var(--sky) 78%,var(--magenta) 100%);
-  -webkit-background-clip:text;background-clip:text;color:transparent;
-}
+.hero h1 .grad{color:var(--orange)}
 .hero-cta{display:flex;gap:16px;margin-top:34px;flex-wrap:wrap}
-.hero-note{margin-top:26px;font-size:.9rem;color:#5a6890;display:flex;align-items:center;gap:10px}
-.hero-note .dots{display:flex}
-.hero-note .dots span{width:12px;height:12px;border-radius:50%;border:2px solid #fff;margin-left:-4px}
-.hero-figure{position:relative;display:flex;justify-content:center}
-.hero-figure img{width:min(440px,88%);filter:drop-shadow(0 24px 40px rgba(23,38,77,.18));position:relative;z-index:2}
-.puzzle-float{position:absolute;z-index:1;opacity:.9;animation:floaty 7s ease-in-out infinite}
-@keyframes floaty{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-16px) rotate(6deg)}}
-.puzzle-float:nth-child(2){animation-delay:-2.4s}
-.puzzle-float:nth-child(3){animation-delay:-4.8s}
-
-/* puzzle divider */
-.puzzle-divider{display:block;width:100%;height:34px}
+.hero-note{margin-top:26px;font-size:.9rem;color:#5a6890}
+.hero-figure{display:flex;justify-content:center}
+.hero-figure img{width:min(440px,88%)}
 
 /* ===== PILLARS ===== */
 .pillars{background:var(--mist);padding:72px 0}
 .pillar-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:44px}
 .pillar{
   background:#fff;border-radius:var(--radius);padding:32px 28px;box-shadow:var(--shadow);
-  border-top:6px solid var(--c,var(--navy));transition:transform .2s;
+  border-top:6px solid var(--c,var(--navy));
 }
-.pillar:hover{transform:translateY(-6px)}
-.pillar h3{font-size:1.3rem;margin:16px 0 10px}
+.pillar h3{font-size:1.3rem;margin-bottom:10px}
 .pillar p{color:#48567e;font-size:.98rem}
-.piece{width:52px;height:52px}
 
 /* ===== PROGRAMAS ===== */
 .prog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:46px}
 .prog{
   position:relative;background:#fff;border:1.5px solid #e6ebf6;border-radius:var(--radius);
-  padding:34px 28px 30px;overflow:hidden;transition:transform .2s,box-shadow .2s;
+  padding:34px 28px 30px;overflow:hidden;
 }
-.prog:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:transparent}
+.prog:hover{box-shadow:var(--shadow)}
 .prog::before{content:"";position:absolute;inset:0 0 auto 0;height:6px;background:var(--c)}
 .prog .tag{display:inline-block;font-size:.72rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;
   color:var(--c);background:color-mix(in srgb,var(--c) 12%,#fff);padding:5px 12px;border-radius:999px;margin-bottom:14px}
 .prog h3{font-size:1.25rem;margin-bottom:10px}
 .prog p{color:#48567e;font-size:.97rem}
-.prog .corner{position:absolute;right:-14px;bottom:-14px;width:84px;height:84px;opacity:.14}
 
 /* ===== IMPACTO ===== */
 .impact{background:var(--navy);color:#fff;position:relative}
@@ -138,10 +121,8 @@ header{
 .help-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:46px}
 .help{
   border-radius:var(--radius);padding:36px 30px;color:#fff;background:var(--c);
-  display:flex;flex-direction:column;gap:12px;box-shadow:var(--shadow);
-  transition:transform .2s;
+  display:flex;flex-direction:column;gap:12px;
 }
-.help:hover{transform:translateY(-6px)}
 .help h3{color:#fff;font-size:1.35rem}
 .help p{color:rgba(255,255,255,.92);font-size:.97rem;flex:1}
 .help a{align-self:flex-start;background:#fff;color:var(--ink);padding:10px 22px;border-radius:999px;font-weight:800;font-size:.9rem}
@@ -158,8 +139,7 @@ header{
 /* ===== CONTATO ===== */
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;margin-top:44px}
 .contact-list{display:flex;flex-direction:column;gap:20px}
-.contact-item{display:flex;gap:16px;align-items:flex-start}
-.contact-item .ic{width:46px;height:46px;flex:none;border-radius:14px;display:grid;place-items:center;background:var(--c);color:#fff;font-size:1.2rem}
+.contact-item{border-left:4px solid var(--c,var(--navy));padding-left:18px}
 .contact-item b{display:block;color:var(--navy)}
 .contact-item span{color:#48567e;font-size:.95rem}
 form{background:#fff;border:1.5px solid #e6ebf6;border-radius:var(--radius);padding:34px;box-shadow:var(--shadow)}
@@ -181,14 +161,12 @@ footer.site a{display:block;padding:4px 0;color:#c8d3ee;font-size:.95rem}
 footer.site a:hover{color:var(--yellow)}
 .foot-bottom{margin-top:44px;padding-top:22px;border-top:1px solid rgba(255,255,255,.14);
   display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:.85rem;color:#93a3cd}
-.rainbow-line{height:6px;background:linear-gradient(90deg,var(--red),var(--orange),var(--yellow),var(--green),var(--sky),var(--magenta))}
 
 /* reveal on scroll */
 .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
 .reveal.in{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){
   .reveal{opacity:1;transform:none;transition:none}
-  .puzzle-float{animation:none}
   html{scroll-behavior:auto}
 }
 
@@ -253,26 +231,9 @@ footer.site a:hover{color:var(--yellow)}
         <a class="btn btn-primary" href="#ajudar">Fazer parte agora</a>
         <a class="btn btn-ghost" href="#programas">Conhecer os programas</a>
       </div>
-      <p class="hero-note">
-        <span class="dots" aria-hidden="true">
-          <span style="background:var(--red)"></span>
-          <span style="background:var(--orange)"></span>
-          <span style="background:var(--green)"></span>
-          <span style="background:var(--sky)"></span>
-        </span>
-        Centenas de voluntários já fazem parte dessa história
-      </p>
+      <p class="hero-note">Centenas de voluntários já fazem parte dessa história</p>
     </div>
     <div class="hero-figure reveal">
-      <svg class="puzzle-float" style="top:6%;left:4%" width="64" height="64" viewBox="0 0 100 100" aria-hidden="true">
-        <path fill="var(--yellow)" d="M20 20h22c-6-14 22-14 16 0h22v22c14-6 14 22 0 16v22H58c6 14-22 14-16 0H20V58c-14 6-14-22 0-16z"/>
-      </svg>
-      <svg class="puzzle-float" style="bottom:10%;right:2%" width="78" height="78" viewBox="0 0 100 100" aria-hidden="true">
-        <path fill="var(--sky)" d="M20 20h22c-6-14 22-14 16 0h22v22c14-6 14 22 0 16v22H58c6 14-22 14-16 0H20V58c-14 6-14-22 0-16z"/>
-      </svg>
-      <svg class="puzzle-float" style="top:46%;right:-4%" width="46" height="46" viewBox="0 0 100 100" aria-hidden="true">
-        <path fill="var(--magenta)" d="M20 20h22c-6-14 22-14 16 0h22v22c14-6 14 22 0 16v22H58c6 14-22 14-16 0H20V58c-14 6-14-22 0-16z"/>
-      </svg>
       <img src="assets/logo-abner.webp" alt="Mãos formando um coração com peças de quebra-cabeça coloridas — logo da ABNER">
     </div>
   </div>
@@ -292,17 +253,14 @@ footer.site a:hover{color:var(--yellow)}
     </div>
     <div class="pillar-grid">
       <article class="pillar reveal" style="--c:var(--red)">
-        <svg class="piece" viewBox="0 0 100 100" aria-hidden="true"><path fill="var(--red)" d="M20 20h22c-6-14 22-14 16 0h22v22c14-6 14 22 0 16v22H58c6 14-22 14-16 0H20V58c-14 6-14-22 0-16z"/></svg>
         <h3>Acolher</h3>
         <p>Recebemos cada família com escuta, respeito e sem julgamentos. Aqui, toda história tem lugar e toda pessoa tem valor.</p>
       </article>
       <article class="pillar reveal" style="--c:var(--green)">
-        <svg class="piece" viewBox="0 0 100 100" aria-hidden="true"><path fill="var(--green)" d="M20 20h22c-6-14 22-14 16 0h22v22c14-6 14 22 0 16v22H58c6 14-22 14-16 0H20V58c-14 6-14-22 0-16z"/></svg>
         <h3>Incluir</h3>
         <p>Trabalhamos pela inclusão real de pessoas autistas e neurodivergentes — na escola, na comunidade e no mercado de trabalho.</p>
       </article>
       <article class="pillar reveal" style="--c:var(--sky)">
-        <svg class="piece" viewBox="0 0 100 100" aria-hidden="true"><path fill="var(--sky)" d="M20 20h22c-6-14 22-14 16 0h22v22c14-6 14 22 0 16v22H58c6 14-22 14-16 0H20V58c-14 6-14-22 0-16z"/></svg>
         <h3>Transformar</h3>
         <p>Do alimento na mesa ao acompanhamento contínuo, agimos para que o cuidado de hoje se torne autonomia amanhã.</p>
       </article>
@@ -323,37 +281,31 @@ footer.site a:hover{color:var(--yellow)}
         <span class="tag">Inclusão</span>
         <h3>Apoio ao autista e à família</h3>
         <p>Orientação, grupos de apoio a pais e cuidadores, atividades sensoriais e encaminhamento para atendimento especializado.</p>
-        <svg class="corner" viewBox="0 0 100 100" aria-hidden="true"><path fill="var(--sky)" d="M20 20h22c-6-14 22-14 16 0h22v22c14-6 14 22 0 16v22H58c6 14-22 14-16 0H20V58c-14 6-14-22 0-16z"/></svg>
       </article>
       <article class="prog reveal" style="--c:var(--orange)">
         <span class="tag">Alimentação</span>
         <h3>Cestas solidárias</h3>
         <p>Distribuição mensal de cestas básicas e refeições para famílias em situação de vulnerabilidade na nossa comunidade.</p>
-        <svg class="corner" viewBox="0 0 100 100" aria-hidden="true"><path fill="var(--orange)" d="M20 20h22c-6-14 22-14 16 0h22v22c14-6 14 22 0 16v22H58c6 14-22 14-16 0H20V58c-14 6-14-22 0-16z"/></svg>
       </article>
       <article class="prog reveal" style="--c:var(--green)">
         <span class="tag">Educação</span>
         <h3>Reforço e oficinas</h3>
         <p>Reforço escolar, oficinas de arte, música e leitura para crianças e adolescentes — porque aprender também é acolher.</p>
-        <svg class="corner" viewBox="0 0 100 100" aria-hidden="true"><path fill="var(--green)" d="M20 20h22c-6-14 22-14 16 0h22v22c14-6 14 22 0 16v22H58c6 14-22 14-16 0H20V58c-14 6-14-22 0-16z"/></svg>
       </article>
       <article class="prog reveal" style="--c:var(--magenta)">
         <span class="tag">Saúde</span>
         <h3>Cuidado e bem-estar</h3>
         <p>Mutirões de saúde, rodas de conversa sobre saúde mental e apoio psicológico em parceria com profissionais voluntários.</p>
-        <svg class="corner" viewBox="0 0 100 100" aria-hidden="true"><path fill="var(--magenta)" d="M20 20h22c-6-14 22-14 16 0h22v22c14-6 14 22 0 16v22H58c6 14-22 14-16 0H20V58c-14 6-14-22 0-16z"/></svg>
       </article>
       <article class="prog reveal" style="--c:var(--red)">
         <span class="tag">Emergência</span>
         <h3>Ação social imediata</h3>
         <p>Roupas, cobertores, itens de higiene e resposta rápida para famílias atingidas por crises e situações inesperadas.</p>
-        <svg class="corner" viewBox="0 0 100 100" aria-hidden="true"><path fill="var(--red)" d="M20 20h22c-6-14 22-14 16 0h22v22c14-6 14 22 0 16v22H58c6 14-22 14-16 0H20V58c-14 6-14-22 0-16z"/></svg>
       </article>
       <article class="prog reveal" style="--c:var(--yellow)">
         <span class="tag">Comunidade</span>
         <h3>Formação de voluntários</h3>
         <p>Capacitação contínua para quem deseja servir: acolhimento, noções de inclusão e organização de ações sociais.</p>
-        <svg class="corner" viewBox="0 0 100 100" aria-hidden="true"><path fill="var(--yellow)" d="M20 20h22c-6-14 22-14 16 0h22v22c14-6 14 22 0 16v22H58c6 14-22 14-16 0H20V58c-14 6-14-22 0-16z"/></svg>
       </article>
     </div>
   </div>
@@ -438,19 +390,15 @@ footer.site a:hover{color:var(--yellow)}
     <div class="contact-grid">
       <div class="contact-list reveal">
         <div class="contact-item" style="--c:var(--sky)">
-          <span class="ic" aria-hidden="true">📍</span>
           <div><b>Endereço</b><span>Rua da Solidariedade, 123 — Centro<br>Sua cidade — UF</span></div>
         </div>
         <div class="contact-item" style="--c:var(--green)">
-          <span class="ic" aria-hidden="true">💬</span>
           <div><b>WhatsApp</b><span>(00) 90000-0000</span></div>
         </div>
         <div class="contact-item" style="--c:var(--orange)">
-          <span class="ic" aria-hidden="true">✉️</span>
           <div><b>E-mail</b><span>contato@abner.org.br</span></div>
         </div>
         <div class="contact-item" style="--c:var(--magenta)">
-          <span class="ic" aria-hidden="true">🕘</span>
           <div><b>Horário</b><span>Segunda a sexta, 9h às 17h<br>Sábados de ação: 8h às 12h</span></div>
         </div>
       </div>
@@ -462,7 +410,7 @@ footer.site a:hover{color:var(--yellow)}
         <label for="msg">Mensagem</label>
         <textarea id="msg" name="msg" rows="4" placeholder="Como você quer participar?" required></textarea>
         <button class="btn btn-primary" type="submit">Enviar mensagem</button>
-        <p class="form-ok" id="formOk">Mensagem enviada! Em breve entraremos em contato. 💙</p>
+        <p class="form-ok" id="formOk">Mensagem enviada! Em breve entraremos em contato.</p>
       </form>
     </div>
   </div>
@@ -470,7 +418,6 @@ footer.site a:hover{color:var(--yellow)}
 
 </main>
 
-<div class="rainbow-line" aria-hidden="true"></div>
 <footer class="site">
   <div class="wrap">
     <div class="foot-grid">
@@ -494,7 +441,7 @@ footer.site a:hover{color:var(--yellow)}
     </div>
     <div class="foot-bottom">
       <span>© 2026 ABNER — Servir Transforma Vidas. Todos os direitos reservados.</span>
-      <span>Feito com 💙 e muitas peças coloridas.</span>
+      <span>Servir transforma vidas.</span>
     </div>
   </div>
 </footer>
