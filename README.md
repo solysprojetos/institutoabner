@@ -5,12 +5,12 @@ Site institucional do **ABNER Projeto Social**, que leva alimentação, acolhime
 ## Estrutura
 
 ```
-index.html                  → o site completo (HTML + CSS + JavaScript em um único arquivo)
-assets/logo-abner.webp      → logo (versão flat, usada na navegação)
-assets/logo-abner-3d.webp   → logo da apresentação (versão 3D, usada no topo do site)
-assets/marca-abner.webp     → símbolo sem o texto (seção Nossa história)
-assets/icones/              → ícones brancos das seções (da apresentação)
-assets/pecas/               → peças de quebra-cabeça coloridas (decoração)
+index.html              → estrutura da página (só HTML)
+css/styles.css          → todos os estilos do site
+js/main.js              → interações (menu mobile, animações e formulário)
+assets/logo-abner.webp  → logo oficial do projeto (da apresentação)
+assets/icones/          → ícones brancos das seções (da apresentação)
+assets/pecas/           → peças de quebra-cabeça coloridas (decoração)
 ```
 
 O site é uma página única (one-page) com as seções da apresentação: **Nossa história · Por que "Abner"? · Quem ajudamos · O que fazemos · Como funciona · Nossos valores · Como ajudar · Junte-se a nós**. Não precisa de servidor nem de build — basta abrir o `index.html` no navegador.
