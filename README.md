@@ -1,15 +1,19 @@
-# ABNER — Servir Transforma Vidas
+# ABNER Projeto Social — Servir Transforma Vidas
 
-Site institucional da **ABNER**, instituição sem fins lucrativos dedicada a acolher famílias, apoiar pessoas autistas e neurodivergentes e levar cuidado a quem mais precisa.
+Site institucional do **ABNER Projeto Social**, que leva alimentação, acolhimento e cuidado a crianças, idosos, famílias e animais. O conteúdo, as cores e os ícones do site seguem a apresentação oficial do projeto.
 
 ## Estrutura
 
 ```
-index.html              → o site completo (HTML + CSS + JavaScript em um único arquivo)
-assets/logo-abner.webp  → logo da instituição
+index.html                  → o site completo (HTML + CSS + JavaScript em um único arquivo)
+assets/logo-abner.webp      → logo (versão flat, usada na navegação)
+assets/logo-abner-3d.webp   → logo da apresentação (versão 3D, usada no topo do site)
+assets/marca-abner.webp     → símbolo sem o texto (seção Nossa história)
+assets/icones/              → ícones brancos das seções (da apresentação)
+assets/pecas/               → peças de quebra-cabeça coloridas (decoração)
 ```
 
-O site é uma página única (one-page) com as seções: **Quem somos · Programas · Impacto · Como ajudar · Depoimentos · Contato**. Não precisa de servidor nem de build — basta abrir o `index.html` no navegador.
+O site é uma página única (one-page) com as seções da apresentação: **Nossa história · Por que "Abner"? · Quem ajudamos · O que fazemos · Como funciona · Nossos valores · Como ajudar · Junte-se a nós**. Não precisa de servidor nem de build — basta abrir o `index.html` no navegador.
 
 ## Como publicar no GitHub Pages
 
@@ -20,14 +24,13 @@ O site é uma página única (one-page) com as seções: **Quem somos · Program
 
 ## ⚠️ Antes de colocar no ar: dados que precisam ser atualizados
 
-O site foi criado com **dados de exemplo (placeholders)**. Procure e substitua no `index.html`:
+Alguns dados vieram como **placeholder** da apresentação. Procure e substitua no `index.html`:
 
 | O quê | Onde está | Valor atual (exemplo) |
 |---|---|---|
-| Endereço | seção Contato | Rua da Solidariedade, 123 — Centro |
-| WhatsApp | seção Contato | (00) 90000-0000 |
-| E-mail | seção Contato **e** na constante `FORM_EMAIL` no `<script>` | contato@abner.org.br |
-| Números de impacto | seção Impacto (`data-count`) | 1.200 famílias, 350 voluntários, 8.500 cestas, 10 anos |
+| Telefone/WhatsApp | seção Junte-se a nós | (xx) xxxxx-xxxx |
+| E-mail do formulário | constante `FORM_EMAIL` no `<script>` | contato@abner.org.br |
+| Instagram | links `@abnerprojetosocial` | confirme se o perfil está correto |
 
 ## Formulário de contato
 
