@@ -1,5 +1,5 @@
 // ============================================================
-// ABNER Projeto Social — interações do site
+// Instituto ABNER — interações do site
 // ============================================================
 
 // Menu mobile

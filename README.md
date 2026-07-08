@@ -1,6 +1,6 @@
-# ABNER Projeto Social — Servir Transforma Vidas
+# Instituto ABNER — Servir Transforma Vidas
 
-Site institucional do **ABNER Projeto Social**, que leva alimentação, acolhimento e cuidado a crianças, idosos, famílias e animais. O conteúdo, as cores e os ícones do site seguem a apresentação oficial do projeto.
+Site institucional do **Instituto ABNER**, que leva alimentação, acolhimento e cuidado a crianças, idosos, famílias e animais. O conteúdo, as cores e os ícones do site seguem a apresentação oficial do projeto.
 
 ## Estrutura
 
