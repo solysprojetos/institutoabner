@@ -92,6 +92,18 @@ header{
 .hero-note{margin-top:26px;font-size:.9rem;color:#7482a8;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
 .hero-figure{display:flex;justify-content:center;position:relative}
 .hero-figure img{width:min(430px,88%);filter:drop-shadow(0 18px 40px rgba(16,55,158,.22))}
+.hero-figure .hero-foto{
+  width:min(520px,100%);border-radius:22px;filter:none;
+  box-shadow:0 22px 50px rgba(16,55,158,.28);
+  border:6px solid #fff;transform:rotate(1.5deg);
+}
+
+/* ===== MOMENTOS (fotos) ===== */
+.momentos-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:46px}
+.momento{margin:0;background:#fff;border-radius:var(--radius);overflow:hidden;
+  box-shadow:var(--shadow);border:1.5px solid #e6ebf6}
+.momento img{width:100%;aspect-ratio:3/2;object-fit:cover}
+.momento figcaption{padding:18px 22px;font-weight:700;color:var(--azul);font-size:.98rem}
 
 /* ===== NOSSA HISTÓRIA (slide 2) ===== */
 .historia{background:var(--mist)}
@@ -233,6 +245,7 @@ footer.site a:hover{color:var(--amarelo)}
   .hero-figure{order:-1}
   .hero-figure img{width:min(300px,70%)}
   .card-grid,.passo-grid{grid-template-columns:1fr 1fr}
+  .momentos-grid{grid-template-columns:1fr}
   .valor-grid{grid-template-columns:repeat(3,1fr)}
   .help-grid{grid-template-columns:1fr 1fr}
   .foot-grid{grid-template-columns:1fr}
