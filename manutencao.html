@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Instituto Abner — Em manutenção</title>
+<meta name="description" content="O site do Instituto Abner está em manutenção. Voltamos em breve!">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#14387E">
+<link rel="icon" type="image/webp" href="assets/logo-abner.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Pinyon+Script&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+<style>
+  :root{--creme:#F7F3E5;--cinza:#B5BAB9;--azul:#14387E;--texto:#4C5560}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{
+    font-family:'Poppins',system-ui,sans-serif;font-weight:300;color:var(--texto);
+    background:var(--creme);min-height:100vh;display:grid;place-items:center;
+    text-align:center;padding:32px 24px;line-height:1.7;overflow:hidden;position:relative;
+  }
+  .pecas{position:fixed;color:var(--cinza);opacity:.5;fill:none;stroke:currentColor;stroke-width:3.2;stroke-linejoin:round;pointer-events:none}
+  .pecas.a{top:-60px;right:-70px;width:min(360px,48vw)}
+  .pecas.b{bottom:-70px;left:-70px;width:min(300px,42vw)}
+  main{max-width:620px;position:relative;z-index:1}
+  img{max-width:100%;display:block;height:auto}
+  .logo{width:min(420px,84vw);margin:0 auto 34px}
+  h1{
+    font-family:'Bebas Neue',Impact,sans-serif;font-weight:400;color:var(--azul);
+    text-transform:uppercase;line-height:.94;letter-spacing:.012em;
+    font-size:clamp(2.4rem,7.5vw,4rem);margin-bottom:20px;
+  }
+  p{font-size:1.05rem}
+  p+p{margin-top:8px}
+  .lema{
+    margin-top:30px;font-family:'Pinyon Script',cursive;font-size:clamp(1.7rem,4vw,2.3rem);
+    color:var(--azul);line-height:1.3;
+  }
+  .insta{
+    display:inline-flex;margin-top:30px;background:var(--azul);color:var(--creme);
+    font-family:'Bebas Neue',sans-serif;font-size:1.15rem;letter-spacing:.13em;text-transform:uppercase;
+    padding:15px 34px 13px;border-radius:999px;text-decoration:none;transition:transform .2s,box-shadow .2s;
+  }
+  .insta:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(20,56,126,.25)}
+  :focus-visible{outline:3px solid var(--azul);outline-offset:3px}
+</style>
+</head>
+<body>
+
+<svg class="pecas a" viewBox="-18 -18 216 216" aria-hidden="true"><use href="#p4"/></svg>
+<svg class="pecas b" viewBox="-18 -18 216 216" aria-hidden="true"><use href="#p4"/></svg>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="peca" viewBox="-16 -16 122 122">
+    <path d="M0,0 h30 c5,-15 25,-15 30,0 h30 v30 c15,5 15,25 0,30 v30 h-30 c-5,-15 -25,-15 -30,0 h-30 v-30 c15,-5 15,-25 0,-30 z"/>
+  </symbol>
+  <symbol id="p4" viewBox="-18 -18 216 216">
+    <use href="#peca" x="0" y="0" width="100" height="100"/>
+    <use href="#peca" x="90" y="0" width="100" height="100"/>
+    <use href="#peca" x="0" y="90" width="100" height="100"/>
+    <use href="#peca" x="90" y="90" width="100" height="100"/>
+  </symbol>
+</svg>
+
+<main>
+  <img class="logo" src="assets/marca/logo-horizontal.webp" alt="Instituto Abner — Servir transforma vidas" width="1200" height="313">
+  <h1>Estamos montando<br>as últimas peças</h1>
+  <p><strong>O site está em manutenção.</strong></p>
+  <p>Voltamos em breve, ainda melhores, para cuidar de quem mais precisa.</p>
+  <p class="lema">Servir transforma vidas</p>
+  <a class="insta" href="https://instagram.com/institutoabner.r" target="_blank" rel="noopener">Siga @institutoabner.r</a>
+</main>
+
+</body>
+</html>

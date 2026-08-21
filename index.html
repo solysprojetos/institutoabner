@@ -3,74 +3,464 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Instituto ABNER — Em manutenção</title>
-<meta name="description" content="O site do Instituto ABNER está em manutenção. Voltamos em breve!">
-<meta name="robots" content="noindex">
+<title>Instituto Abner — Servir transforma vidas</title>
+<meta name="description" content="O Instituto Abner serve, acolhe e transforma vidas. Alimentação, acolhimento e cuidado para crianças, famílias, idosos e animais em situação de vulnerabilidade.">
+<meta name="theme-color" content="#14387E">
+<link rel="canonical" href="https://institutoabner.com.br/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Instituto Abner">
+<meta property="og:title" content="Instituto Abner — Servir transforma vidas">
+<meta property="og:description" content="Alimentação, acolhimento e cuidado para crianças, famílias, idosos e animais. Cada peça importa. Cada pessoa importa.">
+<meta property="og:url" content="https://institutoabner.com.br/">
+<meta property="og:image" content="https://institutoabner.com.br/assets/fotos/mae-filho.webp">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/webp" href="assets/logo-abner.webp">
+<link rel="apple-touch-icon" href="assets/logo-abner.webp">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Nunito+Sans:opsz,wght@6..12,400;6..12,700;6..12,800&display=swap" rel="stylesheet">
-<style>
-:root{
-  --azul:#10379E;
-  --azul-claro:#1565C0;
-  --texto:#5A6570;
-  --amarelo:#FBC02D;
-  --vermelho:#E53935;
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Pinyon+Script&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"NGO",
+  "name":"Instituto Abner",
+  "slogan":"Servir transforma vidas",
+  "url":"https://institutoabner.com.br/",
+  "logo":"https://institutoabner.com.br/assets/logo-abner.webp",
+  "description":"O Instituto Abner serve, acolhe e transforma vidas por meio da solidariedade, da empatia e do amor ao próximo, com ações sociais para crianças, famílias, idosos e animais em situação de vulnerabilidade.",
+  "sameAs":["https://instagram.com/institutoabner.r"],
+  "areaServed":"BR"
 }
-*{margin:0;padding:0;box-sizing:border-box}
-body{
-  font-family:'Nunito Sans',sans-serif;
-  color:var(--texto);
-  min-height:100vh;
-  display:flex;align-items:center;justify-content:center;
-  text-align:center;
-  padding:24px;
-  background:
-    radial-gradient(1100px 520px at 88% -10%,#e8effd 0%,transparent 60%),
-    radial-gradient(800px 420px at -10% 110%,#fdf6e0 0%,transparent 55%),#fff;
-  overflow:hidden;
-}
-.peca{position:absolute;width:56px;opacity:.9;pointer-events:none;animation:flutua 7s ease-in-out infinite}
-.p2{animation-delay:1.4s}.p3{animation-delay:2.8s}.p4{animation-delay:4.2s}
-@keyframes flutua{
-  0%,100%{transform:translateY(0) rotate(-8deg)}
-  50%{transform:translateY(-18px) rotate(8deg)}
-}
-@media (prefers-reduced-motion:reduce){.peca{animation:none}}
-main{max-width:620px}
-main img.logo{width:min(300px,70vw);margin:0 auto 34px;display:block;
-  filter:drop-shadow(0 16px 36px rgba(16,55,158,.2))}
-h1{font-family:'Fraunces',serif;color:var(--azul);font-size:clamp(1.9rem,5.5vw,2.9rem);line-height:1.15;margin-bottom:16px}
-h1 span{color:var(--vermelho)}
-p{font-size:1.12rem;line-height:1.65;margin-bottom:10px}
-.lema{margin-top:26px;display:inline-block;font-family:'Fraunces',serif;font-weight:700;
-  color:var(--azul);font-size:1.15rem;padding:14px 28px;background:#fff;border-radius:14px;
-  box-shadow:0 4px 16px rgba(16,55,158,.1);border-bottom:4px solid var(--amarelo)}
-.insta{margin-top:30px}
-.insta a{display:inline-block;background:var(--azul);color:#fff;font-weight:800;text-decoration:none;
-  padding:13px 30px;border-radius:999px;transition:background .2s}
-.insta a:hover{background:#0c2a7a}
-@media (max-width:640px){.peca{width:40px}}
-</style>
+</script>
 </head>
 <body>
 
-<img class="peca" src="assets/pecas/vermelha.webp" alt="" style="top:10%;left:8%">
-<img class="peca p2" src="assets/pecas/verde.webp" alt="" style="bottom:14%;left:12%">
-<img class="peca p3" src="assets/pecas/amarela.webp" alt="" style="top:16%;right:9%">
-<img class="peca p4" src="assets/pecas/roxa.webp" alt="" style="bottom:10%;right:13%">
+<!-- grafismo da marca: peças de quebra-cabeça -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="peca" viewBox="-16 -16 122 122">
+    <path d="M0,0 h30 c5,-15 25,-15 30,0 h30 v30 c15,5 15,25 0,30 v30 h-30 c-5,-15 -25,-15 -30,0 h-30 v-30 c15,-5 15,-25 0,-30 z"/>
+  </symbol>
+  <symbol id="pecas4" viewBox="-18 -18 216 216">
+    <use href="#peca" x="0" y="0" width="100" height="100"/>
+    <use href="#peca" x="90" y="0" width="100" height="100"/>
+    <use href="#peca" x="0" y="90" width="100" height="100"/>
+    <use href="#peca" x="90" y="90" width="100" height="100"/>
+  </symbol>
+  <symbol id="pecas3" viewBox="-18 -18 216 216">
+    <use href="#peca" x="90" y="0" width="100" height="100"/>
+    <use href="#peca" x="0" y="90" width="100" height="100"/>
+    <use href="#peca" x="90" y="90" width="100" height="100"/>
+  </symbol>
+</svg>
 
-<main>
-  <img class="logo" src="assets/logo-abner.webp" alt="Logo do Instituto ABNER: letra A azul acolhida por uma mão de quebra-cabeça colorido">
-  <h1>Estamos montando as <span>últimas peças</span></h1>
-  <p><strong>O site está em manutenção.</strong></p>
-  <p>Voltamos em breve, ainda melhor, para cuidar de quem mais precisa.</p>
-  <p class="lema">Servir transforma vidas.</p>
-  <div class="insta">
-    <a href="https://instagram.com/institutoabner.r" target="_blank" rel="noopener">Siga @institutoabner.r</a>
+<a class="pular" href="#conteudo" style="position:absolute;left:-9999px">Ir para o conteúdo</a>
+
+<header class="cabecalho" id="cabecalho">
+  <div class="wrap-largo">
+    <a class="marca" href="#topo" aria-label="Instituto Abner — página inicial">
+      <img src="assets/marca/logo-horizontal.webp" alt="Instituto Abner — Servir transforma vidas" width="1200" height="313">
+    </a>
+    <nav class="menu" id="menu" aria-label="Navegação principal">
+      <a href="#historia">História</a>
+      <a href="#missao">Missão</a>
+      <a href="#quem">Quem ajudamos</a>
+      <a href="#fazemos">O que fazemos</a>
+      <a href="#momentos">Momentos</a>
+      <a href="#ajudar">Como ajudar</a>
+    </nav>
+    <a class="btn" href="#junte">Quero ajudar</a>
+    <button class="abrir-menu" id="abrirMenu" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
+      <span></span><span></span><span></span>
+    </button>
   </div>
+</header>
+
+<main id="conteudo">
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="topo">
+  <svg class="pecas" viewBox="-18 -18 216 216" aria-hidden="true"><use href="#pecas4"/></svg>
+  <div class="wrap hero-grid">
+    <div class="surge">
+      <span class="olho">Servir · Empatia · Inclusão</span>
+      <h1>Servir <span class="risco">transforma</span> vidas</h1>
+      <p class="lead">
+        O Instituto Abner leva alimentação, acolhimento e cuidado a crianças, famílias,
+        idosos e animais em situação de vulnerabilidade. Cada peça desse quebra-cabeça
+        é uma pessoa — e nenhuma peça sobra.
+      </p>
+      <div class="hero-botoes">
+        <a class="btn" href="#junte">Quero ajudar</a>
+        <a class="btn btn--contorno" href="#historia">Nossa história</a>
+      </div>
+      <p class="hero-nota">
+        <img src="assets/logo-abner.webp" alt="" width="34" height="29">
+        Cada peça importa. Cada pessoa importa.
+      </p>
+    </div>
+    <div class="hero-figura surge">
+      <div class="foto">
+        <img src="assets/fotos/mae-filho.webp" alt="Mãe abraçando o filho, ambos sorrindo" width="1400" height="2100" fetchpriority="high">
+      </div>
+      <div class="selo">
+        <b>Inclusão em primeiro lugar</b>
+        <span>Nosso símbolo é a letra A acolhida por uma mão de quebra-cabeça: a mão que serve e cuida.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAIXA ===== -->
+<div class="faixa" aria-hidden="true">
+  <div class="faixa-trilho">
+    <div class="faixa-grupo">
+      <span>Amor ao próximo</span><svg viewBox="-16 -16 122 122"><use href="#peca"/></svg>
+      <span>Empatia</span><svg viewBox="-16 -16 122 122"><use href="#peca"/></svg>
+      <span>Acolhimento</span><svg viewBox="-16 -16 122 122"><use href="#peca"/></svg>
+      <span>Solidariedade</span><svg viewBox="-16 -16 122 122"><use href="#peca"/></svg>
+      <span>Dignidade</span><svg viewBox="-16 -16 122 122"><use href="#peca"/></svg>
+      <span>Esperança</span><svg viewBox="-16 -16 122 122"><use href="#peca"/></svg>
+    </div>
+    <div class="faixa-grupo">
+      <span>Amor ao próximo</span><svg viewBox="-16 -16 122 122"><use href="#peca"/></svg>
+      <span>Empatia</span><svg viewBox="-16 -16 122 122"><use href="#peca"/></svg>
+      <span>Acolhimento</span><svg viewBox="-16 -16 122 122"><use href="#peca"/></svg>
+      <span>Solidariedade</span><svg viewBox="-16 -16 122 122"><use href="#peca"/></svg>
+      <span>Dignidade</span><svg viewBox="-16 -16 122 122"><use href="#peca"/></svg>
+      <span>Esperança</span><svg viewBox="-16 -16 122 122"><use href="#peca"/></svg>
+    </div>
+  </div>
+</div>
+
+<!-- ===== NOSSA HISTÓRIA ===== -->
+<section class="historia" id="historia">
+  <svg class="pecas" viewBox="-18 -18 216 216" aria-hidden="true"><use href="#pecas3"/></svg>
+  <div class="wrap historia-grid">
+    <div class="surge">
+      <span class="olho">Nossa história</span>
+      <h2>Um nome que é uma homenagem</h2>
+      <p style="margin-top:24px">
+        O nome do projeto é uma homenagem ao <strong>Abner, filho da fundadora</strong>, um menino
+        autista que ensina, todos os dias, que o amor fala todas as línguas.
+      </p>
+      <p>
+        Por isso, nosso símbolo é a letra <strong>A</strong> acolhida por uma mão de quebra-cabeça
+        colorido: a mão que serve e cuida, e cada peça representando uma pessoa.
+      </p>
+      <p>
+        O Instituto Abner nasceu do sonho de transformar ações solidárias em um projeto social
+        capaz de gerar um impacto ainda maior na vida das pessoas. Antes mesmo de sua criação
+        oficial, ações voluntárias de apoio a famílias em situação de vulnerabilidade já eram
+        realizadas.
+      </p>
+      <p>
+        Hoje, o Instituto Abner fortalece esse propósito, ampliando seu alcance e promovendo
+        <strong>esperança, dignidade e transformação social</strong>.
+      </p>
+      <p class="assinatura">Servir transforma vidas</p>
+    </div>
+    <div class="surge">
+      <div class="foto">
+        <img src="assets/fotos/abraco.webp" alt="Criança abraçada com carinho por uma mulher, as duas sorrindo" width="1400" height="2100" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== NOSSA MISSÃO ===== -->
+<section class="missao" id="missao">
+  <svg class="pecas pecas--creme" viewBox="-18 -18 216 216" aria-hidden="true"><use href="#pecas4"/></svg>
+  <div class="wrap missao-grid">
+    <div class="surge">
+      <span class="olho">Nossa missão</span>
+      <p class="missao-texto">
+        Servir, acolher e transformar vidas por meio da solidariedade, da empatia e do amor ao próximo.
+      </p>
+    </div>
+    <div class="missao-lista surge">
+      <div class="missao-item">
+        <div class="marcador"><img src="assets/icones/maos.webp" alt="" width="26" height="26"></div>
+        <div>
+          <h3>Dignidade</h3>
+          <p>Cada atendimento começa pelo respeito. Ninguém deveria precisar abrir mão da dignidade para receber ajuda.</p>
+        </div>
+      </div>
+      <div class="missao-item">
+        <div class="marcador"><img src="assets/icones/coracao.webp" alt="" width="26" height="26"></div>
+        <div>
+          <h3>Esperança</h3>
+          <p>Levar alimento é o começo. O que fica é a certeza de que alguém se importa e vai voltar.</p>
+        </div>
+      </div>
+      <div class="missao-item">
+        <div class="marcador"><img src="assets/icones/pessoas.webp" alt="" width="26" height="26"></div>
+        <div>
+          <h3>Oportunidades</h3>
+          <p>Ações sociais que impactam positivamente crianças, famílias, idosos e animais em situação de vulnerabilidade.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PILARES ===== -->
+<section class="pilares" aria-label="Nossos pilares">
+  <div class="pilares-grid">
+    <article class="pilar">
+      <img src="assets/fotos/cesta.webp" alt="Caixa de alimentos entregue de mãos em mãos" width="442" height="589" loading="lazy">
+      <div class="pilar-texto">
+        <b>Servir</b>
+        <span>Sair do lugar e ir até quem precisa, com as próprias mãos.</span>
+      </div>
+    </article>
+    <article class="pilar">
+      <img src="assets/fotos/maos.webp" alt="Várias mãos sobrepostas, em preto e branco" width="715" height="1000" loading="lazy">
+      <div class="pilar-texto">
+        <b>Empatia</b>
+        <span>Enxergar a história de cada pessoa antes da necessidade dela.</span>
+      </div>
+    </article>
+    <article class="pilar">
+      <img src="assets/fotos/desenhos.webp" alt="Parede coberta por desenhos coloridos feitos por crianças" width="442" height="589" loading="lazy">
+      <div class="pilar-texto">
+        <b>Inclusão</b>
+        <span>Cada peça importa. Cada pessoa importa. Sem exceção.</span>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ===== QUEM AJUDAMOS ===== -->
+<section id="quem">
+  <div class="wrap">
+    <div class="centro surge">
+      <span class="olho">Quem ajudamos</span>
+      <h2 class="titulo-secao">Cuidamos de quem mais precisa de amor e atenção</h2>
+    </div>
+    <div class="grade grade-4">
+      <article class="cartao surge" style="--c:var(--peca-vermelha)">
+        <div class="icone"><img src="assets/icones/crianca.webp" alt="" width="34" height="34"></div>
+        <h3>Crianças</h3>
+        <p>Alimentação, carinho e apoio para quem está começando a vida.</p>
+      </article>
+      <article class="cartao surge" style="--c:var(--peca-amarela)">
+        <div class="icone"><img src="assets/icones/familia.webp" alt="" width="34" height="34"></div>
+        <h3>Famílias</h3>
+        <p>Cestas básicas e apoio para lares em situação de vulnerabilidade.</p>
+      </article>
+      <article class="cartao surge" style="--c:var(--peca-azul)">
+        <div class="icone"><img src="assets/icones/idosos.webp" alt="" width="34" height="34"></div>
+        <h3>Idosos</h3>
+        <p>Cuidado e companhia para quem já cuidou tanto de nós.</p>
+      </article>
+      <article class="cartao surge" style="--c:var(--peca-verde)">
+        <div class="icone"><img src="assets/icones/pata.webp" alt="" width="34" height="34"></div>
+        <h3>Animais</h3>
+        <p>Ração, proteção e amor também para os que não falam.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== O QUE FAZEMOS ===== -->
+<section id="fazemos" style="background:var(--creme)">
+  <div class="wrap">
+    <div class="centro surge">
+      <span class="olho">O que fazemos</span>
+      <h2 class="titulo-secao">Ações simples que mudam o dia — e a vida — de muita gente</h2>
+    </div>
+    <div class="grade grade-4">
+      <article class="cartao surge" style="--c:var(--peca-amarela)">
+        <div class="icone"><img src="assets/icones/cesta.webp" alt="" width="34" height="34"></div>
+        <h3>Alimentação</h3>
+        <p>Cestas básicas e alimentos para famílias, crianças e idosos.</p>
+      </article>
+      <article class="cartao surge" style="--c:var(--peca-azul)">
+        <div class="icone"><img src="assets/icones/igreja.webp" alt="" width="34" height="34"></div>
+        <h3>Apoio a igrejas</h3>
+        <p>Parceria com igrejas que conhecem de perto as necessidades da comunidade.</p>
+      </article>
+      <article class="cartao surge" style="--c:var(--peca-rosa)">
+        <div class="icone"><img src="assets/icones/casa.webp" alt="" width="34" height="34"></div>
+        <h3>Casas de apoio</h3>
+        <p>Suporte a lares que acolhem pessoas em momentos difíceis.</p>
+      </article>
+      <article class="cartao surge" style="--c:var(--peca-verde)">
+        <div class="icone"><img src="assets/icones/pata.webp" alt="" width="34" height="34"></div>
+        <h3>Causa animal</h3>
+        <p>Ração e cuidado para animais abandonados e resgatados.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== COMO FUNCIONA ===== -->
+<section class="funciona" id="funciona">
+  <svg class="pecas" viewBox="-18 -18 216 216" aria-hidden="true"><use href="#pecas3"/></svg>
+  <div class="wrap">
+    <div class="centro surge">
+      <span class="olho">Como funciona</span>
+      <h2 class="titulo-secao">Do gesto de doar até chegar a quem precisa</h2>
+    </div>
+    <div class="grade grade-4">
+      <article class="passo surge">
+        <span class="num">01</span>
+        <img src="assets/icones/presente.webp" alt="" width="38" height="38">
+        <h3>Arrecadação</h3>
+        <p>Doações de alimentos, ração e recursos de pessoas e empresas parceiras.</p>
+      </article>
+      <article class="passo surge">
+        <span class="num">02</span>
+        <img src="assets/icones/caixa.webp" alt="" width="38" height="38">
+        <h3>Montagem</h3>
+        <p>As cestas e os kits são montados com carinho, pensando em cada família.</p>
+      </article>
+      <article class="passo surge">
+        <span class="num">03</span>
+        <img src="assets/icones/caminhao.webp" alt="" width="38" height="38">
+        <h3>Entrega</h3>
+        <p>Levamos tudo até famílias, igrejas, casas de apoio e abrigos.</p>
+      </article>
+      <article class="passo surge">
+        <span class="num">04</span>
+        <img src="assets/icones/coracao.webp" alt="" width="38" height="38">
+        <h3>Acompanhamento</h3>
+        <p>Mantemos o vínculo com quem recebe, porque cuidar é contínuo.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== MOMENTOS ===== -->
+<section class="momentos" id="momentos">
+  <div class="wrap">
+    <div class="centro surge">
+      <span class="olho">Momentos</span>
+      <h2 class="titulo-secao">O amor em ação, todos os dias</h2>
+    </div>
+    <div class="galeria surge">
+      <figure class="g-larga g-alta">
+        <img src="assets/fotos/criancas.webp" alt="Crianças desenhando em uma sala colorida; um menino sorridente segura um cartaz com a logo do Instituto Abner" loading="lazy">
+        <figcaption>Carinho e apoio para quem está começando a vida</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/fotos/pintura.webp" alt="Mão de criança pintando com tinta colorida sobre um papel" loading="lazy">
+        <figcaption>Espaço para ser criança</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/fotos/entrega.webp" alt="Mãos entregando uma doação a outra pessoa" loading="lazy">
+        <figcaption>Doação que chega de mão em mão</figcaption>
+      </figure>
+      <figure class="g-larga">
+        <img src="assets/fotos/idosos.webp" alt="Voluntária do Instituto Abner abraça e conversa com três senhoras sorridentes ao redor de uma mesa com flores" loading="lazy">
+        <figcaption>Companhia para quem já cuidou tanto de nós</figcaption>
+      </figure>
+      <figure class="g-larga">
+        <img src="assets/fotos/maos-cor.webp" alt="Mãos de pessoas diferentes sobrepostas umas às outras" loading="lazy">
+        <figcaption>Gente cuidando de gente</figcaption>
+      </figure>
+      <figure class="g-larga">
+        <img src="assets/fotos/mae-filho-pb.webp" alt="Mãe e filho sorrindo juntos, em preto e branco" loading="lazy">
+        <figcaption>O amor que sustenta uma família</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ===== COMO AJUDAR ===== -->
+<section class="ajudar" id="ajudar">
+  <svg class="pecas" viewBox="-18 -18 216 216" aria-hidden="true"><use href="#pecas4"/></svg>
+  <div class="wrap">
+    <div class="centro surge">
+      <span class="olho">Como você pode ajudar</span>
+      <h2 class="titulo-secao">Toda ajuda cabe: grande ou pequena, ela sempre chega a alguém</h2>
+    </div>
+    <div class="grade grade-3">
+      <article class="ajuda surge">
+        <div class="capa"><img src="assets/fotos/abraco.webp" alt="Criança abraçada com carinho por uma mulher" loading="lazy"></div>
+        <div class="ajuda-corpo">
+          <h3>Doe</h3>
+          <p>Alimentos não perecíveis, ração, produtos de higiene ou qualquer valor. Tudo vira cuidado.</p>
+          <a class="btn btn--contorno" href="#junte">Quero doar</a>
+        </div>
+      </article>
+      <article class="ajuda surge">
+        <div class="capa"><img src="assets/fotos/maos-cor.webp" alt="Mãos de voluntários sobrepostas" loading="lazy"></div>
+        <div class="ajuda-corpo">
+          <h3>Seja voluntário</h3>
+          <p>Ajude na montagem das cestas e nas entregas. Seu tempo vale ouro para quem espera.</p>
+          <a class="btn btn--contorno" href="#junte">Quero servir</a>
+        </div>
+      </article>
+      <article class="ajuda surge">
+        <div class="capa"><img src="assets/fotos/desenhos.webp" alt="Parede coberta por desenhos coloridos feitos por crianças" loading="lazy"></div>
+        <div class="ajuda-corpo">
+          <h3>Divulgue</h3>
+          <p>Compartilhe o projeto com amigos, família e nas redes. Uma indicação já leva alguém até nós.</p>
+          <a class="btn btn--contorno" href="https://instagram.com/institutoabner.r" target="_blank" rel="noopener">Seguir no Instagram</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== JUNTE-SE A NÓS ===== -->
+<section class="junte" id="junte">
+  <svg class="pecas pecas--claro" viewBox="-18 -18 216 216" aria-hidden="true"><use href="#pecas4"/></svg>
+  <svg class="pecas pecas--claro dir" viewBox="-18 -18 216 216" aria-hidden="true"><use href="#pecas3"/></svg>
+  <div class="wrap centro surge">
+    <div class="emblema"><img src="assets/logo-abner.webp" alt="Símbolo do Instituto Abner" width="88" height="75" loading="lazy"></div>
+    <span class="olho">Junte-se a nós</span>
+    <h2 class="titulo-secao">Cada peça desse quebra-cabeça é uma pessoa como você</h2>
+    <p class="lead">
+      Fale com a gente pelo Instagram: é por lá que combinamos doações, entregas e
+      mutirões de voluntários. Sua mensagem chega direto em quem organiza tudo.
+    </p>
+    <div class="junte-botoes">
+      <a class="btn btn--claro" href="https://instagram.com/institutoabner.r" target="_blank" rel="noopener">Falar no Instagram</a>
+      <a class="btn btn--claro-contorno" href="#ajudar">Ver como ajudar</a>
+    </div>
+    <p class="junte-nota">@institutoabner.r · Servir transforma vidas</p>
+  </div>
+</section>
+
 </main>
 
+<footer class="rodape">
+  <div class="wrap">
+    <div class="rodape-grid">
+      <div>
+        <div class="emblema-rodape"><img src="assets/logo-abner.webp" alt="Instituto Abner" width="64" height="55" loading="lazy"></div>
+        <h4>Instituto Abner</h4>
+        <p>
+          Servir, acolher e transformar vidas por meio da solidariedade, da empatia e do
+          amor ao próximo.
+        </p>
+      </div>
+      <div>
+        <h4>O instituto</h4>
+        <a href="#historia">Nossa história</a>
+        <a href="#missao">Nossa missão</a>
+        <a href="#quem">Quem ajudamos</a>
+        <a href="#fazemos">O que fazemos</a>
+      </div>
+      <div>
+        <h4>Participe</h4>
+        <a href="#funciona">Como funciona</a>
+        <a href="#ajudar">Como ajudar</a>
+        <a href="#junte">Junte-se a nós</a>
+        <a href="https://instagram.com/institutoabner.r" target="_blank" rel="noopener">@institutoabner.r</a>
+      </div>
+    </div>
+    <div class="rodape-fim">
+      <span>© <span id="ano">2026</span> Instituto Abner. Todos os direitos reservados.</span>
+      <span class="script">Cada peça importa. Cada pessoa importa.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
 </body>
 </html>

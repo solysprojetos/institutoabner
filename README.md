@@ -1,39 +1,72 @@
-# Instituto ABNER — Servir Transforma Vidas
+# Instituto Abner — Servir transforma vidas
 
-Site institucional do **Instituto ABNER**, que leva alimentação, acolhimento e cuidado a crianças, idosos, famílias e animais. O conteúdo, as cores e os ícones do site seguem a apresentação oficial do projeto.
+Site institucional do **Instituto Abner**, que serve, acolhe e transforma vidas por meio de
+ações sociais para crianças, famílias, idosos e animais em situação de vulnerabilidade.
+
+O site foi construído a partir do **manual da marca oficial** (`BRAND_COR.pdf`): paleta,
+tipografia, grafismo e fotografias saem de lá.
+
+## Identidade aplicada no site
+
+| Elemento | Valor |
+|---|---|
+| Creme (fundo principal) | `#F7F3E5` |
+| Cinza (faixa "Nossa história") | `#B5BAB9` |
+| Azul institucional | `#14387E` |
+| Azul escuro (rodapé) | `#0D2450` |
+| Títulos | **Bebas Neue** (a fonte usada no manual) |
+| Texto | **Poppins** — substituta livre da *Garet*, que não tem versão web gratuita |
+| Assinatura decorativa | **Pinyon Script** (o mesmo estilo do "Brand"/"Feed" do manual) |
+| Grafismo | peças de quebra-cabeça em contorno, desenhadas em SVG (`#peca` no HTML) |
+
+As cores das peças do símbolo (vermelho, laranja, amarelo, verde, azul, rosa) aparecem
+apenas em detalhes — o traço colorido do título e o topo dos cartões.
+
+> **Nota de acessibilidade:** no manual, a faixa cinza usa texto branco. No site o texto
+> dessa faixa é azul institucional, porque branco sobre `#B5BAB9` não atinge o contraste
+> mínimo de leitura (WCAG AA). O restante segue o manual sem alterações.
 
 ## Estrutura
 
 ```
-index.html              → estrutura da página (só HTML)
-css/styles.css          → todos os estilos do site
-js/main.js              → interações (menu mobile, animações e formulário)
-assets/logo-abner.webp  → logo oficial do projeto (da apresentação)
-assets/icones/          → ícones brancos das seções (da apresentação)
-assets/pecas/           → peças de quebra-cabeça coloridas (decoração)
+index.html              → o site (página única)
+manutencao.html         → página de manutenção, pronta para uso quando precisar
+inicio.html             → redireciona para a home (era o endereço antigo do site)
+css/styles.css          → todo o estilo do site
+js/main.js              → menu mobile, animações de entrada e link ativo do menu
+assets/logo-abner.webp  → símbolo (versão vertical, fundo transparente)
+assets/marca/           → logo horizontal extraída do manual
+assets/icones/          → ícones brancos das seções
+assets/fotos/           → fotos do instituto e do manual da marca
 ```
 
-O site é uma página única (one-page) com as seções da apresentação: **Nossa história · Por que "Abner"? · Quem ajudamos · O que fazemos · Como funciona · Nossos valores · Como ajudar · Junte-se a nós**. Não precisa de servidor nem de build — basta abrir o `index.html` no navegador.
+Seções da home: **Hero · Nossa história · Nossa missão · Pilares (Servir, Empatia, Inclusão) ·
+Quem ajudamos · O que fazemos · Como funciona · Momentos · Como ajudar · Junte-se a nós**.
 
-## Como publicar no GitHub Pages
+Não precisa de servidor nem de build: basta abrir o `index.html` no navegador.
+Para conferir localmente com um servidor: `npx http-server -p 8080`.
 
-1. No GitHub, abra **Settings → Pages** deste repositório.
-2. Em **Source**, escolha **Deploy from a branch**.
-3. Selecione a branch principal (`main`) e a pasta **/ (root)** e salve.
-4. Em alguns minutos o site estará no ar em `https://<usuario>.github.io/institutoabner/`.
+## Publicação
 
-## ⚠️ Antes de colocar no ar: dados que precisam ser atualizados
+O site é publicado pelo GitHub Pages no domínio **institutoabner.com.br**. Cada push na
+branch `main` dispara o workflow `.github/workflows/pages.yml`, que copia a `main` para a
+branch `gh-pages`.
 
-Alguns dados vieram como **placeholder** da apresentação. Procure e substitua no `index.html`:
+### Voltar para o modo manutenção
 
-| O quê | Onde está | Valor atual (exemplo) |
-|---|---|---|
-| Telefone/WhatsApp | seção Junte-se a nós | (xx) xxxxx-xxxx |
-| E-mail do formulário | constante `FORM_EMAIL` no `<script>` | contato@abner.org.br |
-| Instagram | links `@abnerprojetosocial` | confirme se o perfil está correto |
+Troque o conteúdo do `index.html` pelo do `manutencao.html` (o arquivo de manutenção
+continua no repositório justamente para isso):
 
-## Formulário de contato
+```bash
+cp index.html site.html && cp manutencao.html index.html
+git commit -am "Coloca o site em modo manutenção" && git push
+```
 
-O formulário usa o serviço gratuito [FormSubmit](https://formsubmit.co) e envia as mensagens para o e-mail definido na constante `FORM_EMAIL` dentro do `index.html` (não requer cadastro).
+## Contato
 
-**Importante:** na primeira mensagem enviada pelo site, o FormSubmit manda um e-mail de confirmação para esse endereço — é preciso clicar no link de ativação uma única vez para os envios passarem a funcionar.
+Hoje o único canal divulgado no site é o **Instagram [@institutoabner.r](https://instagram.com/institutoabner.r)**.
+Quando o instituto tiver os dados abaixo, é só pedir que eles entram no site:
+
+- **WhatsApp** — vira botão flutuante e link direto na seção "Junte-se a nós";
+- **E-mail** — reativa um formulário de contato na página;
+- **Chave PIX** — vira um bloco de doação com botão de copiar.
