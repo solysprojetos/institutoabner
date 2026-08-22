@@ -1,10 +1,10 @@
 # Instituto Abner — Servir transforma vidas
 
-Site institucional do **Instituto Abner**, que serve, acolhe e transforma vidas por meio de
-ações sociais para crianças, famílias, idosos e animais em situação de vulnerabilidade.
+Site institucional do **Instituto Abner**, que serve pessoas, acolhe famílias e transforma
+realidades por meio da solidariedade.
 
-O site foi construído a partir do **manual da marca oficial** (`BRAND_COR.pdf`): paleta,
-tipografia, grafismo e fotografias saem de lá.
+A identidade visual vem do **manual da marca oficial** (`BRAND_COR.pdf`) e a logo vem do
+arquivo vetorial `FRENTE.pdf`.
 
 ## Identidade aplicada no site
 
@@ -16,36 +16,60 @@ tipografia, grafismo e fotografias saem de lá.
 | Azul escuro (rodapé) | `#0D2450` |
 | Títulos | **Bebas Neue** (a fonte usada no manual) |
 | Texto | **Poppins** — substituta livre da *Garet*, que não tem versão web gratuita |
-| Assinatura decorativa | **Pinyon Script** (o mesmo estilo do "Brand"/"Feed" do manual) |
-| Grafismo | peças de quebra-cabeça em contorno, desenhadas em SVG (`#peca` no HTML) |
-
-As cores das peças do símbolo (vermelho, laranja, amarelo, verde, azul, rosa) aparecem
-apenas em detalhes — o traço colorido do título e o topo dos cartões.
+| Assinatura decorativa | **Pinyon Script** |
+| Grafismo | peças de quebra-cabeça em contorno, desenhadas em SVG |
 
 > **Nota de acessibilidade:** no manual, a faixa cinza usa texto branco. No site o texto
 > dessa faixa é azul institucional, porque branco sobre `#B5BAB9` não atinge o contraste
-> mínimo de leitura (WCAG AA). O restante segue o manual sem alterações.
+> mínimo de leitura (WCAG AA). Todos os textos do site foram medidos e passam em AA.
+
+> **Nota de tipografia:** a Bebas Neue e a Pinyon Script têm um único peso (400). Todo texto
+> nessas duas fontes é fixado em 400 no CSS — pedir 300 ou 700 faz o navegador falsificar o
+> desenho.
 
 ## Estrutura
 
 ```
 index.html              → o site (página única)
+privacidade.html        → política de privacidade
 manutencao.html         → página de manutenção, pronta para uso quando precisar
-inicio.html             → redireciona para a home (era o endereço antigo do site)
+inicio.html             → redireciona para a home (endereço antigo do site)
 css/styles.css          → todo o estilo do site
-js/main.js              → menu mobile, animações de entrada e link ativo do menu
-assets/marca/logo-abner.svg        → logo oficial, vetorial (arquivo FRENTE.pdf)
+js/main.js              → menu, animações, link ativo e ampliação das fotos
+assets/marca/logo-abner.svg        → logo oficial, vetorial
 assets/marca/logo-abner-claro.svg  → mesma logo com o azul em creme, para fundo escuro
 assets/marca/icone.png             → ícone para a tela inicial do celular
-assets/icones/          → ícones brancos das seções
 assets/fotos/           → fotos do instituto e do manual da marca
+assets/icones/          → ícones antigos, hoje sem uso no site
 ```
 
-Seções da home: **Hero · Nossa história · Nossa missão · Pilares (Servir, Empatia, Inclusão) ·
-Quem ajudamos · O que fazemos · Como funciona · Momentos · Como ajudar · Junte-se a nós**.
+Seções da home, na ordem: **Início · Por que Abner? · Nossa história · Nossas ações ·
+Projetos · Nosso impacto · Galeria · Depoimentos · Voluntariado · Doações · Transparência ·
+Parceiros · Contato**.
 
 Não precisa de servidor nem de build: basta abrir o `index.html` no navegador.
 Para conferir localmente com um servidor: `npx http-server -p 8080`.
+
+## ⚠️ Conteúdo que ainda falta
+
+Estas áreas estão construídas e prontas, mas **exibem um aviso de "em breve"** porque ainda
+não há informação real para publicar. Nada foi inventado. Procure o texto indicado para
+preencher:
+
+| Seção | O que falta | Onde está |
+|---|---|---|
+| Nosso impacto | Números reais (famílias, crianças, ações, voluntários) | `data-numero` no `index.html` |
+| Galeria | Fotos reais das ações; hoje há duas | seção `#galeria` |
+| Depoimentos | Depoimentos com nome e autorização de quem escreveu | seção `#depoimentos` |
+| Projetos | Descrição de cada projeto | seção `#projetos` |
+| Transparência | Relatórios e prestação de contas para download | seção `#transparencia` |
+| Parceiros | Logos dos parceiros | seção `#parceiros` |
+| Doações | Chave PIX, QR Code e dados bancários | `.doacoes-formas` |
+| Contato / rodapé | WhatsApp, e-mail e endereço | `.contato-canais` e rodapé |
+
+Enquanto isso, **o único canal de contato divulgado é o Instagram
+[@institutoabner.r](https://instagram.com/institutoabner.r)**, e todos os botões de ação
+levam para lá.
 
 ## Publicação
 
@@ -55,19 +79,9 @@ branch `gh-pages`.
 
 ### Voltar para o modo manutenção
 
-Troque o conteúdo do `index.html` pelo do `manutencao.html` (o arquivo de manutenção
-continua no repositório justamente para isso):
+Troque o conteúdo do `index.html` pelo do `manutencao.html`:
 
 ```bash
 cp index.html site.html && cp manutencao.html index.html
 git commit -am "Coloca o site em modo manutenção" && git push
 ```
-
-## Contato
-
-Hoje o único canal divulgado no site é o **Instagram [@institutoabner.r](https://instagram.com/institutoabner.r)**.
-Quando o instituto tiver os dados abaixo, é só pedir que eles entram no site:
-
-- **WhatsApp** — vira botão flutuante e link direto na seção "Junte-se a nós";
-- **E-mail** — reativa um formulário de contato na página;
-- **Chave PIX** — vira um bloco de doação com botão de copiar.

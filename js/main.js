@@ -12,11 +12,12 @@ botaoMenu.addEventListener('click', () => {
   botaoMenu.setAttribute('aria-label', aberto ? 'Fechar menu' : 'Abrir menu');
 });
 
-menu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+const fecharMenu = () => {
   menu.classList.remove('aberto');
   botaoMenu.setAttribute('aria-expanded', 'false');
   botaoMenu.setAttribute('aria-label', 'Abrir menu');
-}));
+};
+menu.querySelectorAll('a').forEach(link => link.addEventListener('click', fecharMenu));
 
 // --- sombra do cabeçalho ao rolar ---------------------------------------
 const cabecalho = document.getElementById('cabecalho');
@@ -37,7 +38,6 @@ const observador = new IntersectionObserver((entradas) => {
 document.querySelectorAll('.surge').forEach(el => observador.observe(el));
 
 // --- link ativo no menu conforme a seção visível -------------------------
-const secoes = [...document.querySelectorAll('main section[id]')];
 const links = new Map(
   [...menu.querySelectorAll('a[href^="#"]')].map(a => [a.getAttribute('href').slice(1), a])
 );
@@ -52,7 +52,44 @@ const espiao = new IntersectionObserver((entradas) => {
   });
 }, { rootMargin: '-45% 0px -50% 0px' });
 
-secoes.forEach(secao => { if (links.has(secao.id)) espiao.observe(secao); });
+document.querySelectorAll('main section[id]').forEach(secao => {
+  if (links.has(secao.id)) espiao.observe(secao);
+});
+
+// --- ampliação das fotos da galeria --------------------------------------
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightboxImg');
+const lightboxLegenda = document.getElementById('lightboxLegenda');
+const lightboxFechar = document.getElementById('lightboxFechar');
+let focoAnterior = null;
+
+const abrirFoto = (img, legenda) => {
+  focoAnterior = document.activeElement;
+  lightboxImg.src = img.currentSrc || img.src;
+  lightboxImg.alt = img.alt;
+  lightboxLegenda.textContent = legenda;
+  lightbox.hidden = false;
+  document.body.style.overflow = 'hidden';
+  lightboxFechar.focus();
+};
+
+const fecharFoto = () => {
+  lightbox.hidden = true;
+  lightboxImg.removeAttribute('src');
+  document.body.style.overflow = '';
+  if (focoAnterior) focoAnterior.focus();
+};
+
+document.querySelectorAll('.galeria-abrir').forEach(botao => {
+  botao.addEventListener('click', () => {
+    const figura = botao.closest('figure');
+    abrirFoto(botao.querySelector('img'), figura.querySelector('figcaption')?.textContent.trim() || '');
+  });
+});
+
+lightboxFechar.addEventListener('click', fecharFoto);
+lightbox.addEventListener('click', e => { if (e.target === lightbox) fecharFoto(); });
+addEventListener('keydown', e => { if (e.key === 'Escape' && !lightbox.hidden) fecharFoto(); });
 
 // --- ano do rodapé -------------------------------------------------------
 document.getElementById('ano').textContent = new Date().getFullYear();
