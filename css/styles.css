@@ -72,6 +72,12 @@ h1,h2,h3,.bebas{
   line-height:.92;
   color:var(--azul);
 }
+/* A Bebas Neue e a Pinyon Script têm um peso só (400). Pedir 300 ou 700
+   faz o navegador falsificar o desenho — o 700 engrossa o traço na marra e
+   fica destoando do resto. Por isso todo texto nessas duas é fixado em 400. */
+.btn,.olho,.menu a,.faixa span,.passo .num,.selo b,.pilar-texto b,
+.rodape h4,h4,.script,.assinatura{font-weight:400}
+
 h1{font-size:clamp(3.1rem,10vw,6.6rem)}
 h2{font-size:clamp(2.3rem,5.6vw,4.1rem)}
 h3{font-size:clamp(1.45rem,2.4vw,1.85rem);line-height:1}
@@ -89,11 +95,9 @@ section{padding:var(--secao) 0;position:relative;overflow:hidden}
   letter-spacing:.24em;text-transform:uppercase;color:var(--azul);
   margin-bottom:18px;
 }
-.olho::before{content:"";width:30px;height:2px;background:currentColor;opacity:.55}
 .lead{font-size:clamp(1.05rem,1.5vw,1.22rem);max-width:56ch;color:var(--texto)}
 h2+.lead,h2+p{margin-top:20px}
 .centro{text-align:center}
-.centro .olho::after{content:"";width:30px;height:2px;background:currentColor;opacity:.55}
 .centro .olho{justify-content:center}
 .titulo-secao{max-width:22ch}
 .centro .titulo-secao,.centro .lead{margin-inline:auto}
@@ -223,13 +227,8 @@ section>.wrap,section>.wrap-largo{position:relative;z-index:1}
   max-width:24ch;
 }
 .missao-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(32px,5vw,70px);align-items:start}
-.missao-lista{display:grid;gap:22px}
-.missao-item{display:grid;grid-template-columns:auto 1fr;gap:20px;align-items:start}
-.missao-item .marcador{
-  width:52px;height:52px;border-radius:14px;background:var(--azul);
-  display:grid;place-items:center;flex:none;
-}
-.missao-item .marcador img{width:26px;height:26px}
+.missao-lista{display:grid;gap:30px}
+.missao-item{display:block}
 .missao-item h3{margin-bottom:4px}
 .missao-item p{font-size:.98rem}
 
@@ -256,7 +255,7 @@ section>.wrap,section>.wrap-largo{position:relative;z-index:1}
 .grade-4{grid-template-columns:repeat(4,1fr)}
 .grade-3{grid-template-columns:repeat(3,1fr)}
 .cartao{
-  background:var(--branco);border-radius:var(--raio-g);padding:34px 30px 32px;
+  background:var(--branco);border-radius:var(--raio-g);padding:38px 32px 34px;
   border:var(--borda);box-shadow:0 2px 0 rgba(20,56,126,.04);
   transition:transform .3s ease,box-shadow .3s ease;position:relative;overflow:hidden;
 }
@@ -267,12 +266,7 @@ section>.wrap,section>.wrap-largo{position:relative;z-index:1}
 }
 .cartao:hover{transform:translateY(-6px);box-shadow:var(--sombra)}
 .cartao:hover::before{transform:scaleX(1)}
-.cartao .icone{
-  width:66px;height:66px;border-radius:20px;background:var(--azul);
-  display:grid;place-items:center;margin-bottom:22px;
-}
-.cartao .icone img{width:34px;height:34px}
-.cartao h3{margin-bottom:10px}
+.cartao h3{margin-bottom:12px}
 .cartao p{font-size:.97rem;line-height:1.7}
 
 /* ===== como funciona ===== */
@@ -284,9 +278,8 @@ section>.wrap,section>.wrap-largo{position:relative;z-index:1}
 }
 .passo .num{
   font-family:'Bebas Neue',sans-serif;font-size:3.4rem;line-height:.8;color:transparent;
-  -webkit-text-stroke:1.6px rgba(20,56,126,.35);display:block;margin-bottom:14px;
+  -webkit-text-stroke:1.6px rgba(20,56,126,.35);display:block;margin-bottom:18px;
 }
-.passo img{width:38px;height:38px;margin-bottom:16px;filter:brightness(0) saturate(100%) invert(17%) sepia(64%) saturate(2200%) hue-rotate(207deg) brightness(92%) contrast(93%)}
 .passo h3{margin-bottom:8px}
 .passo p{font-size:.95rem}
 
