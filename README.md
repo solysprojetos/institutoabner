@@ -34,8 +34,9 @@ manutencao.html         → página de manutenção, pronta para uso quando prec
 inicio.html             → redireciona para a home (era o endereço antigo do site)
 css/styles.css          → todo o estilo do site
 js/main.js              → menu mobile, animações de entrada e link ativo do menu
-assets/logo-abner.webp  → símbolo (versão vertical, fundo transparente)
-assets/marca/           → logo horizontal extraída do manual
+assets/marca/logo-abner.svg        → logo oficial, vetorial (arquivo FRENTE.pdf)
+assets/marca/logo-abner-claro.svg  → mesma logo com o azul em creme, para fundo escuro
+assets/marca/icone.png             → ícone para a tela inicial do celular
 assets/icones/          → ícones brancos das seções
 assets/fotos/           → fotos do instituto e do manual da marca
 ```
