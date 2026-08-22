@@ -192,7 +192,7 @@ section>.wrap,section>.wrap-largo{position:relative;z-index:1}
 .selo span{font-size:.82rem;line-height:1.5;display:block;margin-top:6px;opacity:.9}
 
 /* ===== faixa de valores (marquee) ===== */
-.faixa{background:var(--azul);color:var(--creme);padding:22px 0;overflow:hidden}
+.faixa{background:var(--azul);color:var(--creme);padding:18px 0;overflow:hidden;position:relative;z-index:61}
 .faixa-trilho{display:flex;width:max-content;animation:desliza 34s linear infinite}
 .faixa-grupo{display:flex;align-items:center;gap:44px;padding-right:44px}
 .faixa span{
@@ -379,7 +379,7 @@ section>.wrap,section>.wrap-largo{position:relative;z-index:1}
   .historia .pecas{bottom:-60px;left:-52px;width:180px}
   .hero .pecas{top:-30px;right:-56px;width:180px}
   .menu{
-    position:fixed;inset:82px 0 auto 0;flex-direction:column;gap:0;
+    position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;
     background:var(--creme);border-bottom:1px solid rgba(20,56,126,.12);
     padding:10px 22px 24px;transform:translateY(-140%);transition:transform .35s ease;
     box-shadow:0 20px 40px rgba(20,56,126,.12);align-items:stretch;
