@@ -135,7 +135,7 @@ section>.wrap,section>.wrap-largo{position:relative;z-index:1}
 }
 .cabecalho.rolou{box-shadow:0 10px 30px rgba(20,56,126,.08)}
 .cabecalho .wrap-largo{display:flex;align-items:center;gap:26px;min-height:82px}
-.marca img{height:46px;width:auto}
+.marca img{height:50px;width:auto}
 .menu{display:flex;gap:26px;margin-left:auto;align-items:center}
 .menu a{
   font-family:'Bebas Neue',sans-serif;font-size:1.08rem;letter-spacing:.11em;
@@ -405,7 +405,7 @@ section>.wrap,section>.wrap-largo{position:relative;z-index:1}
   .galeria{grid-template-columns:repeat(2,1fr);grid-auto-rows:150px}
   .g-larga{grid-column:span 2}
   .rodape-grid{grid-template-columns:1fr}
-  .marca img{height:38px}
+  .marca img{height:40px}
   .selo{position:static;max-width:none;margin-top:16px}
   .hero-figura .foto{aspect-ratio:1/1}
 }
