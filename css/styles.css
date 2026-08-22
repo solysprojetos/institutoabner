@@ -188,13 +188,22 @@ section>.wrap,section>.wrap-largo{position:relative;z-index:1}
 /* ===== história (faixa cinza da marca) ===== */
 .historia{background:var(--cinza);color:var(--azul)}
 .historia .pecas{bottom:-120px;left:-90px;width:min(440px,48vw);color:var(--branco);opacity:.55}
-.historia-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(32px,5vw,70px);align-items:center}
+.historia-grid{display:grid;grid-template-columns:1fr .82fr;gap:clamp(32px,5vw,70px);align-items:center}
+.historia-abre{
+  margin-top:22px;font-size:clamp(1.1rem,1.7vw,1.32rem);line-height:1.7;max-width:44ch;
+}
+.historia-texto{margin-top:clamp(38px,5vw,64px)}
+.historia-texto p{max-width:70ch}
+.historia-fecha{
+  margin-top:1.4em;font-size:clamp(1.12rem,1.8vw,1.4rem);line-height:1.6;
+  font-weight:400;color:var(--azul);
+}
 .historia p{color:#20325C}
 .historia .olho,.historia h2{color:var(--azul)}
-.historia .foto{border-radius:var(--raio-g);overflow:hidden;box-shadow:var(--sombra-forte);aspect-ratio:3/4}
-.historia .foto img{width:100%;height:100%;object-fit:cover}
+.historia .foto{border-radius:var(--raio-g);overflow:hidden;box-shadow:var(--sombra-forte);aspect-ratio:1/1}
+.historia .foto img{width:100%;height:100%;object-fit:cover;object-position:center 28%}
 .assinatura{
-  margin-top:30px;font-family:'Pinyon Script',cursive;font-size:clamp(1.8rem,3vw,2.5rem);
+  margin-top:34px;font-family:'Pinyon Script',cursive;font-size:clamp(1.8rem,3vw,2.5rem);
   color:var(--azul);line-height:1.2;
 }
 
