@@ -18,10 +18,11 @@
   --azul-escuro:#0D2450;
   --branco:#FFFFFF;
 
-  /* Cor do grafismo de quebra-cabeça: laranja do próprio símbolo. Foi a
-     única da paleta das peças que se sustenta nos cinco fundos do site
-     (creme, creme claro, cinza, névoa e azul). */
-  --peca-cor:#FD5920;
+  /* Grafismo de quebra-cabeça: o cinza da marca, na força máxima (sem
+     transparência) para aparecer nos fundos claros. Sobre a faixa cinza e
+     sobre o azul ele não teria como aparecer, então ali as peças são
+     brancas — é o que o manual da marca faz nessas duas páginas. */
+  --peca-cor:#B5BAB9;
 
   --texto:#4C5560;
   --texto-suave:#6B747E;
@@ -88,12 +89,12 @@ h2+.lead,h2+p,.topico+.lead,.topico+p{margin-top:20px}
 /* ===== grafismo: peças de quebra-cabeça ===== */
 .pecas{
   position:absolute;pointer-events:none;z-index:0;display:block;
-  color:var(--peca-cor);opacity:.55;overflow:visible;
+  color:var(--peca-cor);opacity:1;overflow:visible;
 }
-.pecas use{fill:none;stroke:currentColor;stroke-width:3.6;stroke-linejoin:round}
-.faixa svg{fill:none;stroke:var(--peca-cor);stroke-width:6;stroke-linejoin:round}
-.pecas--claro{opacity:.5}
-.pecas--creme{opacity:.5}
+.pecas use{fill:none;stroke:currentColor;stroke-width:4.2;stroke-linejoin:round}
+.faixa svg{fill:none;stroke:var(--creme);stroke-width:6;stroke-linejoin:round}
+.pecas--claro{color:var(--branco);opacity:.42}
+.pecas--creme{opacity:1}
 section>.wrap,section>.wrap-largo{position:relative;z-index:1}
 
 /* ===== botões ===== */
@@ -144,7 +145,7 @@ section>.wrap,section>.wrap-largo{position:relative;z-index:1}
 .faixa-trilho{display:flex;width:max-content;animation:desliza 38s linear infinite}
 .faixa-grupo{display:flex;align-items:center;gap:44px;padding-right:44px}
 .faixa span{font-family:'Bebas Neue',sans-serif;font-size:1.4rem;letter-spacing:.18em;white-space:nowrap}
-.faixa svg{width:18px;height:18px;flex:none;opacity:.9}
+.faixa svg{width:18px;height:18px;flex:none;opacity:.8}
 @keyframes desliza{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
 /* ===== início ===== */
@@ -168,7 +169,7 @@ section>.wrap,section>.wrap-largo{position:relative;z-index:1}
 
 /* ===== nossa história ===== */
 .historia{background:var(--cinza);color:var(--azul)}
-.historia .pecas{bottom:-140px;right:-120px;left:auto;width:min(360px,40vw);opacity:.6}
+.historia .pecas{bottom:-80px;right:-56px;left:auto;width:min(320px,36vw);color:var(--branco);opacity:.9}
 .historia-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(32px,5vw,64px);align-items:start}
 .historia p{color:#20325C;max-width:64ch}
 .historia p+p{margin-top:1.1em}
@@ -215,9 +216,9 @@ section>.wrap,section>.wrap-largo{position:relative;z-index:1}
 }
 .reservado-peca{
   position:absolute;top:-40px;right:-46px;width:min(260px,30vw);height:auto;
-  color:var(--peca-cor);opacity:.45;fill:none;
+  color:var(--peca-cor);opacity:1;fill:none;
 }
-.reservado-peca use{fill:none;stroke:currentColor;stroke-width:3.6;stroke-linejoin:round}
+.reservado-peca use{fill:none;stroke:currentColor;stroke-width:4.2;stroke-linejoin:round}
 .reservado-texto{position:relative;z-index:1;max-width:58ch}
 .reservado-texto b{
   font-family:'Bebas Neue',sans-serif;font-weight:400;text-transform:uppercase;
@@ -353,7 +354,7 @@ section>.wrap,section>.wrap-largo{position:relative;z-index:1}
   .rodape-grid{grid-template-columns:1fr 1fr}
 }
 @media (max-width:900px){
-  .pecas{opacity:.4}
+  .pecas{opacity:.85}
   .hero .pecas{top:-30px;right:-56px;width:180px}
   .historia .pecas{bottom:-60px;left:-52px;width:180px}
   .abner .pecas,.voluntario .pecas,.doacoes .pecas,.historia .pecas{bottom:-70px;right:-70px;left:auto;top:auto;width:170px}
