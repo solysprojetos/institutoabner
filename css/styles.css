@@ -24,8 +24,8 @@
      brancas — é o que o manual da marca faz nessas duas páginas. */
   --peca-cor:#B5BAB9;
 
-  --texto:#4C5560;
-  --texto-suave:#6B747E;
+  --texto:#1A1A1A;
+  --texto-suave:#5F6368;
 
   --raio:18px;
   --raio-g:28px;
@@ -192,7 +192,7 @@ section>.wrap,section>.wrap-largo{position:relative;z-index:1}
 /* ===== nossa história ===== */
 .historia{background:var(--cinza);color:var(--azul)}
 .historia-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(32px,5vw,64px);align-items:start}
-.historia p{color:#20325C;max-width:64ch}
+.historia p{color:var(--texto);max-width:64ch}
 .historia p+p{margin-top:1.1em}
 .historia-abre{margin-top:22px;font-size:clamp(1.08rem,1.6vw,1.28rem);line-height:1.7}
 .historia-fecha{margin-top:1.4em;font-size:clamp(1.1rem,1.7vw,1.35rem);line-height:1.6;color:var(--azul)}
