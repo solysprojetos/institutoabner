@@ -77,7 +77,7 @@ h2{font-size:clamp(2.3rem,5.6vw,4.1rem)}
 .topico{font-size:clamp(1.65rem,2.9vw,2.45rem);letter-spacing:.09em}
 h3{font-size:clamp(1.35rem,2.2vw,1.6rem);line-height:1}
 p+p{margin-top:1.05em}
-strong{font-weight:600;color:var(--azul)}
+strong{font-weight:400;color:var(--texto)}
 .script{font-family:'Pinyon Script',cursive;text-transform:none}
 
 .wrap{width:min(1180px,100% - 44px);margin-inline:auto}
@@ -195,14 +195,14 @@ section>.wrap,section>.wrap-largo{position:relative;z-index:1}
 .historia p{color:var(--texto);max-width:64ch}
 .historia p+p{margin-top:1.1em}
 .historia-abre{margin-top:22px;font-size:clamp(1.08rem,1.6vw,1.28rem);line-height:1.7}
-.historia-fecha{margin-top:1.4em;font-size:clamp(1.1rem,1.7vw,1.35rem);line-height:1.6;color:var(--azul)}
+.historia-fecha{margin-top:1.4em;font-size:clamp(1.1rem,1.7vw,1.35rem);line-height:1.6}
 .historia-foto{position:sticky;top:118px}
 .historia .foto{border-radius:var(--raio-g);overflow:hidden;box-shadow:var(--sombra-forte);aspect-ratio:4/5}
 .historia .foto img{width:100%;height:100%;object-fit:cover;object-position:center 28%}
 .historia-lema{
-  margin-top:30px;font-size:clamp(1.15rem,1.8vw,1.45rem);color:var(--azul);
+  margin-top:30px;font-size:clamp(1.15rem,1.8vw,1.45rem);
 }
-.historia-lema strong{font-weight:600}
+.historia-lema strong{font-weight:500}
 
 /* ===== cartões ===== */
 .grade{display:grid;gap:24px;margin-top:40px}
@@ -323,6 +323,7 @@ section>.wrap,section>.wrap-largo{position:relative;z-index:1}
 .doacoes{background:var(--azul);color:var(--creme)}
 .doacoes .topico{color:var(--creme)}
 .doacoes .lead{color:rgba(247,243,229,.88)}
+.impacto strong,.doacoes strong{color:var(--creme)}
 .doacoes-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(32px,5vw,64px);align-items:start}
 .doacoes .btn{margin-top:32px}
 .doacoes-nota{margin-top:28px;font-size:.95rem;color:rgba(247,243,229,.72);max-width:52ch}
