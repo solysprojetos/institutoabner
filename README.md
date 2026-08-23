@@ -17,11 +17,18 @@ arquivo vetorial `FRENTE.pdf`.
 | Títulos | **Bebas Neue** (a fonte usada no manual) |
 | Texto | **Poppins** — substituta livre da *Garet*, que não tem versão web gratuita |
 | Assinatura decorativa | **Pinyon Script** |
+| Laranja do grafismo | `#FD5920` — cor tirada das peças do próprio símbolo |
 | Grafismo | peças de quebra-cabeça em contorno, desenhadas em SVG |
 
 > **Nota de acessibilidade:** no manual, a faixa cinza usa texto branco. No site o texto
 > dessa faixa é azul institucional, porque branco sobre `#B5BAB9` não atinge o contraste
 > mínimo de leitura (WCAG AA). Todos os textos do site foram medidos e passam em AA.
+
+> **Nota do grafismo:** as peças de quebra-cabeça eram cinza e sumiam nos fundos claros.
+> Hoje usam o laranja `#FD5920`, tirado das peças do próprio símbolo — foi a única cor da
+> paleta das peças que se sustenta nos cinco fundos do site. O token é `--peca-cor`.
+> Como o grafismo ficou bem mais visível, ele foi afastado para os cantos das seções: se
+> voltar a cruzar uma coluna de texto, atrapalha a leitura.
 
 > **Nota de tipografia:** a Bebas Neue e a Pinyon Script têm um único peso (400). Todo texto
 > nessas duas fontes é fixado em 400 no CSS — pedir 300 ou 700 faz o navegador falsificar o

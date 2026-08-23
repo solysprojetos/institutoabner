@@ -18,6 +18,11 @@
   --azul-escuro:#0D2450;
   --branco:#FFFFFF;
 
+  /* Cor do grafismo de quebra-cabeça: laranja do próprio símbolo. Foi a
+     única da paleta das peças que se sustenta nos cinco fundos do site
+     (creme, creme claro, cinza, névoa e azul). */
+  --peca-cor:#FD5920;
+
   --texto:#4C5560;
   --texto-suave:#6B747E;
 
@@ -83,12 +88,12 @@ h2+.lead,h2+p,.topico+.lead,.topico+p{margin-top:20px}
 /* ===== grafismo: peças de quebra-cabeça ===== */
 .pecas{
   position:absolute;pointer-events:none;z-index:0;display:block;
-  color:var(--cinza);opacity:.5;overflow:visible;
+  color:var(--peca-cor);opacity:.55;overflow:visible;
 }
-.pecas use{fill:none;stroke:currentColor;stroke-width:3.2;stroke-linejoin:round}
-.faixa svg{fill:none;stroke:currentColor;stroke-width:6;stroke-linejoin:round}
-.pecas--claro{color:var(--branco);opacity:.16}
-.pecas--creme{color:var(--azul);opacity:.09}
+.pecas use{fill:none;stroke:currentColor;stroke-width:3.6;stroke-linejoin:round}
+.faixa svg{fill:none;stroke:var(--peca-cor);stroke-width:6;stroke-linejoin:round}
+.pecas--claro{opacity:.5}
+.pecas--creme{opacity:.5}
 section>.wrap,section>.wrap-largo{position:relative;z-index:1}
 
 /* ===== botões ===== */
@@ -139,12 +144,12 @@ section>.wrap,section>.wrap-largo{position:relative;z-index:1}
 .faixa-trilho{display:flex;width:max-content;animation:desliza 38s linear infinite}
 .faixa-grupo{display:flex;align-items:center;gap:44px;padding-right:44px}
 .faixa span{font-family:'Bebas Neue',sans-serif;font-size:1.4rem;letter-spacing:.18em;white-space:nowrap}
-.faixa svg{width:18px;height:18px;flex:none;opacity:.75}
+.faixa svg{width:18px;height:18px;flex:none;opacity:.9}
 @keyframes desliza{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
 /* ===== início ===== */
 .hero{background:var(--creme);padding:clamp(52px,7vw,92px) 0 clamp(68px,8vw,104px)}
-.hero .pecas{top:-70px;right:-90px;width:min(520px,55vw)}
+.hero .pecas{top:-80px;right:-110px;width:min(460px,48vw)}
 .hero-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:clamp(32px,5vw,72px);align-items:center}
 .hero h1{max-width:20ch}
 .hero .lead{margin-top:24px}
@@ -154,7 +159,7 @@ section>.wrap,section>.wrap-largo{position:relative;z-index:1}
 
 /* ===== por que Abner ===== */
 .abner{background:var(--creme-claro)}
-.abner .pecas{bottom:-90px;left:-70px;width:min(340px,38vw)}
+.abner .pecas{bottom:-140px;left:-140px;width:min(300px,34vw)}
 .abner-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(32px,5vw,72px);align-items:center}
 .abner-abre{font-size:clamp(1.08rem,1.6vw,1.28rem);line-height:1.7}
 .abner p{max-width:60ch}
@@ -163,7 +168,7 @@ section>.wrap,section>.wrap-largo{position:relative;z-index:1}
 
 /* ===== nossa história ===== */
 .historia{background:var(--cinza);color:var(--azul)}
-.historia .pecas{bottom:-120px;left:-90px;width:min(420px,46vw);color:var(--branco);opacity:.5}
+.historia .pecas{bottom:-140px;right:-120px;left:auto;width:min(360px,40vw);opacity:.6}
 .historia-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(32px,5vw,64px);align-items:start}
 .historia p{color:#20325C;max-width:64ch}
 .historia p+p{margin-top:1.1em}
@@ -210,9 +215,9 @@ section>.wrap,section>.wrap-largo{position:relative;z-index:1}
 }
 .reservado-peca{
   position:absolute;top:-40px;right:-46px;width:min(260px,30vw);height:auto;
-  color:var(--azul);opacity:.10;fill:none;
+  color:var(--peca-cor);opacity:.45;fill:none;
 }
-.reservado-peca use{fill:none;stroke:currentColor;stroke-width:3.2;stroke-linejoin:round}
+.reservado-peca use{fill:none;stroke:currentColor;stroke-width:3.6;stroke-linejoin:round}
 .reservado-texto{position:relative;z-index:1;max-width:58ch}
 .reservado-texto b{
   font-family:'Bebas Neue',sans-serif;font-weight:400;text-transform:uppercase;
@@ -226,7 +231,7 @@ section>.wrap,section>.wrap-largo{position:relative;z-index:1}
 
 /* ===== nosso impacto ===== */
 .impacto{background:var(--azul);color:var(--creme)}
-.impacto .pecas{top:-80px;right:-70px;width:min(380px,42vw)}
+.impacto .pecas{top:-100px;right:-100px;width:min(340px,38vw)}
 .impacto .topico{color:var(--creme)}
 .impacto .lead{color:rgba(247,243,229,.82)}
 .numeros{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:44px}
@@ -275,13 +280,13 @@ section>.wrap,section>.wrap-largo{position:relative;z-index:1}
 
 /* ===== voluntariado ===== */
 .voluntario{background:var(--cinza-nevoa)}
-.voluntario .pecas{bottom:-80px;right:-60px;width:min(320px,36vw)}
+.voluntario .pecas{bottom:-100px;right:-90px;width:min(300px,34vw)}
 .voluntario-grid>div{max-width:62ch}
 .voluntario .btn{margin-top:32px}
 
 /* ===== doações ===== */
 .doacoes{background:var(--azul);color:var(--creme)}
-.doacoes .pecas{top:-90px;left:-60px;width:min(400px,44vw)}
+.doacoes .pecas{bottom:-130px;left:-130px;top:auto;width:min(320px,36vw)}
 .doacoes .topico{color:var(--creme)}
 .doacoes .lead{color:rgba(247,243,229,.88)}
 .doacoes-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(32px,5vw,64px);align-items:start}
@@ -348,10 +353,10 @@ section>.wrap,section>.wrap-largo{position:relative;z-index:1}
   .rodape-grid{grid-template-columns:1fr 1fr}
 }
 @media (max-width:900px){
-  .pecas{opacity:.32}
+  .pecas{opacity:.4}
   .hero .pecas{top:-30px;right:-56px;width:180px}
   .historia .pecas{bottom:-60px;left:-52px;width:180px}
-  .abner .pecas,.voluntario .pecas{bottom:-52px;right:-52px;left:auto;width:170px}
+  .abner .pecas,.voluntario .pecas,.doacoes .pecas,.historia .pecas{bottom:-70px;right:-70px;left:auto;top:auto;width:170px}
   .menu{
     position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;
     background:var(--creme);padding:10px 22px 24px;transform:translateY(-140%);
