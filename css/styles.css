@@ -108,7 +108,7 @@ h2+.lead,h2+p,.topico+.lead,.topico+p{margin-top:20px}
 .pecas-dir{right:min(calc(-.5 * var(--lado)),calc(var(--margem) - var(--lado) - 24px))}
 
 @media (max-width:1399px){
-  .pecas{--lado:min(200px,44vw);top:auto;bottom:calc(-.62 * var(--lado));transform:none}
+  .pecas{--lado:min(200px,44vw);top:auto;bottom:calc(38px - var(--lado));transform:none}
   .pecas-esq{left:calc(-.42 * var(--lado))}
   .pecas-dir{right:calc(-.42 * var(--lado))}
 }
@@ -245,14 +245,14 @@ section>.wrap,section>.wrap-largo{position:relative;z-index:1}
 }
 .parceiro{
   background:var(--branco);border-radius:var(--raio-g);box-shadow:var(--sombra-suave);
-  min-height:180px;display:grid;place-items:center;padding:26px 28px;text-align:center;
+  min-height:156px;display:grid;place-items:center;padding:24px 26px;text-align:center;
 }
 /* As três logos têm proporções bem diferentes (4:1, 1:1 e 0,6:1). Igualar
    só a altura faria a estreita parecer minúscula ao lado da larga, então
    cada formato tem seu limite, calibrado para ficarem com peso parecido. */
-.parceiro img{max-width:100%;max-height:96px;width:auto;height:auto;object-fit:contain}
-.parceiro-larga{max-height:none;max-width:min(250px,100%)}
-.parceiro-alta{max-height:128px}
+.parceiro img{max-width:100%;max-height:82px;width:auto;height:auto;object-fit:contain}
+.parceiro-larga{max-height:none;max-width:min(210px,100%)}
+.parceiro-alta{max-height:108px}
 .parceiro-nome{
   font-family:'Bebas Neue',sans-serif;font-weight:400;text-transform:uppercase;
   font-size:1.5rem;letter-spacing:.08em;color:var(--azul);line-height:1.05;
@@ -409,7 +409,9 @@ section>.wrap,section>.wrap-largo{position:relative;z-index:1}
   .wrap,.wrap-largo{width:min(100% - 32px,100%)}
   .pecas{--margem:16px}
   .grade-3,.numeros,.galeria{grid-template-columns:1fr}
-  .parceiros-grade{grid-template-columns:1fr}
+  .parceiros-grade{grid-template-columns:1fr;gap:16px}
+  .parceiro{min-height:124px;padding:20px 24px}
+  .parceiro-alta{max-height:92px}
   .rodape-grid{grid-template-columns:1fr}
   .marca img{height:46px}
   .hero-figura .foto{aspect-ratio:1/1}
