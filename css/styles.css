@@ -245,9 +245,14 @@ section>.wrap,section>.wrap-largo{position:relative;z-index:1}
 }
 .parceiro{
   background:var(--branco);border-radius:var(--raio-g);box-shadow:var(--sombra-suave);
-  min-height:150px;display:grid;place-items:center;padding:28px 30px;text-align:center;
+  min-height:180px;display:grid;place-items:center;padding:26px 28px;text-align:center;
 }
-.parceiro img{max-height:84px;width:auto;object-fit:contain}
+/* As três logos têm proporções bem diferentes (4:1, 1:1 e 0,6:1). Igualar
+   só a altura faria a estreita parecer minúscula ao lado da larga, então
+   cada formato tem seu limite, calibrado para ficarem com peso parecido. */
+.parceiro img{max-width:100%;max-height:96px;width:auto;height:auto;object-fit:contain}
+.parceiro-larga{max-height:none;max-width:min(250px,100%)}
+.parceiro-alta{max-height:128px}
 .parceiro-nome{
   font-family:'Bebas Neue',sans-serif;font-weight:400;text-transform:uppercase;
   font-size:1.5rem;letter-spacing:.08em;color:var(--azul);line-height:1.05;
