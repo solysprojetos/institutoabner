@@ -237,10 +237,29 @@ section>.wrap,section>.wrap-largo{position:relative;z-index:1}
   font-size:clamp(1.5rem,2.4vw,2rem);line-height:1;color:var(--azul);display:block;
 }
 .reservado-texto span{display:block;margin-top:10px;font-size:1rem;color:var(--texto)}
-.reservado--parceiros{
-  display:flex;flex-wrap:wrap;gap:24px;align-items:center;justify-content:space-between;
-  background:var(--branco);
+
+/* faixa de parceiros: cartões brancos, porque as logos costumam vir com
+   fundo branco e ficariam com uma caixa visível sobre o creme */
+.parceiros-grade{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:40px;
 }
+.parceiro{
+  background:var(--branco);border-radius:var(--raio-g);box-shadow:var(--sombra-suave);
+  min-height:150px;display:grid;place-items:center;padding:28px 30px;text-align:center;
+}
+.parceiro img{max-height:84px;width:auto;object-fit:contain}
+.parceiro-nome{
+  font-family:'Bebas Neue',sans-serif;font-weight:400;text-transform:uppercase;
+  font-size:1.5rem;letter-spacing:.08em;color:var(--azul);line-height:1.05;
+}
+.parceiro-nome small{
+  display:block;margin-top:6px;font-family:'Poppins',sans-serif;font-weight:300;
+  font-size:.7rem;letter-spacing:.14em;color:var(--texto-suave);
+}
+.parceiros-chamada{
+  margin-top:34px;display:flex;flex-wrap:wrap;align-items:center;gap:20px 26px;
+}
+.parceiros-chamada p{font-size:1rem}
 
 /* ===== nosso impacto ===== */
 .impacto{background:var(--azul);color:var(--creme)}
@@ -358,6 +377,7 @@ section>.wrap,section>.wrap-largo{position:relative;z-index:1}
 /* ===== responsivo ===== */
 @media (max-width:1080px){
   .grade-3{grid-template-columns:repeat(2,1fr)}
+  .parceiros-grade{grid-template-columns:repeat(3,1fr)}
   .numeros{grid-template-columns:repeat(2,1fr)}
   .galeria{grid-template-columns:repeat(2,1fr)}
   .rodape-grid{grid-template-columns:1fr 1fr}
@@ -384,10 +404,10 @@ section>.wrap,section>.wrap-largo{position:relative;z-index:1}
   .wrap,.wrap-largo{width:min(100% - 32px,100%)}
   .pecas{--margem:16px}
   .grade-3,.numeros,.galeria{grid-template-columns:1fr}
+  .parceiros-grade{grid-template-columns:1fr}
   .rodape-grid{grid-template-columns:1fr}
   .marca img{height:46px}
   .hero-figura .foto{aspect-ratio:1/1}
-  .reservado--parceiros{flex-direction:column;align-items:flex-start}
 }
 @media (prefers-reduced-motion:reduce){
   *{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important}
