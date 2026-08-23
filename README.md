@@ -46,7 +46,6 @@ assets/marca/logo-abner.svg        → logo oficial, vetorial
 assets/marca/logo-abner-claro.svg  → mesma logo com o azul em creme, para fundo escuro
 assets/marca/icone.png             → ícone para a tela inicial do celular
 assets/fotos/           → fotos do instituto e do manual da marca
-assets/icones/          → ícones antigos, hoje sem uso no site
 ```
 
 Seções da home, na ordem: **Início · Por que Abner? · Nossa história · Nossas ações ·
