@@ -59,7 +59,7 @@ preencher:
 | Seção | O que falta | Onde está |
 |---|---|---|
 | Nosso impacto | Números reais (famílias, crianças, ações, voluntários) | `data-numero` no `index.html` |
-| Galeria | Fotos reais das ações; hoje há duas | seção `#galeria` |
+| Galeria | Todas as fotos das ações | seção `#galeria` |
 | Depoimentos | Depoimentos com nome e autorização de quem escreveu | seção `#depoimentos` |
 | Projetos | Descrição de cada projeto | seção `#projetos` |
 | Transparência | Relatórios e prestação de contas para download | seção `#transparencia` |
