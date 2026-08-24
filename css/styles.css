@@ -107,10 +107,16 @@ h2+.lead,h2+p,.topico+.lead,.topico+p{margin-top:20px}
 .pecas-esq{left:min(calc(-.5 * var(--lado)),calc(var(--margem) - var(--lado) - 24px))}
 .pecas-dir{right:min(calc(-.5 * var(--lado)),calc(var(--margem) - var(--lado) - 24px))}
 
+/* Abaixo de 1400px não há margem lateral sobrando, então a peça vai para o
+   respiro do fim da seção. Esse respiro ganha 40px a mais justamente para
+   caber a peça: sem isso ela virava uma tira fina de 38px, que na prática
+   não se via. Agora aparecem 96px de altura por cerca de 120px de largura. */
 @media (max-width:1399px){
-  .pecas{--lado:min(200px,44vw);top:auto;bottom:calc(38px - var(--lado));transform:none}
-  .pecas-esq{left:calc(-.42 * var(--lado))}
-  .pecas-dir{right:calc(-.42 * var(--lado))}
+  section{padding-bottom:calc(var(--secao) + 56px)}
+  section.hero{padding-bottom:calc(clamp(68px,8vw,104px) + 56px)}
+  .pecas{--lado:min(230px,52vw);top:auto;bottom:calc(96px - var(--lado));transform:none}
+  .pecas-esq{left:calc(-.40 * var(--lado))}
+  .pecas-dir{right:calc(-.40 * var(--lado))}
 }
 
 /* nos fundos em que o cinza não teria como aparecer, as peças são brancas */
@@ -424,7 +430,7 @@ section>.wrap,section>.wrap-largo{position:relative;z-index:1}
    sem quebrar em linhas de duas palavras. Abaixo de 360px não há largura
    para duas colunas e eles voltam a empilhar. */
 @media (max-width:599px){
-  .hero{padding:34px 0 66px}
+  .hero{padding:34px 0 134px}
   .hero-grid{grid-template-columns:1.04fr .96fr;gap:16px;align-items:center}
   .hero h1{font-size:1.5rem;line-height:1.06}
   .hero .lead{font-size:.92rem;line-height:1.65;margin-top:14px}
