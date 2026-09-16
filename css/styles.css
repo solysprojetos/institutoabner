@@ -97,10 +97,6 @@ strong{font-weight:500;color:inherit}
   letter-spacing:.22em;font-size:.92rem;color:var(--texto-suave);
   margin-bottom:10px;line-height:1.3;
 }
-.sobretitulo::before{
-  content:"";display:inline-block;width:24px;height:2px;background:currentColor;
-  vertical-align:middle;margin-right:12px;opacity:.7;
-}
 
 .wrap{width:min(1160px,100% - 44px);margin-inline:auto}
 .wrap-largo{width:min(1380px,100% - 44px);margin-inline:auto}
