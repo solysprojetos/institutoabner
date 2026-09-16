@@ -160,7 +160,7 @@ const montarIndicadores = () => {
 
   $('#impactoPeriodo').textContent =
     `Dados apurados no período: ${ind.periodo}. Cada indicador conta pessoas ` +
-    `diferentes — quem é atendido mais de uma vez é contado uma só vez.`;
+    `diferentes, e quem é atendido mais de uma vez é contado uma só vez.`;
 
   const obs = $('#impactoObs');
   if (ind.observacao) obs.textContent = ind.observacao; else obs.hidden = true;
@@ -201,7 +201,7 @@ const montarPix = () => {
   $('#pixChave').textContent = pix.chave;
   $('#pixTipo').textContent = pix.tipo ? `(${pix.tipo})` : '';
   $('#pixBeneficiario').textContent = pix.beneficiario;
-  $('#pixInstituicao').textContent = pix.instituicao ? ` — ${pix.instituicao}` : '';
+  $('#pixInstituicao').textContent = pix.instituicao ? `, ${pix.instituicao}` : '';
   $('#blocoPix').hidden = false;
 
   const botao = $('#pixCopiar');

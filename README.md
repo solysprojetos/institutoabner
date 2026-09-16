@@ -118,8 +118,8 @@ O site é publicado pelo GitHub Pages no domínio **institutoabner.com.br**. Cad
 branch `main` dispara o workflow `.github/workflows/pages.yml`, que copia a `main` para a
 branch `gh-pages`.
 
-> Ao trocar o CSS ou o JS, suba o número da versão no endereço (`styles.css?v=15`,
-> `main.js?v=15`) para o navegador de quem já visitou buscar o arquivo novo.
+> Ao trocar o CSS ou o JS, suba o número da versão no endereço (`styles.css?v=16`,
+> `main.js?v=16`) para o navegador de quem já visitou buscar o arquivo novo.
 
 ### Voltar para o modo manutenção
 
