@@ -36,8 +36,9 @@ precisa ser editado para publicar conteúdo novo.
 > bloco principal com dois secundários — em vez de fileiras de cartões iguais. As sombras são
 > discretas e o contorno de 1px faz o trabalho de separar os blocos.
 
-> **Movimento:** só há a entrada suave de cada bloco, uma vez. A faixa de valores é estática.
-> Quem usa "reduzir movimento" no sistema não vê animação nenhuma.
+> **Movimento:** a entrada suave de cada bloco, uma vez, e o carrossel lento da faixa de
+> valores — que pára ao passar o mouse. Quem usa "reduzir movimento" no sistema não vê
+> animação nenhuma: a faixa fica parada, com os seis valores legíveis.
 
 > **Acessibilidade:** todos os textos do site foram medidos e passam em WCAG AA, inclusive
 > sobre o azul e sobre a faixa cinza (onde o texto é azul, e não branco como no manual,
@@ -116,8 +117,8 @@ O site é publicado pelo GitHub Pages no domínio **institutoabner.com.br**. Cad
 branch `main` dispara o workflow `.github/workflows/pages.yml`, que copia a `main` para a
 branch `gh-pages`.
 
-> Ao trocar o CSS ou o JS, suba o número da versão no endereço (`styles.css?v=12`,
-> `main.js?v=12`) para o navegador de quem já visitou buscar o arquivo novo.
+> Ao trocar o CSS ou o JS, suba o número da versão no endereço (`styles.css?v=13`,
+> `main.js?v=13`) para o navegador de quem já visitou buscar o arquivo novo.
 
 ### Voltar para o modo manutenção
 

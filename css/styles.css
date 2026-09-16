@@ -240,22 +240,34 @@ section>.wrap,section>.wrap-largo{position:relative;z-index:1}
   border:2px solid var(--cinza);border-radius:var(--raio-g);z-index:-1;
 }
 
-/* ===== faixa de valores (estática) =====
-   Uma linha só de palavras quebrava em telas médias e deixava o marcador
-   sozinho no começo da segunda linha. Agora é uma grade: três colunas em
-   duas linhas, com traço vertical separando as colunas. As palavras ficam
-   alinhadas em qualquer largura, sem sobra solta. */
-.valores{background:var(--azul);color:var(--creme);padding:22px 0}
-.valores-lista{
-  display:grid;grid-template-columns:repeat(3,1fr);
-  width:min(980px,100%);margin-inline:auto;row-gap:14px;
+/* ===== faixa de valores (carrossel) =====
+   Baixa e lenta, para ser um detalhe da marca e não um bloco. Cada cópia
+   tem no mínimo a largura da tela, senão em monitores largos sobraria um
+   vão no meio do giro. */
+.valores{background:var(--azul);color:var(--creme);overflow:hidden}
+.valores-trilho{
+  display:flex;width:max-content;
+  animation:desliza 46s linear infinite;
 }
-.valores-lista li{
-  font-family:'Bebas Neue',sans-serif;font-size:clamp(.92rem,1.5vw,1.2rem);
-  letter-spacing:.14em;text-transform:uppercase;line-height:1.25;
-  text-align:center;padding:2px 14px;
+.valores:hover .valores-trilho{animation-play-state:paused}
+.valores-grupo{
+  display:flex;align-items:center;flex:none;
+  min-width:100vw;justify-content:space-around;
+  padding:11px 0;
 }
-.valores-lista li:not(:nth-child(3n+1)){box-shadow:inset 1px 0 0 var(--linha-clara)}
+.valores-grupo li{
+  font-family:'Bebas Neue',sans-serif;font-size:clamp(.88rem,1.1vw,1.02rem);
+  letter-spacing:.15em;text-transform:uppercase;line-height:1.2;
+  white-space:nowrap;display:flex;align-items:center;gap:clamp(20px,3.2vw,44px);
+  padding-left:clamp(10px,1.6vw,22px);
+}
+/* o quadradinho de quebra-cabeça fecha cada palavra, inclusive a última,
+   para a emenda entre as duas cópias ter o mesmo ritmo do resto */
+.valores-grupo li::after{
+  content:"";width:7px;height:7px;flex:none;
+  border:1.5px solid currentColor;border-radius:2px;opacity:.55;
+}
+@keyframes desliza{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
 /* ===== por que Abner ===== */
 .abner{background:var(--branco)}
@@ -568,11 +580,9 @@ section>.wrap,section>.wrap-largo{position:relative;z-index:1}
   .parceiro .parceiro-larga{max-height:52px;max-width:min(210px,100%)}
   .parceiro .parceiro-alta{max-height:96px;max-width:min(120px,100%)}
 
-  .valores{padding:18px 0}
-  .valores-lista{grid-template-columns:repeat(2,1fr);row-gap:12px}
-  .valores-lista li{padding:2px 10px}
-  .valores-lista li:not(:nth-child(3n+1)){box-shadow:none}
-  .valores-lista li:not(:nth-child(2n+1)){box-shadow:inset 1px 0 0 var(--linha-clara)}
+  /* no celular o giro é mais curto, então anda um pouco mais devagar */
+  .valores-trilho{animation-duration:34s}
+  .valores-grupo{padding:9px 0}
 
   .simbolo{grid-template-columns:1fr;gap:16px;text-align:left}
   .simbolo img{width:96px}
@@ -595,6 +605,9 @@ section>.wrap,section>.wrap-largo{position:relative;z-index:1}
   *{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important}
   html{scroll-behavior:auto}
   .surge{opacity:1;transform:none}
+  /* a faixa fica imóvel: como as duas cópias são iguais, parar no fim da
+     animação mostra exatamente o mesmo que parar no começo */
+  .valores-trilho{animation:none}
   .btn:hover{transform:none}
   .galeria-item:hover .galeria-abrir img{transform:none}
   .rodape a:hover{transform:none}

@@ -21,7 +21,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Pinyon+Script&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="preload" as="image" href="assets/fotos/mae-filho.webp" fetchpriority="high">
-<link rel="stylesheet" href="css/styles.css?v=12">
+<link rel="stylesheet" href="css/styles.css?v=13">
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
@@ -111,10 +111,22 @@
   </div>
 </section>
 
-<!-- faixa de valores: estática, sem movimento -->
-<div class="valores">
-  <div class="wrap">
-    <ul class="valores-lista">
+<!-- Faixa de valores: carrossel lento e discreto. São duas cópias iguais
+     do mesmo grupo — a animação desloca metade do trilho, então o fim de
+     uma cópia encontra o começo da outra e o giro não tem emenda.
+     Decorativa (aria-hidden), pára ao passar o mouse e fica imóvel para
+     quem pede menos movimento. -->
+<div class="valores" aria-hidden="true">
+  <div class="valores-trilho">
+    <ul class="valores-grupo">
+      <li>Acolhimento</li>
+      <li>Solidariedade</li>
+      <li>Inclusão</li>
+      <li>Dignidade</li>
+      <li>Esperança</li>
+      <li>Transformação social</li>
+    </ul>
+    <ul class="valores-grupo">
       <li>Acolhimento</li>
       <li>Solidariedade</li>
       <li>Inclusão</li>
@@ -520,7 +532,7 @@
   </figure>
 </div>
 
-<script src="js/conteudo.js?v=12"></script>
-<script src="js/main.js?v=12"></script>
+<script src="js/conteudo.js?v=13"></script>
+<script src="js/main.js?v=13"></script>
 </body>
 </html>
