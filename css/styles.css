@@ -228,13 +228,6 @@ section>.wrap,section>.wrap-largo{position:relative;z-index:1}
 .foto--hero img{object-position:48% 18%}
 .foto--retrato{aspect-ratio:4/5}
 .foto--retrato img{object-position:50% 20%}
-.hero-figura{position:relative}
-/* quadro fino deslocado na diagonal, atrás da foto — o degrau do manual da
-   marca, no lugar de uma sombra pesada */
-.hero-figura::before{
-  content:"";position:absolute;inset:26px -20px -20px 26px;
-  border:2px solid var(--cinza);border-radius:var(--raio-g);z-index:-1;
-}
 
 /* ===== faixa de valores (carrossel) =====
    Baixa e lenta, para ser um detalhe da marca e não um bloco. Cada cópia
@@ -535,7 +528,6 @@ section>.wrap,section>.wrap-largo{position:relative;z-index:1}
     row-gap:28px;
   }
   .hero-figura{max-width:560px;width:100%}
-  .hero-figura::before{display:none}
   .abner-grid{gap:30px}
   .abner-foto{max-width:440px}
   .historia-foto{position:static;max-width:520px}

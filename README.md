@@ -34,7 +34,8 @@ precisa ser editado para publicar conteúdo novo.
 
 > **Composição:** cada seção tem um arranjo próprio — duas colunas com foto, lista numerada,
 > bloco principal com dois secundários — em vez de fileiras de cartões iguais. As sombras são
-> discretas e o contorno de 1px faz o trabalho de separar os blocos.
+> discretas e o contorno de 1px faz o trabalho de separar os blocos. As fotos entram em
+> molduras retas, sem quadro deslocado atrás.
 
 > **Movimento:** a entrada suave de cada bloco, uma vez, e o carrossel lento da faixa de
 > valores — que pára ao passar o mouse. Quem usa "reduzir movimento" no sistema não vê
@@ -117,8 +118,8 @@ O site é publicado pelo GitHub Pages no domínio **institutoabner.com.br**. Cad
 branch `main` dispara o workflow `.github/workflows/pages.yml`, que copia a `main` para a
 branch `gh-pages`.
 
-> Ao trocar o CSS ou o JS, suba o número da versão no endereço (`styles.css?v=14`,
-> `main.js?v=14`) para o navegador de quem já visitou buscar o arquivo novo.
+> Ao trocar o CSS ou o JS, suba o número da versão no endereço (`styles.css?v=15`,
+> `main.js?v=15`) para o navegador de quem já visitou buscar o arquivo novo.
 
 ### Voltar para o modo manutenção
 
