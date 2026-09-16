@@ -1,16 +1,29 @@
 # Instituto Abner — Servir transforma vidas
 
-Site institucional do **Instituto Abner**, que serve pessoas, acolhe famílias e transforma
-realidades por meio da solidariedade.
+Site institucional do **Instituto Abner**, que acolhe, inclui e apoia pessoas e famílias em
+situação de vulnerabilidade.
 
 A identidade visual vem do **manual da marca oficial** (`BRAND_COR.pdf`) e a logo vem do
 arquivo vetorial `FRENTE.pdf`.
+
+## Princípio do site: só conteúdo real
+
+O site **não publica "em breve", "espaço reservado", "a cadastrar" nem número inventado**.
+Cada seção que depende de conteúdo do Instituto é montada a partir do arquivo
+`js/conteudo.js`. Enquanto a informação não existir:
+
+* a seção **não aparece** na página;
+* o **link dela some** do menu e do rodapé.
+
+Quando o conteúdo for preenchido, a seção e os links voltam sozinhos. É o único arquivo que
+precisa ser editado para publicar conteúdo novo.
 
 ## Identidade aplicada no site
 
 | Elemento | Valor |
 |---|---|
-| Creme (fundo principal) | `#F7F3E5` |
+| Creme (primeira tela) | `#F7F3E5` |
+| Creme claro (fundos suaves) | `#FBF9F3` |
 | Cinza (faixa "Nossa história") | `#B5BAB9` |
 | Azul institucional | `#14387E` |
 | Azul escuro (rodapé) | `#0D2450` |
@@ -19,19 +32,20 @@ arquivo vetorial `FRENTE.pdf`.
 | Assinatura decorativa | **Pinyon Script** |
 | Grafismo | peças de quebra-cabeça em contorno, desenhadas em SVG |
 
-> **Nota de acessibilidade:** no manual, a faixa cinza usa texto branco. No site o texto
-> dessa faixa é azul institucional, porque branco sobre `#B5BAB9` não atinge o contraste
-> mínimo de leitura (WCAG AA). Todos os textos do site foram medidos e passam em AA.
+> **Composição:** cada seção tem um arranjo próprio — duas colunas com foto, lista numerada,
+> bloco principal com dois secundários — em vez de fileiras de cartões iguais. As sombras são
+> discretas e o contorno de 1px faz o trabalho de separar os blocos.
 
-> **Nota do grafismo:** as peças de quebra-cabeça usam o cinza da marca (`--peca-cor`,
-> `#B5BAB9`) **sem transparência**, para aparecerem nos fundos claros. Nos dois lugares em
-> que o cinza não teria como aparecer — a faixa cinza de "Nossa história" e os blocos azuis
-> — as peças são brancas, que é o que o manual faz nessas páginas. As peças ficam nos cantos
-> das seções: se cruzarem uma coluna de texto, atrapalham a leitura.
+> **Movimento:** só há a entrada suave de cada bloco, uma vez. A faixa de valores é estática.
+> Quem usa "reduzir movimento" no sistema não vê animação nenhuma.
 
-> **Nota de tipografia:** a Bebas Neue e a Pinyon Script têm um único peso (400). Todo texto
-> nessas duas fontes é fixado em 400 no CSS — pedir 300 ou 700 faz o navegador falsificar o
-> desenho.
+> **Acessibilidade:** todos os textos do site foram medidos e passam em WCAG AA, inclusive
+> sobre o azul e sobre a faixa cinza (onde o texto é azul, e não branco como no manual,
+> porque branco sobre `#B5BAB9` não atinge o contraste mínimo). A galeria abre por teclado,
+> fecha com `Esc` e devolve o foco para onde estava.
+
+> **Tipografia:** a Bebas Neue e a Pinyon Script têm um único peso (400). Todo texto nessas
+> duas fontes é fixado em 400 no CSS — pedir 300 ou 700 faz o navegador falsificar o desenho.
 
 ## Estrutura
 
@@ -41,46 +55,69 @@ privacidade.html        → política de privacidade
 manutencao.html         → página de manutenção, pronta para uso quando precisar
 inicio.html             → redireciona para a home (endereço antigo do site)
 css/styles.css          → todo o estilo do site
-js/main.js              → menu, animações, link ativo e ampliação das fotos
-assets/marca/logo-abner.svg        → logo oficial, vetorial
-assets/marca/logo-abner-claro.svg  → mesma logo com o azul em creme, para fundo escuro
-assets/marca/icone.png             → ícone para a tela inicial do celular
-assets/fotos/           → fotos do instituto e do manual da marca
+js/conteudo.js          → ⭐ o conteúdo real do Instituto (o único arquivo a editar)
+js/main.js              → menu, montagem das seções, galeria, PIX e animações
+assets/marca/           → logo vetorial, versão clara e ícone do celular
+assets/fotos/           → fotos
+assets/parceiros/       → logos dos parceiros
 ```
 
-Seções da home, na ordem: **Início · Por que Abner? · Nossa história · Nossas ações ·
-Projetos · Nosso impacto · Galeria · Depoimentos · Voluntariado · Doações · Transparência ·
-Parceiros · Contato**.
+Seções sempre visíveis, na ordem: **Início · Por que Abner? · Nossa história · Áreas de
+atuação · Como ajudar · Parceiros · Contato**.
+
+Seções que aparecem quando houver conteúdo: **Ações realizadas · Projetos · Nosso impacto ·
+Galeria · Depoimentos · Transparência**.
 
 Não precisa de servidor nem de build: basta abrir o `index.html` no navegador.
 Para conferir localmente com um servidor: `npx http-server -p 8080`.
 
-## ⚠️ Conteúdo que ainda falta
+## ⚠️ O que o Instituto precisa enviar
 
-Estas áreas estão construídas e prontas, mas **exibem um aviso de "em breve"** porque ainda
-não há informação real para publicar. Nada foi inventado. Procure o texto indicado para
-preencher:
+Tudo abaixo está **construído e testado**. Falta apenas o conteúdo real. Basta preencher a
+lista correspondente em `js/conteudo.js` — o próprio arquivo traz o exemplo de cada campo.
 
-| Seção | O que falta | Onde está |
+| Seção | O que enviar | Onde preencher |
 |---|---|---|
-| Nosso impacto | Números reais (famílias, crianças, ações, voluntários) | `data-numero` no `index.html` |
-| Galeria | Todas as fotos das ações | seção `#galeria` |
-| Depoimentos | Depoimentos com nome e autorização de quem escreveu | seção `#depoimentos` |
-| Projetos | Descrição de cada projeto | seção `#projetos` |
-| Transparência | Relatórios e prestação de contas para download | seção `#transparencia` |
-| Parceiros | Logos dos parceiros | seção `#parceiros` |
-| Doações | Chave PIX, QR Code e dados bancários | `.doacoes-formas` |
-| Contato / rodapé | WhatsApp, e-mail e endereço | `.contato-canais` e rodapé |
+| Ações realizadas | Para cada ação: título, data, local, descrição, fotos reais (e resultado, só se confirmado) | `acoesRealizadas` |
+| Galeria | Nada além das fotos das ações: a galeria se monta sozinha, agrupada por ação, com legenda e ampliação | `acoesRealizadas[].fotos` |
+| Projetos | Título, público atendido, período, situação e descrição de cada projeto | `projetos` |
+| Nosso impacto | Números conferidos **e o período** a que se referem | `indicadores` |
+| Depoimentos | Texto, nome e **autorização** de quem escreveu | `depoimentos` |
+| Transparência | Relatórios e prestações de contas em arquivo (PDF), por período | `documentos` |
+| PIX | Chave, tipo e **nome do beneficiário** (obrigatório) | `pix` |
+| Contato | WhatsApp, e-mail e endereço | `contato` |
 
-Enquanto isso, **o único canal de contato divulgado é o Instagram
-[@institutoabner.r](https://instagram.com/institutoabner.r)**, e todos os botões de ação
-levam para lá.
+### Regras que o site aplica sozinho
+
+* **Indicadores:** um número só aparece com o período preenchido, e cada indicador conta uma
+  coisa diferente — família atendida três vezes continua sendo uma família. O site escreve
+  isso ao lado dos números.
+* **Depoimento sem nome não é publicado.**
+* **PIX sem nome do beneficiário não é publicado**, porque quem doa precisa conferir para
+  quem está pagando. Com os dados preenchidos, aparece a chave, o botão de copiar e o aviso
+  para conferir o beneficiário no aplicativo do banco.
+* **Fotos das ações** ganham legenda e ampliação automaticamente.
+
+Enquanto o Instagram for o único canal confirmado,
+[@institutoabner.r](https://instagram.com/institutoabner.r) é o destino de todos os botões de
+participação, com o rótulo dizendo exatamente o que acontece ao clicar.
+
+### Sobre as fotos
+
+O site usa apenas as fotos reais da fundadora com o filho Abner. As demais imagens da pasta
+`assets/fotos/` são material de estúdio e simulações do manual da marca (uma delas com marca
+d'água de banco de imagens) — não são registros de ações do Instituto e por isso **não são
+publicadas**. As fotos das ações devem ser enviadas pelo Instituto e ficam em
+`assets/fotos/acoes/`.
 
 ## Publicação
 
 O site é publicado pelo GitHub Pages no domínio **institutoabner.com.br**. Cada push na
 branch `main` dispara o workflow `.github/workflows/pages.yml`, que copia a `main` para a
 branch `gh-pages`.
+
+> Ao trocar o CSS ou o JS, suba o número da versão no endereço (`styles.css?v=11`,
+> `main.js?v=11`) para o navegador de quem já visitou buscar o arquivo novo.
 
 ### Voltar para o modo manutenção
 

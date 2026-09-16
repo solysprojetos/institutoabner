@@ -4,14 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Instituto Abner · Servir transforma vidas</title>
-<meta name="description" content="O Instituto Abner serve pessoas, acolhe famílias e transforma realidades por meio da solidariedade. Conheça nossas ações, seja voluntário ou contribua.">
+<meta name="description" content="O Instituto Abner acolhe, inclui e apoia pessoas e famílias em situação de vulnerabilidade. Conheça nossa história, seja voluntário, parceiro ou combine sua doação.">
 <meta name="theme-color" content="#14387E">
 <link rel="canonical" href="https://institutoabner.com.br/">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:site_name" content="Instituto Abner">
 <meta property="og:title" content="Instituto Abner · Servir transforma vidas">
-<meta property="og:description" content="Transformando amor em cuidado, esperança e novas possibilidades.">
+<meta property="og:description" content="Acolhimento, inclusão e apoio a pessoas e famílias em situação de vulnerabilidade.">
 <meta property="og:url" content="https://institutoabner.com.br/">
 <meta property="og:image" content="https://institutoabner.com.br/assets/fotos/mae-filho.webp">
 <meta name="twitter:card" content="summary_large_image">
@@ -20,7 +20,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Pinyon+Script&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/styles.css?v=10">
+<link rel="preload" as="image" href="assets/fotos/mae-filho.webp" fetchpriority="high">
+<link rel="stylesheet" href="css/styles.css?v=11">
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
@@ -29,7 +30,7 @@
   "slogan":"Servir transforma vidas",
   "url":"https://institutoabner.com.br/",
   "logo":"https://institutoabner.com.br/assets/marca/logo-abner.svg",
-  "description":"O Instituto Abner serve pessoas, acolhe famílias e transforma realidades por meio da solidariedade, com ações sociais para famílias, crianças e pessoas em situação de vulnerabilidade.",
+  "description":"O Instituto Abner acolhe, inclui e apoia pessoas e famílias em situação de vulnerabilidade, reunindo voluntários e parceiros dispostos a servir.",
   "sameAs":["https://instagram.com/institutoabner.r"],
   "areaServed":"BR"
 }
@@ -37,7 +38,7 @@
 </head>
 <body>
 
-<!-- grafismo e ícones -->
+<!-- grafismo da marca: peças de quebra-cabeça em contorno -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
   <symbol id="peca" viewBox="-16 -16 122 122">
     <path d="M0,0 h30 c5,-15 25,-15 30,0 h30 v30 c15,5 15,25 0,30 v30 h-30 c-5,-15 -25,-15 -30,0 h-30 v-30 c15,-5 15,-25 0,-30 z"/>
@@ -48,402 +49,427 @@
     <use href="#peca" x="0" y="90" width="100" height="100"/>
     <use href="#peca" x="90" y="90" width="100" height="100"/>
   </symbol>
-  <symbol id="pecas3" viewBox="-18 -18 216 216">
-    <use href="#peca" x="90" y="0" width="100" height="100"/>
-    <use href="#peca" x="0" y="90" width="100" height="100"/>
-    <use href="#peca" x="90" y="90" width="100" height="100"/>
-  </symbol>
 </svg>
 
 <a class="pular" href="#conteudo">Ir para o conteúdo</a>
-
-<!-- ===== FAIXA ===== -->
-<div class="faixa" aria-hidden="true">
-  <div class="faixa-trilho">
-    <div class="faixa-grupo">
-      <span>Acolhimento</span><svg viewBox="-16 -16 122 122"><use href="#peca"/></svg>
-      <span>Solidariedade</span><svg viewBox="-16 -16 122 122"><use href="#peca"/></svg>
-      <span>Inclusão</span><svg viewBox="-16 -16 122 122"><use href="#peca"/></svg>
-      <span>Dignidade</span><svg viewBox="-16 -16 122 122"><use href="#peca"/></svg>
-      <span>Esperança</span><svg viewBox="-16 -16 122 122"><use href="#peca"/></svg>
-      <span>Transformação social</span><svg viewBox="-16 -16 122 122"><use href="#peca"/></svg>
-    </div>
-    <div class="faixa-grupo">
-      <span>Acolhimento</span><svg viewBox="-16 -16 122 122"><use href="#peca"/></svg>
-      <span>Solidariedade</span><svg viewBox="-16 -16 122 122"><use href="#peca"/></svg>
-      <span>Inclusão</span><svg viewBox="-16 -16 122 122"><use href="#peca"/></svg>
-      <span>Dignidade</span><svg viewBox="-16 -16 122 122"><use href="#peca"/></svg>
-      <span>Esperança</span><svg viewBox="-16 -16 122 122"><use href="#peca"/></svg>
-      <span>Transformação social</span><svg viewBox="-16 -16 122 122"><use href="#peca"/></svg>
-    </div>
-  </div>
-</div>
 
 <header class="cabecalho" id="cabecalho">
   <div class="wrap-largo">
     <a class="marca" href="#topo" aria-label="Instituto Abner, página inicial">
       <img src="assets/marca/logo-abner.svg" alt="Instituto Abner" width="176" height="150">
     </a>
-    <nav class="menu" id="menu" aria-label="Navegação principal">
-      <a href="#topo">Início</a>
-      <a href="#quem-somos">Quem somos</a>
-      <a href="#acoes">Nossas ações</a>
-      <a href="#projetos">Projetos</a>
-      <a href="#transparencia">Transparência</a>
-      <a href="#voluntario">Seja voluntário</a>
-      <a href="#contato">Contato</a>
-      <a class="btn btn--menu" href="#doacoes">Doe agora</a>
-    </nav>
-    <a class="btn cabecalho-doe" href="#doacoes">Doe agora</a>
+
     <button class="abrir-menu" id="abrirMenu" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
       <span></span><span></span><span></span>
     </button>
+
+    <nav class="menu" id="menu" aria-label="Navegação principal">
+      <a href="#quem-somos">Por que Abner?</a>
+      <a href="#historia">Nossa história</a>
+      <a href="#atuacao">O que fazemos</a>
+      <!-- Só aparecem quando o conteúdo real existir (js/conteudo.js). Projetos e
+           Galeria ficam só no rodapé, para o menu não crescer demais. -->
+      <a href="#acoes-realizadas" data-link-dinamico hidden>Ações realizadas</a>
+      <a href="#transparencia" data-link-dinamico hidden>Transparência</a>
+      <a href="#parceiros">Parceiros</a>
+      <a href="#contato">Contato</a>
+      <a class="btn btn--pequeno cabecalho-cta" href="#ajudar">Quero ajudar</a>
+    </nav>
   </div>
 </header>
 
 <main id="conteudo">
 
-<!-- ===== INÍCIO ===== -->
+<!-- =====================================================
+     PRIMEIRA TELA
+     ===================================================== -->
 <section class="hero" id="topo">
-  <svg class="pecas pecas-esq" viewBox="-18 -18 216 216" aria-hidden="true"><use href="#pecas4"/></svg>
   <div class="wrap hero-grid">
-    <div class="surge">
-      <h1>Transformando amor em cuidado, esperança e novas possibilidades.</h1>
+    <div class="hero-titulo surge">
+      <p class="sobretitulo">Instituto Abner</p>
+      <h1 class="hero-slogan">Servir<br>transforma vidas.</h1>
+    </div>
+
+    <figure class="hero-figura surge">
+      <div class="foto foto--hero">
+        <img src="assets/fotos/mae-filho.webp"
+             alt="A fundadora do Instituto Abner e seu filho Abner, abraçados e sorrindo"
+             width="1400" height="2100" fetchpriority="high" decoding="async">
+      </div>
+    </figure>
+
+    <div class="hero-acao surge">
       <p class="lead">
-        O Instituto Abner nasceu para servir pessoas, acolher famílias e transformar
-        realidades por meio da solidariedade.
+        Acolhemos, incluímos e apoiamos pessoas e famílias em situação de vulnerabilidade,
+        reunindo voluntários e parceiros dispostos a servir.
       </p>
       <div class="hero-botoes">
-        <a class="btn btn--contorno" href="#quem-somos">Conheça o Instituto</a>
-        <a class="btn" href="#doacoes">Quero ajudar</a>
-      </div>
-    </div>
-    <div class="hero-figura surge">
-      <div class="foto">
-        <img src="assets/fotos/mae-filho.webp" alt="Mãe abraçando o filho, ambos sorrindo" width="1400" height="2100" fetchpriority="high">
+        <a class="btn" href="#ajudar">Quero ajudar</a>
+        <a class="btn btn--contorno" href="#historia">Conheça nossa história</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===== POR QUE ABNER ===== -->
+<!-- faixa de valores: estática, sem movimento -->
+<div class="valores">
+  <div class="wrap">
+    <ul class="valores-lista">
+      <li>Acolhimento</li>
+      <li>Solidariedade</li>
+      <li>Inclusão</li>
+      <li>Dignidade</li>
+      <li>Esperança</li>
+      <li>Transformação social</li>
+    </ul>
+  </div>
+</div>
+
+<!-- =====================================================
+     POR QUE ABNER?
+     ===================================================== -->
 <section class="abner" id="quem-somos">
   <svg class="pecas pecas-dir" viewBox="-18 -18 216 216" aria-hidden="true"><use href="#pecas4"/></svg>
   <div class="wrap abner-grid">
-    <div class="surge">
+    <figure class="abner-foto surge">
+      <div class="foto foto--retrato">
+        <img src="assets/fotos/mae-filho-pb.webp"
+             alt="A fundadora do Instituto Abner e seu filho Abner, em preto e branco"
+             width="730" height="1095" loading="lazy" decoding="async">
+      </div>
+    </figure>
+
+    <div class="abner-texto surge">
+      <p class="sobretitulo">Nosso nome</p>
       <h2 class="topico">Por que Abner?</h2>
-      <p class="abner-abre">
-        O nome do Instituto é uma homenagem a <strong>Abner, filho da fundadora</strong>, um menino
-        autista que ensina todos os dias que o amor pode ser demonstrado de muitas formas.
+      <p class="destaque">
+        O nome do Instituto é uma homenagem a <strong>Abner, filho da fundadora</strong>, um
+        menino autista que ensina todos os dias que o amor pode ser demonstrado de muitas formas.
       </p>
-      <p>
-        Sua história inspira o propósito de acolher, incluir, servir e transformar vidas.
-      </p>
-      <p>
-        O símbolo do Instituto também representa esse propósito. A letra <strong>A</strong> é
-        acolhida por uma mão formada por peças coloridas, representando o cuidado, o servir, a
-        inclusão e cada pessoa que faz parte dessa história.
-      </p>
-    </div>
-    <div class="abner-simbolo surge">
-      <img src="assets/marca/logo-abner.svg" alt="Símbolo do Instituto Abner: a letra A acolhida por uma mão formada por peças de quebra-cabeça coloridas" width="176" height="150" loading="lazy">
+      <p>Sua história inspira o propósito de acolher, incluir, servir e transformar vidas.</p>
+
+      <div class="simbolo">
+        <img src="assets/marca/logo-abner.svg"
+             alt="Símbolo do Instituto Abner: a letra A acolhida por uma mão formada por peças de quebra-cabeça coloridas"
+             width="176" height="150" loading="lazy" decoding="async">
+        <p>
+          O símbolo carrega o mesmo propósito. A letra <strong>A</strong> é acolhida por uma
+          mão formada por peças coloridas, que representam o cuidado, o servir, a inclusão e
+          cada pessoa que faz parte dessa história.
+        </p>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ===== NOSSA HISTÓRIA ===== -->
+<!-- =====================================================
+     NOSSA HISTÓRIA
+     ===================================================== -->
 <section class="historia" id="historia">
   <svg class="pecas pecas-esq" viewBox="-18 -18 216 216" aria-hidden="true"><use href="#pecas4"/></svg>
   <div class="wrap historia-grid">
     <div class="historia-texto surge">
+      <p class="sobretitulo">De onde viemos</p>
       <h2 class="topico">Nossa história</h2>
-      <p class="historia-abre">
+
+      <p class="destaque">
         O <strong>Instituto Abner</strong> nasceu do sonho de transformar um trabalho de
-        solidariedade, que já acontecia há anos, em um projeto social estruturado e capaz de
-        alcançar ainda mais pessoas.
+        solidariedade, que já acontecia há anos, em um projeto social estruturado.
       </p>
-      <p>
-        Antes mesmo de sua criação oficial, sua <strong>fundadora e empresária</strong> já
-        desenvolvia um trabalho de cuidado e apoio ao próximo, ajudando
-        <strong>colaboradores, famílias, pessoas da igreja, amigos e pessoas em situação de
-        vulnerabilidade</strong>, sempre buscando acolher e apoiar aqueles que mais precisavam.
-      </p>
-      <p>
-        Com o crescimento dessas iniciativas e o desejo de ampliar esse trabalho, nasceu a
-        vontade de fazer ainda mais e alcançar novas vidas.
-      </p>
-      <p class="historia-fecha">
-        Hoje, o <strong>Instituto Abner</strong> fortalece esse propósito, reunindo
-        <strong>voluntários, parceiros e pessoas dispostas a servir</strong> para promover
-        <strong>esperança, dignidade, inclusão e transformação social</strong>.
-      </p>
-      <p class="historia-lema"><strong>Servir transforma vidas.</strong></p>
-    </div>
-    <div class="historia-foto surge">
-      <div class="foto">
-        <img src="assets/fotos/abraco.webp" alt="Criança abraçada com carinho por uma mulher, as duas sorrindo" width="1400" height="2100" loading="lazy">
+
+      <div class="historia-blocos">
+        <article>
+          <h3>Antes do Instituto</h3>
+          <p>
+            Sua <strong>fundadora e empresária</strong> já desenvolvia um trabalho de cuidado e
+            apoio ao próximo, ajudando colaboradores, famílias, pessoas da igreja, amigos e
+            pessoas em situação de vulnerabilidade.
+          </p>
+        </article>
+        <article>
+          <h3>O desejo de ampliar</h3>
+          <p>
+            Com o crescimento dessas iniciativas e o desejo de alcançar novas vidas, nasceu a
+            vontade de fazer ainda mais — de forma organizada e contínua.
+          </p>
+        </article>
+        <article>
+          <h3>Hoje</h3>
+          <p>
+            O Instituto fortalece esse propósito reunindo <strong>voluntários, parceiros e
+            pessoas dispostas a servir</strong> para promover esperança, dignidade, inclusão e
+            transformação social.
+          </p>
+        </article>
       </div>
+
+      <p class="historia-lema script">Servir transforma vidas.</p>
     </div>
+
+    <figure class="historia-foto surge">
+      <div class="foto foto--retrato">
+        <img src="assets/fotos/abraco.webp"
+             alt="A fundadora do Instituto Abner abraçada com seu filho Abner, os dois sorrindo"
+             width="1400" height="2100" loading="lazy" decoding="async">
+      </div>
+    </figure>
   </div>
 </section>
 
-<!-- ===== NOSSAS AÇÕES ===== -->
-<section class="acoes" id="acoes">
+<!-- =====================================================
+     O QUE FAZEMOS — áreas de atuação
+     (não são ações já realizadas: essas ficam em "Ações realizadas")
+     ===================================================== -->
+<section class="atuacao" id="atuacao">
   <svg class="pecas pecas-dir" viewBox="-18 -18 216 216" aria-hidden="true"><use href="#pecas4"/></svg>
   <div class="wrap">
-    <div class="surge">
-      <h2 class="topico">Nossas ações</h2>
+    <div class="secao-abre surge">
+      <p class="sobretitulo">O que fazemos</p>
+      <h2 class="topico">Áreas de atuação</h2>
+      <p class="lead">
+        São as frentes em que o Instituto trabalha. Cada ação já realizada é registrada e
+        publicada com foto, data e local.
+      </p>
     </div>
-    <div class="grade grade-3">
-      <article class="cartao surge">
-        <h3>Assistência às famílias</h3>
-        <p>Apoio a famílias e pessoas em situação de vulnerabilidade por meio de ações sociais e auxílio em necessidades essenciais.</p>
-      </article>
-      <article class="cartao surge">
-        <h3>Crianças e inclusão</h3>
-        <p>Atividades voltadas para acolhimento, convivência, desenvolvimento, inclusão e momentos especiais para crianças.</p>
-      </article>
-      <article class="cartao surge">
-        <h3>Campanhas solidárias</h3>
-        <p>Arrecadação e distribuição de alimentos, roupas, materiais e outros itens essenciais.</p>
-      </article>
-      <article class="cartao surge">
-        <h3>Ações comunitárias</h3>
-        <p>Atividades realizadas junto às comunidades, promovendo cuidado, orientação, lazer, apoio e aproximação social.</p>
-      </article>
-      <article class="cartao surge">
-        <h3>Voluntariado</h3>
-        <p>Mobilização de pessoas que desejam doar seu tempo, conhecimento e disposição para ajudar quem precisa.</p>
-      </article>
-      <article class="cartao cartao--acao surge">
-        <h3>Quer fazer parte?</h3>
-        <p>Toda ação do Instituto acontece porque alguém decidiu servir.</p>
-        <a class="btn btn--contorno" href="#voluntario">Seja voluntário</a>
-      </article>
-    </div>
+
+    <ol class="atuacao-lista surge">
+      <li>
+        <span class="atuacao-num" aria-hidden="true">01</span>
+        <div>
+          <h3>Assistência às famílias</h3>
+          <p>Apoio a famílias e pessoas em situação de vulnerabilidade por meio de ações sociais e auxílio em necessidades essenciais.</p>
+        </div>
+      </li>
+      <li>
+        <span class="atuacao-num" aria-hidden="true">02</span>
+        <div>
+          <h3>Crianças e inclusão</h3>
+          <p>Atividades de acolhimento, convivência, desenvolvimento, inclusão e momentos especiais para crianças.</p>
+        </div>
+      </li>
+      <li>
+        <span class="atuacao-num" aria-hidden="true">03</span>
+        <div>
+          <h3>Campanhas solidárias</h3>
+          <p>Arrecadação e distribuição de alimentos, roupas, materiais e outros itens essenciais.</p>
+        </div>
+      </li>
+      <li>
+        <span class="atuacao-num" aria-hidden="true">04</span>
+        <div>
+          <h3>Ações comunitárias</h3>
+          <p>Atividades junto às comunidades, promovendo cuidado, orientação, lazer, apoio e aproximação social.</p>
+        </div>
+      </li>
+      <li>
+        <span class="atuacao-num" aria-hidden="true">05</span>
+        <div>
+          <h3>Voluntariado</h3>
+          <p>Mobilização de pessoas que desejam doar seu tempo, conhecimento e disposição para ajudar quem precisa.</p>
+        </div>
+      </li>
+    </ol>
   </div>
 </section>
 
-<!-- ===== PROJETOS ===== -->
-<section class="projetos" id="projetos">
+<!-- =====================================================
+     AÇÕES REALIZADAS · PROJETOS · INDICADORES · GALERIA · DEPOIMENTOS
+     Montadas pelo js/main.js a partir do js/conteudo.js.
+     Enquanto não houver conteúdo real, ficam ocultas.
+     ===================================================== -->
+<section class="realizadas" id="acoes-realizadas" data-secao-dinamica hidden>
   <svg class="pecas pecas-esq" viewBox="-18 -18 216 216" aria-hidden="true"><use href="#pecas4"/></svg>
   <div class="wrap">
-    <div class="surge">
+    <div class="secao-abre">
+      <p class="sobretitulo">O que já aconteceu</p>
+      <h2 class="topico">Ações realizadas</h2>
+    </div>
+    <div class="realizadas-lista" id="listaAcoes"></div>
+  </div>
+</section>
+
+<section class="projetos" id="projetos" data-secao-dinamica hidden>
+  <svg class="pecas pecas-dir" viewBox="-18 -18 216 216" aria-hidden="true"><use href="#pecas4"/></svg>
+  <div class="wrap">
+    <div class="secao-abre">
+      <p class="sobretitulo">Iniciativas contínuas</p>
       <h2 class="topico">Projetos</h2>
     </div>
-    <div class="reservado surge">
-      <div class="reservado-texto">
-        <b>Em breve</b>
-        <span>Espaço reservado para a apresentação dos projetos do Instituto, com objetivo, público atendido, período e resultados de cada um.</span>
-      </div>
-    </div>
+    <div class="grade grade-3" id="listaProjetos"></div>
   </div>
 </section>
 
-<!-- ===== NOSSO IMPACTO ===== -->
-<section class="impacto" id="impacto">
+<section class="impacto" id="impacto" data-secao-dinamica hidden>
   <svg class="pecas pecas-dir" viewBox="-18 -18 216 216" aria-hidden="true"><use href="#pecas4"/></svg>
   <div class="wrap">
-    <div class="surge">
+    <div class="secao-abre">
+      <p class="sobretitulo">Nossos números</p>
       <h2 class="topico">Nosso impacto é feito de pessoas</h2>
-      <p class="lead">
-        Os números abaixo serão preenchidos com os dados oficiais do Instituto, à medida que
-        cada ação for registrada.
-      </p>
+      <p class="lead" id="impactoPeriodo"></p>
     </div>
-    <div class="numeros surge">
-      <div class="numero">
-        <b data-numero>—</b>
-        <span>Famílias alcançadas</span>
-      </div>
-      <div class="numero">
-        <b data-numero>—</b>
-        <span>Crianças beneficiadas</span>
-      </div>
-      <div class="numero">
-        <b data-numero>—</b>
-        <span>Ações realizadas</span>
-      </div>
-      <div class="numero">
-        <b data-numero>—</b>
-        <span>Voluntários</span>
-      </div>
-    </div>
+    <div class="numeros" id="listaNumeros"></div>
+    <p class="nota" id="impactoObs"></p>
   </div>
 </section>
 
-<!-- ===== GALERIA ===== -->
-<section class="galeria-sec" id="galeria">
+<section class="galeria-sec" id="galeria" data-secao-dinamica hidden>
   <svg class="pecas pecas-esq" viewBox="-18 -18 216 216" aria-hidden="true"><use href="#pecas4"/></svg>
   <div class="wrap">
-    <div class="surge">
+    <div class="secao-abre">
+      <p class="sobretitulo">Registros</p>
       <h2 class="topico">Momentos que contam nossa história</h2>
     </div>
-    <div class="reservado surge">
-      <div class="reservado-texto">
-        <b>Em breve</b>
-        <span>Espaço reservado para as fotos das ações do Instituto, como entregas, campanhas, voluntários, atividades com crianças, eventos e ações comunitárias.</span>
-      </div>
-    </div>
+    <div id="listaGaleria"></div>
   </div>
 </section>
 
-<!-- ===== DEPOIMENTOS ===== -->
-<section class="depoimentos" id="depoimentos">
+<section class="depoimentos" id="depoimentos" data-secao-dinamica hidden>
   <svg class="pecas pecas-dir" viewBox="-18 -18 216 216" aria-hidden="true"><use href="#pecas4"/></svg>
   <div class="wrap">
-    <div class="surge">
+    <div class="secao-abre">
+      <p class="sobretitulo">Quem caminha com a gente</p>
       <h2 class="topico">Histórias que nos movem</h2>
     </div>
-    <div class="reservado surge">
-      <div class="reservado-texto">
-        <b>Em breve</b>
-        <span>Espaço reservado para depoimentos de famílias atendidas, voluntários e parceiros. Cada depoimento será publicado com o nome e a autorização de quem o escreveu.</span>
-      </div>
-    </div>
+    <div class="grade grade-3" id="listaDepoimentos"></div>
   </div>
 </section>
 
-<!-- ===== VOLUNTARIADO ===== -->
-<section class="voluntario" id="voluntario">
-  <svg class="pecas pecas-esq" viewBox="-18 -18 216 216" aria-hidden="true"><use href="#pecas4"/></svg>
-  <div class="wrap voluntario-grid">
-    <div class="surge">
-      <h2 class="topico">Existe um lugar para você nessa história</h2>
-      <p class="lead">
-        Você pode contribuir com seu tempo, conhecimento, recursos ou simplesmente com a
-        disposição de servir.
-      </p>
-      <p>
-        Cada voluntário que chega fortalece nossa capacidade de alcançar novas pessoas e
-        transformar ainda mais vidas.
-      </p>
-      <a class="btn" href="https://instagram.com/institutoabner.r" target="_blank" rel="noopener">Quero ser voluntário</a>
-    </div>
-  </div>
-</section>
-
-<!-- ===== DOAÇÕES ===== -->
-<section class="doacoes" id="doacoes">
+<!-- =====================================================
+     COMO AJUDAR
+     ===================================================== -->
+<section class="ajudar" id="ajudar">
   <svg class="pecas pecas-dir" viewBox="-18 -18 216 216" aria-hidden="true"><use href="#pecas4"/></svg>
-  <div class="wrap doacoes-grid">
-    <div class="surge">
-      <h2 class="topico">Sua ajuda se transforma em cuidado</h2>
+  <div class="wrap">
+    <div class="secao-abre surge">
+      <p class="sobretitulo">Participe</p>
+      <h2 class="topico">Como ajudar</h2>
       <p class="lead">
-        Cada contribuição ajuda o Instituto Abner a continuar realizando ações, apoiando famílias
-        e levando esperança a quem mais precisa.
-      </p>
-      <a class="btn btn--claro" href="https://instagram.com/institutoabner.r" target="_blank" rel="noopener">Quero contribuir</a>
-      <p class="doacoes-nota">
-        Transparência e responsabilidade fazem parte dos valores do Instituto. Cada recurso
-        recebido é destinado às ações sociais e prestado em contas.
-        <a href="#transparencia">Ver transparência</a>
+        Toda ação do Instituto acontece porque alguém decidiu servir. Há três formas de
+        caminhar com a gente.
       </p>
     </div>
-    <div class="doacoes-formas surge">
-      <h3>Formas de contribuir</h3>
-      <ul>
-        <li><b>PIX</b><span>chave a cadastrar</span></li>
-        <li><b>QR Code</b><span>a cadastrar</span></li>
-        <li><b>Dados bancários</b><span>a cadastrar</span></li>
-        <li><b>Doação de itens</b><span>alimentos, roupas e materiais</span></li>
-      </ul>
-      <p class="doacoes-aviso">Enquanto os dados não são cadastrados, fale com a gente pelo Instagram para combinar sua doação.</p>
+
+    <div class="ajudar-grid">
+      <article class="ajudar-principal surge">
+        <h3>Fazer uma doação</h3>
+        <p>
+          Sua contribuição vira cuidado: alimentos, roupas, materiais e apoio às famílias
+          atendidas. Você pode doar recursos ou itens.
+        </p>
+
+        <!-- O bloco do PIX só aparece depois que a chave oficial for
+             cadastrada em js/conteudo.js, sempre com o beneficiário. -->
+        <div class="pix" id="blocoPix" hidden>
+          <p class="pix-rotulo">Chave PIX <span id="pixTipo"></span></p>
+          <p class="pix-chave" id="pixChave"></p>
+          <button type="button" class="btn btn--claro btn--pequeno" id="pixCopiar">Copiar chave PIX</button>
+          <p class="pix-benef">Beneficiário: <strong id="pixBeneficiario"></strong><span id="pixInstituicao"></span></p>
+          <p class="pix-aviso">Confira o nome do beneficiário no aplicativo do seu banco antes de concluir.</p>
+        </div>
+
+        <a class="btn btn--claro" id="ctaDoacao" href="https://instagram.com/institutoabner.r" target="_blank" rel="noopener">
+          Combinar uma doação pelo Instagram
+        </a>
+        <p class="nota nota--clara">
+          O Instagram é o canal confirmado do Instituto. É por lá que combinamos valores,
+          entregas e a destinação de cada doação.
+        </p>
+      </article>
+
+      <article class="ajudar-item surge">
+        <h3>Ser voluntário</h3>
+        <p>
+          Você pode contribuir com seu tempo, conhecimento ou simplesmente com a disposição
+          de servir. Cada voluntário amplia o alcance de cada ação.
+        </p>
+        <a class="btn btn--contorno" href="https://instagram.com/institutoabner.r" target="_blank" rel="noopener">
+          Quero participar como voluntário
+        </a>
+      </article>
+
+      <article class="ajudar-item surge">
+        <h3>Ser parceiro</h3>
+        <p>
+          Empresas, igrejas, instituições e projetos podem caminhar com o Instituto,
+          apoiando campanhas e ampliando o alcance das ações.
+        </p>
+        <a class="btn btn--contorno" href="https://instagram.com/institutoabner.r" target="_blank" rel="noopener">
+          Quero ser parceiro
+        </a>
+      </article>
     </div>
   </div>
 </section>
 
-<!-- ===== TRANSPARÊNCIA ===== -->
-<section class="transparencia" id="transparencia">
+<!-- =====================================================
+     TRANSPARÊNCIA — só com documentos reais publicados
+     ===================================================== -->
+<section class="transparencia" id="transparencia" data-secao-dinamica hidden>
   <svg class="pecas pecas-esq" viewBox="-18 -18 216 216" aria-hidden="true"><use href="#pecas4"/></svg>
   <div class="wrap transparencia-grid">
-    <div class="surge">
+    <div>
+      <p class="sobretitulo">Prestação de contas</p>
       <h2 class="topico">Transparência</h2>
       <p class="lead">
-        Acreditamos que confiança também se constrói através da transparência.
-      </p>
-      <p>
-        Por isso, buscamos apresentar de forma clara nossas ações, projetos, resultados e a
-        aplicação dos recursos destinados ao Instituto.
+        Confiança também se constrói com informação clara. Os documentos abaixo estão
+        organizados por período e podem ser baixados por qualquer pessoa.
       </p>
     </div>
-    <div class="transparencia-lista surge">
-      <h3>O que será publicado aqui</h3>
-      <ul>
-        <li>Relatórios de atividades</li>
-        <li>Prestação de contas</li>
-        <li>Documentos institucionais</li>
-        <li>Projetos realizados</li>
-        <li>Parceiros</li>
-        <li>Resultados das ações</li>
-      </ul>
-      <p class="transparencia-aviso">Espaço reservado. Os documentos serão disponibilizados para download assim que o Instituto concluir cada período.</p>
-    </div>
+    <ul class="documentos" id="listaDocumentos"></ul>
   </div>
 </section>
 
-<!-- ===== PARCEIROS ===== -->
+<!-- =====================================================
+     PARCEIROS
+     ===================================================== -->
 <section class="parceiros" id="parceiros">
   <svg class="pecas pecas-dir" viewBox="-18 -18 216 216" aria-hidden="true"><use href="#pecas4"/></svg>
   <div class="wrap">
-    <div class="surge">
-      <h2 class="topico">Juntos podemos alcançar ainda mais pessoas</h2>
+    <div class="secao-abre surge">
+      <p class="sobretitulo">Caminham com a gente</p>
+      <h2 class="topico">Parceiros</h2>
       <p class="lead">
-        Empresas, igrejas, apoiadores, instituições e projetos parceiros caminham com o Instituto
-        Abner para ampliar o alcance de cada ação.
+        Empresas e instituições que apoiam o Instituto Abner e ajudam a ampliar o alcance de
+        cada ação.
       </p>
     </div>
+
     <ul class="parceiros-grade surge">
       <li class="parceiro">
-        <img class="parceiro-larga" src="assets/parceiros/sgroup.webp" alt="SGROUP Nacional" width="900" height="221" loading="lazy">
+        <img class="parceiro-larga" src="assets/parceiros/sgroup.webp" alt="SGROUP Nacional" width="900" height="221" loading="lazy" decoding="async">
       </li>
       <li class="parceiro">
-        <img src="assets/parceiros/solys.webp" alt="Solys Administração e Gestão" width="478" height="420" loading="lazy">
+        <img src="assets/parceiros/solys.webp" alt="Solys Administração e Gestão" width="478" height="420" loading="lazy" decoding="async">
       </li>
       <li class="parceiro">
-        <img class="parceiro-alta" src="assets/parceiros/mc.webp" alt="MC" width="270" height="420" loading="lazy">
+        <img class="parceiro-alta" src="assets/parceiros/mc.webp" alt="MC" width="270" height="420" loading="lazy" decoding="async">
       </li>
     </ul>
-    <div class="parceiros-chamada surge">
-      <p>Sua empresa, igreja ou instituição também pode caminhar com o Instituto.</p>
-      <a class="btn btn--contorno" href="https://instagram.com/institutoabner.r" target="_blank" rel="noopener">Seja um parceiro</a>
-    </div>
   </div>
 </section>
 
-<!-- ===== CONTATO ===== -->
+<!-- =====================================================
+     CONTATO
+     ===================================================== -->
 <section class="contato" id="contato">
   <svg class="pecas pecas-esq" viewBox="-18 -18 216 216" aria-hidden="true"><use href="#pecas4"/></svg>
   <div class="wrap contato-grid">
     <div class="surge">
-      <h2 class="topico">Fale com a gente</h2>
+      <p class="sobretitulo">Fale com a gente</p>
+      <h2 class="topico">Vamos conversar</h2>
       <p class="lead">
         O Instagram é o canal ativo do Instituto. É por lá que combinamos doações, entregas e
-        mutirões de voluntários.
+        mutirões de voluntários — e respondemos a quem quer participar.
       </p>
-      <div class="contato-botoes">
-        <a class="btn" href="https://instagram.com/institutoabner.r" target="_blank" rel="noopener">Fale conosco</a>
-        <a class="btn btn--contorno" href="#doacoes">Doe agora</a>
-      </div>
+      <a class="btn contato-btn" href="https://instagram.com/institutoabner.r" target="_blank" rel="noopener">Abrir o Instagram</a>
     </div>
-    <div class="contato-canais surge">
-      <div class="canal">
+
+    <ul class="contato-canais surge" id="contatoCanais">
+      <li class="canal">
         <b>Instagram</b>
         <a href="https://instagram.com/institutoabner.r" target="_blank" rel="noopener">@institutoabner.r</a>
-      </div>
-      <div class="canal canal--vazio">
-        <b>WhatsApp</b>
-        <span>a cadastrar</span>
-      </div>
-      <div class="canal canal--vazio">
-        <b>E-mail</b>
-        <span>a cadastrar</span>
-      </div>
-      <div class="canal canal--vazio">
-        <b>Endereço</b>
-        <span>a cadastrar</span>
-      </div>
-    </div>
+      </li>
+    </ul>
   </div>
 </section>
 
@@ -452,35 +478,31 @@
 <footer class="rodape">
   <div class="wrap">
     <div class="rodape-grid">
-      <div>
-        <img class="logo-rodape" src="assets/marca/logo-abner-claro.svg" alt="Instituto Abner" width="176" height="150" loading="lazy">
-        <p>
-          Servir pessoas, acolher famílias e transformar realidades por meio da solidariedade.
-        </p>
+      <div class="rodape-marca">
+        <img class="logo-rodape" src="assets/marca/logo-abner-claro.svg" alt="Instituto Abner" width="176" height="150" loading="lazy" decoding="async">
+        <p>Acolher, incluir e apoiar pessoas e famílias em situação de vulnerabilidade.</p>
         <p class="rodape-lema script">Servir transforma vidas.</p>
       </div>
-      <div>
-        <h3>Links rápidos</h3>
-        <a href="#quem-somos">Quem somos</a>
-        <a href="#acoes">Nossas ações</a>
-        <a href="#projetos">Projetos</a>
-        <a href="#impacto">Nosso impacto</a>
-        <a href="#galeria">Galeria</a>
-      </div>
-      <div>
+      <nav class="rodape-links" aria-label="O Instituto">
+        <h3>O Instituto</h3>
+        <a href="#quem-somos">Por que Abner?</a>
+        <a href="#historia">Nossa história</a>
+        <a href="#atuacao">O que fazemos</a>
+        <a href="#acoes-realizadas" data-link-dinamico hidden>Ações realizadas</a>
+        <a href="#projetos" data-link-dinamico hidden>Projetos</a>
+        <a href="#galeria" data-link-dinamico hidden>Galeria</a>
+      </nav>
+      <nav class="rodape-links" aria-label="Participe">
         <h3>Participe</h3>
-        <a href="#voluntario">Seja voluntário</a>
-        <a href="#doacoes">Doe agora</a>
-        <a href="#parceiros">Seja um parceiro</a>
-        <a href="#transparencia">Transparência</a>
+        <a href="#ajudar">Fazer uma doação</a>
+        <a href="#ajudar">Ser voluntário</a>
+        <a href="#ajudar">Ser parceiro</a>
+        <a href="#transparencia" data-link-dinamico hidden>Transparência</a>
         <a href="privacidade.html">Política de privacidade</a>
-      </div>
-      <div>
+      </nav>
+      <div class="rodape-links" id="rodapeContato">
         <h3>Contato</h3>
         <a href="https://instagram.com/institutoabner.r" target="_blank" rel="noopener">@institutoabner.r</a>
-        <span class="rodape-vazio">WhatsApp a cadastrar</span>
-        <span class="rodape-vazio">E-mail a cadastrar</span>
-        <span class="rodape-vazio">Endereço a cadastrar</span>
       </div>
     </div>
     <div class="rodape-fim">
@@ -498,6 +520,7 @@
   </figure>
 </div>
 
-<script src="js/main.js?v=10"></script>
+<script src="js/conteudo.js?v=11"></script>
+<script src="js/main.js?v=11"></script>
 </body>
 </html>
